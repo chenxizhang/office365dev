@@ -4,17 +4,19 @@
 
 1. Office 365开发概述及生态环境介绍
 2. Office 365开发环境搭建
-Microsoft Graph 简介
-Office 365 Add-in开发（Outlook）
-Office 365 Add-in开发（Word）
-Office 365 Add-in开发（Excel）
-Office 365 Add-in开发（PowerPoint）
-Office 365 Add-in开发（OneNote）
-Office 365 Add-in开发（SharePoint）
-SharePoint Framework开发
-Skype for Business开发入门
-PowerApps & Flow 实战入门
-PowerApps & Flow 定制开发
-Power BI 快速入门
-Power BI 定制开发
-Teams 应用扩展（Tab，Connector，Bot）
+3. Microsoft Graph 简介
+4. Office 365 Add-in开发（Outlook）
+5. Office 365 Add-in开发（Word）
+6. Office 365 Add-in开发（Excel）
+7. Office 365 Add-in开发（PowerPoint）
+8. Office 365 Add-in开发（OneNote）
+9. Office 365 Add-in开发（SharePoint）
+10. SharePoint Framework开发
+11. Skype for Business开发入门
+12. PowerApps & Flow 实战入门
+13. PowerApps & Flow 定制开发
+14. Power BI 快速入门
+15. Power BI 定制开发
+16. Teams 应用扩展（Tab，Connector，Bot）
+
+本次课程将同步在LinkedIn上面分享，如果有兴趣，请关注我的LinkedIn账号（chenxizhang）
