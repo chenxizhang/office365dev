@@ -11,6 +11,7 @@
 > 据我所知，同类活动今年仍然将择期举办，规模和深度可能都会有提升，敬请大家关注，并且可以早做些准备。 
 
 ![](https://media.licdn.com/mpr/mpr/AAEAAQAAAAAAAA1MAAAAJGJmODgwYjEyLTUwNDEtNDQzMy05NGRiLTU5MmYyNTJjMTllYQ.jpg)
+
 但是，如果放长远一些眼光来看，Office 365目前采用敏捷开发模式，产品组也更加开放，我相信它本身会越来越完善；与此同时，作为一个全新的平台和全新的生态，我们也希望有更多的开发人员加入，并且做出自己的贡献。
 
 ## 内容介绍
