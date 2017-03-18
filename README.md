@@ -1,5 +1,7 @@
 # Office 365 开发概览系列文章和教程
 
+原文于2017年2月26日首发于LinkedIn，请参考[链接](http://www.linkedin.com/pulse/office-365-%E5%BC%80%E5%8F%91%E6%A6%82%E8%A7%88%E7%B3%BB%E5%88%97%E6%96%87%E7%AB%A0%E5%92%8C%E6%95%99%E7%A8%8B-%E5%B8%8C%E7%AB%A0-%E9%99%88) 
+
 ## 引子
 
 ![](https://media.licdn.com/mpr/mpr/AAEAAQAAAAAAAAy_AAAAJGQ0YTJhYWM4LTYyYmYtNGMwNy1hYTQxLTdkOTgwNzM5Y2Q3Mw.jpg)
