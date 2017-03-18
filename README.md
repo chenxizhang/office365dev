@@ -38,6 +38,7 @@
 ## 重要说明
 - 需要特别声明一下，我将主要利用业余的时间来分享这个系列，所以更新的周期可能不是很有规律，但我想争取在6月底之前完整所有这个系列（包括文章和视频），如果有合适的朋友愿意参与这个系列，我非常欢迎，请私下跟我联系讨论。
 - 本系列文章和课程将主要以国际版Office 365 企业版E3 作为演示和开发环境，采用的开发工具是Visual Studio 2017 Enterprise。（如果有兴趣跟随一起做练习，请预先准备好相关环境，都可以申请试用版）。
-- 本系列文章将在LinkedIn和博客园、Github三个平台同步连载，欢迎大家根据自己的喜好进行关注，并且进行交流。
-- 本课程将在LinkedIn Learning上面进行首发，地址请关注后期通知，并且可能会同步到有关的视频网站。
+- 本系列文章将在[LinkedIn](http://www.linkedin.com/in/chenxizhang/)和[博客园](http://www.cnblogs.com/chenxizhang/category/967796.html)、[Github](https://github.com/chenxizhang/office365dev) 三个平台同步连载，欢迎大家根据自己的喜好进行关注，并且进行交流。
+- 本文将同时在 *微软中国Office 365官方微信号* 连载，欢迎关注“ mschinaoffice365"，每周都会收到各种新功能介绍和实用技巧。
+- 本文将同时在 *Excel之家ExcelHome* 连载，欢迎关注“iexcelhome"，ExcelHome是华语地区最大的Office中文技术社区，拥有超过300万注册会员。
 - 本系列文章和课程所涉及到的案例代码，将全部在Github上面共享，欢迎大家参与。
