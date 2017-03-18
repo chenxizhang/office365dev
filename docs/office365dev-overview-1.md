@@ -72,7 +72,7 @@ VBA的全称是Microsoft Visual Basic for Applications。在多个Office客户�
 
 > 宏——macro——是VBA中的一个重要概念，通常可以简单理解为一组代码。
 
-![](https://media.licdn.com/mpr/mpr/AAEAAQAAAAAAAAyyAAAAJDliMGQ3Y2IwLWE0M2QtNGVkOS1iYTk0LTgyMDg2MGQwYmRjNA.png!)
+![](https://media.licdn.com/mpr/mpr/AAEAAQAAAAAAAAyyAAAAJDliMGQ3Y2IwLWE0M2QtNGVkOS1iYTk0LTgyMDg2MGQwYmRjNA.png)
 
 VBA代码的部署一般分为两种，它可以作为Office文档的一部分存在（例如只是某个文件的特定功能的话），也可以单独存在（假定是一个通用的功能，尤其是希望在应用程序启动的时候就自动加载的话）。前者不消多说，现在一般就是通过带有m后缀的文件名保存即可（例如xlsm, docm等），后者有一个更加专用的格式（例如xlam）和叫法（加载宏）。
 
