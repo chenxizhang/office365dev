@@ -1,7 +1,15 @@
 ﻿Imports System.Net.Http
 Imports Microsoft.Graph
 Imports Microsoft.Identity.Client
-
+''' <summary>
+''' 说明：这个范例是介绍如何在Console Application中调用Microsoft Graph，获取用户基本信息，现有邮件列表，以及发送邮件
+''' 作者：陈希章 Ares Chen
+''' 时间：2017年4月4日
+''' 参考：https : //github.com/chenxizhang/office365dev 
+''' 必备条件：Install-Package Microsoft.Identity.Client -IncludePrerelease
+''' 必备条件：Install-Package Microsoft.Graph
+''' 请注意：安装完之后， 需要更新一下Newtonsoft.Json这个Package， 并且版本不能超过10.0
+''' </summary>
 Module Module1
 
 
@@ -56,7 +64,7 @@ Module Module1
 
         Public Async Function AuthenticateRequestAsync(request As HttpRequestMessage) As Task Implements IAuthenticationProvider.AuthenticateRequestAsync
 
-            Dim clientID As String = "1e545fe0-3d58-4aa8-bcfe-972930be72dc"
+            Dim clientID As String = "1e545fe0-3d58-4aa8-bcfe-972930be72dc" '这个ID是我创建的一个临时App的ID，请替换为自己的
             Dim scopes As String() = {"user.read", "mail.read", "mail.send"}
             Dim app As PublicClientApplication = New PublicClientApplication(clientID)
             Dim result As AuthenticationResult

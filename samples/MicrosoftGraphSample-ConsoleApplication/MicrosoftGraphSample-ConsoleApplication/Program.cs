@@ -5,6 +5,7 @@
  * 参考：https://github.com/chenxizhang/office365dev 
  * 必备条件：Install-Package Microsoft.Identity.Client -IncludePrerelease
  * 必备条件：Install-Package Microsoft.Graph
+ * 请注意：安装完之后，需要更新一下Newtonsoft.Json这个Package，并且版本不能超过10.0
  */
 
 namespace MicrosoftGraphSample_ConsoleApplication
@@ -74,7 +75,7 @@ namespace MicrosoftGraphSample_ConsoleApplication
 
         public async Task AuthenticateRequestAsync(HttpRequestMessage request)
         {
-            string clientID = "1e545fe0-3d58-4aa8-bcfe-972930be72dc";
+            string clientID = "1e545fe0-3d58-4aa8-bcfe-972930be72dc";//这个ID是我创建的一个临时App的ID，请替换为自己的
             string[] scopes = { "user.read", "mail.read", "mail.send" };
             var app = new PublicClientApplication(clientID);
 
