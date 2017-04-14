@@ -1,6 +1,6 @@
 # Office 365 开发概览系列文章和教程
 
-原文于2017年2月26日首发于LinkedIn，请参考[链接](http://www.linkedin.com/pulse/office-365-%E5%BC%80%E5%8F%91%E6%A6%82%E8%A7%88%E7%B3%BB%E5%88%97%E6%96%87%E7%AB%A0%E5%92%8C%E6%95%99%E7%A8%8B-%E5%B8%8C%E7%AB%A0-%E9%99%88) 
+原文于2017年2月26日首发于LinkedIn，请参考[链接](http://www.linkedin.com/pulse/office-365-开发概览系列文章和教程-希章-陈)
 
 ## 引子
 
@@ -10,7 +10,7 @@
 
 我并不认为Office 365的平台就已经是完美的，事实上因为在全球有多个版本导致有些功能或接口并不完全统一，而且由于开发的技术（Web为主，结合了云的架构）与传统的Office开发有较大的差异，这些会给我们的开发人员带来一些困扰和挑战。我们在去年10月份的时候，在北京举办了第一届Office 365技术峰会暨开发马拉松大会，总部产品组来了将近20人的豪华团队，与中国的开发团队（或独立开发个人）做了深入广泛的交流，我们能看到大家的积极热情，也收到了不少实际的反馈意见。
 
-> 据我所知，同类活动今年仍然将择期举办，规模和深度可能都会有提升，敬请大家关注，并且可以早做些准备。 
+> 据我所知，同类活动今年仍然将择期举办，规模和深度可能都会有提升，敬请大家关注，并且可以早做些准备。
 
 ![](https://media.licdn.com/mpr/mpr/AAEAAQAAAAAAAA1MAAAAJGJmODgwYjEyLTUwNDEtNDQzMy05NGRiLTU5MmYyNTJjMTllYQ.jpg)
 
@@ -38,9 +38,13 @@
 16. Teams 应用扩展（Tab，Connector，Bot）
 
 ## 重要说明
-- 需要特别声明一下，我将主要利用业余的时间来分享这个系列，所以更新的周期可能不是很有规律，但我想争取在6月底之前完整所有这个系列（包括文章和视频），如果有合适的朋友愿意参与这个系列，我非常欢迎，请私下跟我联系讨论。
-- 本系列文章和课程将主要以国际版Office 365 企业版E3 作为演示和开发环境，采用的开发工具是Visual Studio 2017 Enterprise。（如果有兴趣跟随一起做练习，请预先准备好相关环境，都可以申请试用版）。
-- 本系列文章将在[LinkedIn](http://www.linkedin.com/in/chenxizhang/)和[博客园](http://www.cnblogs.com/chenxizhang/category/967796.html)、[Github](https://github.com/chenxizhang/office365dev) 三个平台同步连载，欢迎大家根据自己的喜好进行关注，并且进行交流。
-- 本文将同时在 *微软中国Office 365官方微信号* 连载，欢迎关注“ mschinaoffice365"，每周都会收到各种新功能介绍和实用技巧。
-- 本文将同时在 *Excel之家ExcelHome* 连载，欢迎关注“iexcelhome"，ExcelHome是华语地区最大的Office中文技术社区，拥有超过300万注册会员。
-- 本系列文章和课程所涉及到的案例代码，将全部在Github上面共享，欢迎大家参与。
+
+* 需要特别声明一下，我将主要利用业余的时间来分享这个系列，所以更新的周期可能不是很有规律，但我想争取在6月底之前完整所有这个系列（包括文章和视频），如果有合适的朋友愿意参与这个系列，我非常欢迎，请私下跟我联系讨论。
+* 本系列文章和课程将主要以国际版Office 365 企业版E3 作为演示和开发环境，采用的开发工具是Visual Studio 2017 Enterprise。（如果有兴趣跟随一起做练习，请预先准备好相关环境，都可以申请试用版）。
+* 本系列文章将在[LinkedIn](http://www.linkedin.com/in/chenxizhang/)和[博客园](http://www.cnblogs.com/chenxizhang/category/967796.html)、[Github](https://github.com/chenxizhang/office365dev) 三个平台同步连载，欢迎大家根据自己的喜好进行关注，并且进行交流。
+* 本文将同时在 _微软中国Office 365官方微信号_ 连载，欢迎关注“ mschinaoffice365"，每周都会收到各种新功能介绍和实用技巧。
+* 本文将同时在 _Excel之家ExcelHome_ 连载，欢迎关注“iexcelhome"，ExcelHome是华语地区最大的Office中文技术社区，拥有超过300万注册会员。
+* 本系列文章和课程所涉及到的案例代码，将全部在Github上面共享，欢迎大家参与。
+
+
+
