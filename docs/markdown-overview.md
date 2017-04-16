@@ -1,4 +1,4 @@
-![](http://m.c.lnkd.licdn.com/mpr/mpr/AAEAAQAAAAAAAAn7AAAAJGY0MTBlNTI5LWEzODgtNGIxYS05MzI4LWZhMDdlOTUxMTNkMA.png)
+![](images/687474703a2f2f6d2e632e6c6e6b642e6c6963646e2e636f6d2f6d70722f6d70722f41414541415141414141414141416e37414141414a4759304d54426c4e5449354c57457a4f4467744e474978595330354d7a49344c575a684d44646c4f5455784d544e.png)
 
 # 学习一点Markdown的基本知识
 > 本文于2017年3月18日首发于LinkedIn，请参考[链接](http://www.linkedin.com/pulse/%E5%AD%A6%E4%B9%A0%E4%B8%80%E7%82%B9markdown%E7%9A%84%E5%9F%BA%E6%9C%AC%E7%9F%A5%E8%AF%86-%E5%B8%8C%E7%AB%A0-%E9%99%88?published=t)
@@ -8,10 +8,10 @@
 Markdown的愿景是： HTML文档应该长成什么样，就应该怎么编写。所以实际上他要解决的问题是所见即所得，用文本编写HTML文档的问题。这听起来有点夸张，或者对于没有用过的朋友来说，可能是很难理解的。那么，我们对照一下下面两张图。
 
 下面这一张图，是用Markdown语法编辑的“Office 365开发概览系列文章和教程”。
-![](https://media.licdn.com/mpr/mpr/AAEAAQAAAAAAAAzZAAAAJGUwMGNjM2IwLWY3Y2YtNGVlNy05MjhkLThmMTQwYzkxMjUzNQ.png)
+![](images/68747470733a2f2f6d656469612e6c6963646e2e636f6d2f6d70722f6d70722f41414541415141414141414141417a5a414141414a4755774d474e6a4d3249774c575933593259744e47566c4e7930354d6a686b4c54686d4d545177597a6b784d6a557a4e.png)
 
 如果同样的事情， 使用标准的HTML语法来编写，则可能是下面这个样子的。
-![](https://media.licdn.com/mpr/mpr/AAEAAQAAAAAAAAvpAAAAJGRkZTFiYWVjLWYyMzQtNDE3Mi1hM2M2LTM2NzRlN2UxY2NkZQ.png)
+![](images/68747470733a2f2f6d656469612e6c6963646e2e636f6d2f6d70722f6d70722f41414541415141414141414141417670414141414a47526b5a5446695957566a4c5759794d7a51744e4445334d6931684d324d324c544d324e7a526c4e32557859324e6b5a.png)
 
 Markdown并不是用来取代HTML的，事实上，它的后缀名为MD的文件并不能直接显示在浏览器中，而是需要经过特殊的解析，转换为最终的HTML才能显示。
 
@@ -27,7 +27,7 @@ http://wowubuntu.com/markdown/#list
 
 有了这些概念之后，最后我给大家介绍几块常见的Markdown的编辑器。注意，我前面提到过了，其实编写Markdown并不需要特定的编辑器，直接用记事本就可以了（如果用Notepad++，还可以实现代码高亮等功能），如果我就是编写一个简单的文件，我用记事本就可以了。但如果我想编写很多文章（而且文章内容都比较多的话），而且我希望在本地可以进行预览，以及可以结合Github进行版本的管理，我更加倾向于使用Visual Studio Code这块跨平台的轻量级代码编辑器。
 
-![](https://media.licdn.com/mpr/mpr/AAEAAQAAAAAAAAphAAAAJGI4ZTQ2NmQxLTE1NTMtNDg5MC1hYTIwLWIzYTBmZWZiNGQxZg.png)
+![](images/68747470733a2f2f6d656469612e6c6963646e2e636f6d2f6d70722f6d70722f41414541415141414141414141417068414141414a4749345a5451324e6d51784c5445314e544d744e4467354d433168595449774c57497a5954426d5a575a694e4751785a.png)
 
 我正在撰写的一个系列文章，除了发布在LinkedIn上面外，将同步发布到Github和cnblogs上面，后者都是支持Markdown的，所以我在Visual Studio Code建立一个项目，看起来的效果像上图所示。
 

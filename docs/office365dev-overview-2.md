@@ -21,33 +21,35 @@ Office 365并不是Office的简单升级版本，我们以前的Office版本通�
 Office 365的名称不会随着时间而变化，也就是说，不会有Office 366或者Office 360之类的叫法，他就叫Office 365（当时取这个名字，大意是希望让Office服务于我们的每一天）。据不完全统计，世界上大约有1/7的用户在使用Office，我们有这个荣幸。
 
 从最基本的层面来看，Office 365可以像下面这样理解
-![Office 365](https://media.licdn.com/mpr/mpr/AAEAAQAAAAAAAAqQAAAAJDM2Y2UwZjg4LTVlMjItNDA2OC05MzllLWJiZjg4ODU4ZGExYw.png)
+![Office 365](images/68747470733a2f2f6d656469612e6c6963646e2e636f6d2f6d70722f6d70722f41414541415141414141414141417151414141414a444d32593255775a6a67344c54566c4d6a49744e4441324f4330354d7a6c6c4c574a695a6a67344f4455345a47457859.png)
 
 
 与此同时，Office 365还在不断地创新，推出新的服务，很多都是免费提供给现有Office 365用户的。下面是目前国际版的截图。
-![国际版](https://media.licdn.com/mpr/mpr/AAEAAQAAAAAAAAvtAAAAJDc5ZmIwZDNkLTBlZTktNDNhZC1iYTY3LTQ5NDVlYmZhZjIxYw.png)
+![国际版](images/68747470733a2f2f6d656469612e6c6963646e2e636f6d2f6d70722f6d70722f41414541415141414141414141417674414141414a4463355a6d49775a444e6b4c54426c5a546b744e444e685a433169595459334c5451354e44566c596d5a685a6a497859.png)
 
 
 Office 365是一个全球运营的服务，目前我们在全球38个不同的地区都有Office 365的数据中心，请参考 [http://o365datacentermap.azurewebsites.net/](http://o365datacentermap.azurewebsites.net/)。
 
-![数据中心](https://media.licdn.com/mpr/mpr/AAEAAQAAAAAAAAqMAAAAJDE3NmFmNDQyLWEzNWMtNGJhMi1hYWQxLTg5ZmY3ZmFiMWQ1Mg.png)
+![数据中心](images/68747470733a2f2f6d656469612e6c6963646e2e636f6d2f6d70722f6d70722f4141454141514141414141414141714d414141414a4445334e6d466d4e4451794c57457a4e574d744e474a684d693168595751784c5467355a6d59335a6d46694d5751314d.png)
 
 
 与此同时，在中国我们有两个完全独立的数据中心（分别位于上海和北京），由世纪互联负责运营。请参考 http://www.21vbluecloud.com/office365。
 
 > 除了全球统一的那个国际版之外，在世纪互联运营的这个版本，我们内部称之为Gallatin，大部分中国的客户都是购买这个版本，但也有一部分有海外业务的中国客户，会购买另外一个代号为Yellowstone的海外版本（特指数据中心在香港或新加坡的版本）。
 
-![世纪互联](https://media.licdn.com/mpr/mpr/AAEAAQAAAAAAAA1EAAAAJGM4Mzk4ZTZmLTM0ZjktNDI2YS05OWQ1LTZlYmM0NGYyOGZhNw.png)
+![世纪互联](images/68747470733a2f2f6d656469612e6c6963646e2e636f6d2f6d70722f6d70722f41414541415141414141414141413145414141414a474d344d7a6b345a545a6d4c544d305a6a6b744e444932595330354f5751314c545a6c596d4d304e4759794f475a684e.png)
 
 最后，Office 365是基于订阅进行授权的，用户可以按需订阅组件，按照具体使用的时间付费，而无需一次性购买。针对不同的组织或个人，Office 365提供了丰富多样的订阅选项。详情请参考 https://products.office.com/zh-cn/business/compare-more-office-365-for-business-plans
 
-![购买计划](https://media.licdn.com/mpr/mpr/AAEAAQAAAAAAAAukAAAAJGY4ZGE4M2U2LWZhZDAtNDgyZS04ZTQxLWNlMDVkMGEyNzlkMA.png)
+![购买计划](images/68747470733a2f2f6d656469612e6c6963646e2e636f6d2f6d70722f6d70722f4141454141514141414141414141756b414141414a4759345a4745344d3255324c575a685a4441744e4467795a5330345a5451784c574e6c4d44566b4d4745794e7a6c6b4d.png)
 
 > 教育版和非营利组织版订阅费用极低，甚至免费。
 
-世纪互联的授权计划大抵上跟国际版类似，但也有些细微的区别，有兴趣的请参考 http://www.21vbluecloud.com/office365/pricing.html。从功能角度来说，核心的功能都已经落地到Gallatin，但是确实有些新推出的服务，会有一定的部署周期。本系列文章后续提到这些服务的时候，会做出一定的说明。
+世纪互联的授权计划大抵上跟国际版类似，但也有些细微的区别，有兴趣的请参考 http://www.21vbluecloud.com/office365/pricing.html。
 
-![](https://media.licdn.com/mpr/mpr/AAEAAQAAAAAAAAoiAAAAJDA1OTM4ZGNlLWQ1NDgtNGNjMS1hYzA1LTZlZWYzYThlYTA0ZA.png)
+从功能角度来说，核心的功能都已经落地到Gallatin，但是确实有些新推出的服务，会有一定的部署周期。本系列文章后续提到这些服务的时候，会做出一定的说明。
+
+![](images/68747470733a2f2f6d656469612e6c6963646e2e636f6d2f6d70722f6d70722f41414541415141414141414141416f69414141414a4441314f544d345a474e6c4c5751314e4467744e474e6a4d533168597a41314c545a6c5a57597a5954686c595441305a.png)
 
 那么，在了解了Office 365的这些背景之后，我们再来看一下在Office 365 这个全新的生产力云平台上面，对于开发人员来说有哪些机会。
 
@@ -55,7 +57,7 @@ Office 365是一个全球运营的服务，目前我们在全球38个不同的�
 
 所以，Office 365继承了Office的一贯的优良传统，从设计的一开始，从架构上面来说就支持开发人员在其基础上，按照业务的需求进行定制和扩展，官方的Office开发中心清晰地展示了这方面的能力，具体来说可以有下面四个主要的场景
 
-![](https://media.licdn.com/mpr/mpr/AAEAAQAAAAAAAAseAAAAJGYzOTVhNGU4LTIwNjctNDNlMy1iODU1LWI4ZmFjYjI1MDUzYw.png)
+![](images/68747470733a2f2f6d656469612e6c6963646e2e636f6d2f6d70722f6d70722f41414541415141414141414141417365414141414a47597a4f5456684e4755344c5449774e6a63744e444e6c4d7931694f4455314c5749345a6d466a596a49314d44557a59.png)
 
 **Microsoft Graph**
 
@@ -63,7 +65,7 @@ Office 365是一个全球运营的服务，目前我们在全球38个不同的�
 
 下图提到的这个随办的应用，是目前国内做得很完善的与Office 365应用集成的成功案例，有兴趣可以参考
 
-![](https://media.licdn.com/mpr/mpr/AAEAAQAAAAAAAAthAAAAJGJjNGMzZDkwLTFjODItNGFkOC05M2RkLTAyZjA1MDkzZTUyMg.png)
+![](images/68747470733a2f2f6d656469612e6c6963646e2e636f6d2f6d70722f6d70722f41414541415141414141414141417468414141414a474a6a4e474d7a5a446b774c54466a4f4449744e47466b4f4330354d32526b4c5441795a6a41314d446b7a5a5455794d.png)
 
 > 关于Microsoft Graph，我在本系列文章的第三篇将详细展开探讨，如果有兴趣的朋友，请先了解 https://developer.microsoft.com/en-us/graph/
 
@@ -73,7 +75,7 @@ Add-ins对于Office开发人员来说并不是新事物。上一篇文章我已�
 
 这两种Add-in，请姑且允许我将其称之为传统的Add-in。他们将需要在本地安装和部署，并且将出现在Office应用的如下界面中，可以按需要启用或者禁用。
 
-![](https://media.licdn.com/mpr/mpr/AAEAAQAAAAAAAAvbAAAAJDk1OTJlYWU1LTBjODEtNGQxMS05MjJjLTMyZWQ3N2FlN2IwZg.png)
+![](images/68747470733a2f2f6d656469612e6c6963646e2e636f6d2f6d70722f6d70722f41414541415141414141414141417662414141414a446b314f544a6c595755314c54426a4f4445744e4751784d5330354d6a4a6a4c544d795a5751334e32466c4e3249775a.png)
 
 这两种Add-in的优势和劣势在上一篇文章已经有详细的说明，这里不再赘述。Office 365的Add-in指的是基于新一代的Web技术推出的Add-in开发能力，我可以将他们称之为Web Add-in。
 
@@ -85,7 +87,7 @@ Add-ins对于Office开发人员来说并不是新事物。上一篇文章我已�
 
 下面这个同样由随办团队出品的iOffice Add-in，可以安装在Outlook或者OWA中，这个目前是免费的Add-in，可以让随办的用户之间在Outlook中进行很多有意思的互动，包括查看联系人，分配微任务等。
 
-![](https://media.licdn.com/mpr/mpr/AAEAAQAAAAAAAAmuAAAAJDAxNmJiNTVhLWFhYTUtNDJiNy1iNGY3LTM3OGE2ZTc5ODE2Yw.png)
+![](images/68747470733a2f2f6d656469612e6c6963646e2e636f6d2f6d70722f6d70722f41414541415141414141414141416d75414141414a4441784e6d4a694e5456684c574668595455744e444a694e7931694e4759334c544d334f4745325a5463354f44453259.png)
 
 **SharePoint Add-ins**
 
@@ -93,23 +95,23 @@ Add-ins对于Office开发人员来说并不是新事物。上一篇文章我已�
 
 目前在Office Store中有超过1163个SharePoint Add-in，占到全部Add-in的将近58%，足见其市场潜力。
 
-![](https://media.licdn.com/mpr/mpr/AAEAAQAAAAAAAAwnAAAAJGRhNGRhMzIwLWEzOWEtNGJmZC1hMzIyLTQwMjRkMGUxODlmOA.png)
+![](images/68747470733a2f2f6d656469612e6c6963646e2e636f6d2f6d70722f6d70722f4141454141514141414141414141776e414141414a4752684e4752684d7a49774c57457a4f5745744e474a6d5a4331684d7a49794c5451774d6a526b4d4755784f446c6d4f.png)
 
 **Office 365 Connectors**
 
 Connector（直译过来是连接器）是一个全新的事物。它目前在Outlook Modern Groups以及最新发布的Microsoft Teams中起到连接外部应用系统或者信息源的作用。
 
-![](https://media.licdn.com/mpr/mpr/AAEAAQAAAAAAAAsvAAAAJGVkMjQ0NDlhLTMwOGEtNDczNS1iODM1LWUxODNjZTY1NzBkNg.png)
+![](images/68747470733a2f2f6d656469612e6c6963646e2e636f6d2f6d70722f6d70722f41414541415141414141414141417376414141414a47566b4d6a51304e446c684c544d774f4745744e44637a4e5331694f444d314c5755784f444e6a5a5459314e7a426b4e.png)
 
 这个要讲起来，最根本的一点是大家要理解在企业内部协作的时候，最重要的是一个团队的概念，而在团队的一个共同的工作区中，我们称之为Group。在Group（Teams中称为Team）的日常协作过程中，可能有链接外部的应用系统或者信息源，以便在这些系统或者信息发生变化的时候，团队能以一种透明的方式得到通知。Connector就是做这个的。目前已经默认提供了超过50个标准的Connector，但开发人员可以根据自己需要进行定制。
 
-![](https://media.licdn.com/mpr/mpr/AAEAAQAAAAAAAAwwAAAAJDhkN2YyYjRhLWU2ZDktNDI1My05NTgxLTZlMGRkYjE3Y2I1Mg.png)
+![](images/68747470733a2f2f6d656469612e6c6963646e2e636f6d2f6d70722f6d70722f41414541415141414141414141417777414141414a44686b4e325979596a52684c5755325a446b744e4449314d7930354e5467784c545a6c4d47526b596a4533593249314d.png)
 
 介绍完了Office 365开发的典型四大场景（Microsoft Graph，Office add-ins，SharePoint Add-ins，Office 365 Connectors），这里快速给大家提一下，作为开发人员可以使用哪些平台或工具来开展工作。
 
 从下图可以看到，目前支持的开发平台除了ASP.NET，还有Android+iOS这种Native App平台，也有完全基于Javascript以及NodeJS的开发支持。这是一个开放是世界，Office 365的开发掀开了崭新的一页；对于开发人员来说，会有一定的挑战，但我相信机遇更加大。
 
-![](https://media.licdn.com/mpr/mpr/AAEAAQAAAAAAAA1UAAAAJDUwY2IwYzkwLWVhZDItNGEzYi04NDQzLThkNDgwODhhMmRhZQ.png)
+![](images/68747470733a2f2f6d656469612e6c6963646e2e636f6d2f6d70722f6d70722f41414541415141414141414141413155414141414a44557759324977597a6b774c5756685a4449744e47457a596930344e44517a4c54686b4e4467774f4468684d6d52685a.png)
 
 
 ## Office 365生态环境介绍
@@ -118,20 +120,20 @@ Connector（直译过来是连接器）是一个全新的事物。它目前在Ou
 
 我在“[风起云涌：西雅图技术培训见闻分享](http://www.linkedin.com/pulse/%E9%A3%8E%E8%B5%B7%E4%BA%91%E6%B6%8C%E8%A5%BF%E9%9B%85%E5%9B%BE%E6%8A%80%E6%9C%AF%E5%9F%B9%E8%AE%AD%E8%A7%81%E9%97%BB%E5%88%86%E4%BA%AB-%E5%B8%8C%E7%AB%A0-%E9%99%88)” 这篇文章中提到，我理解微软的成功法则是通过紧密团结和帮助客户和合作伙伴成功来获得成就。
 
-![](https://media.licdn.com/mpr/mpr/AAEAAQAAAAAAAAtoAAAAJDRiMDMzMWM2LWQ3YWItNGU4Yi1hOGFiLTg1MmVlMzkyNmFhZA.jpg)
+![](images/68747470733a2f2f6d656469612e6c6963646e2e636f6d2f6d70722f6d70722f4141454141514141414141414141746f414141414a4452694d444d7a4d574d324c575133595749744e475534596931684f4746694c5467314d6d566c4d7a6b794e6d46685a.jpg)
 
 这可能看起来有点抽象，我们谈点实际的。Office 365作为一个逐渐完善和成熟起来的全球性生产力云平台，他已经取得的一些成绩，以及将要进一步的发展，都完全离不开客户和合作伙伴的参与。
 
 从客户这个角度来说，我们看到越来越多客户认识到Office 365所带来的全新价值，在自身的数字化转型过程中，利用Office 365提供的生产力解决方案（而不仅仅是产品）取得先机。
-![](https://media.licdn.com/mpr/mpr/AAEAAQAAAAAAAA3oAAAAJGRkYjIwNGUyLTEyZmQtNDNjYi1iYjVhLTI4ZWVjMGJlOTI1NA.png)
+![](images/68747470733a2f2f6d656469612e6c6963646e2e636f6d2f6d70722f6d70722f4141454141514141414141414141336f414141414a47526b596a49774e4755794c5445795a6d51744e444e6a59693169596a56684c5449345a57566a4d474a6c4f5449314e.png)
 
 Facebook的选择让我们看到这种级别的科技企业的决断力，也许这正好是他能专注于业务创新的动力之一。
 
-![](https://media.licdn.com/mpr/mpr/AAEAAQAAAAAAAAyWAAAAJDkyZjBkN2Y0LTU1ZjctNDY4Ni1hYTZkLTU1NTE5M2Y2MWI2NA.png)
+![](images/68747470733a2f2f6d656469612e6c6963646e2e636f6d2f6d70722f6d70722f41414541415141414141414141417957414141414a446b795a6a426b4e3259304c5455315a6a63744e4459344e69316859545a6b4c5455314e5445354d3259324d5749324e.png)
 
 合作伙伴体系一直是微软的重要资产，在全球有数以百万计的各种规模的合作伙伴，这一点都不夸张。每年都有一次规模盛大的全球合作伙伴大会，今年的大会将在华盛顿举行，有意思的是，这一届又与时俱进地改了名字，希望进一步激励和启迪所有人在数字化转型的道路上锐意创新吧。
 
-![](https://media.licdn.com/mpr/mpr/AAEAAQAAAAAAAAq2AAAAJDI0ZDNkZWU1LTAxYjgtNDViMS05ZjUwLTY2OWI0MzMyNTM4Mw.png)
+![](images/68747470733a2f2f6d656469612e6c6963646e2e636f6d2f6d70722f6d70722f41414541415141414141414141417132414141414a4449305a444e6b5a5755314c544178596a67744e4456694d5330355a6a55774c5459324f5749304d7a4d794e544d344d.png)
 
 开发人员是Office 365生态中的重要力量，在微软内部研发工程师仍然占了大部分的比例，至少包括基础架构的开发团队，Office 365功能开发的团队，以及为Office 365设计接口的团队，还有一些特殊版本本地化的研发团队等。
 
@@ -139,4 +141,4 @@ Facebook的选择让我们看到这种级别的科技企业的决断力，也许
 
 为了更好地建设围绕Office 365的中文用户社区，微软有多个部门都在积极努力，下面这篇文章我详细地介绍了这方面的信息，如果有兴趣的朋友请参考
 
-[介绍Office 365 中文用户社区 4.0](http://www.linkedin.com/pulse/%E4%BB%8B%E7%BB%8Doffice-365-%E4%B8%AD%E6%96%87%E7%94%A8%E6%88%B7%E7%A4%BE%E5%8C%BA-40-%E5%B8%8C%E7%AB%A0-%E9%99%88)
+[介绍Office 365 中文用户社区 4.0](office365community.md)

@@ -16,7 +16,7 @@
 
 这个版本没有用年份来编号（实际上应该是Office 2002），原因估计是为了配合Windows XP的整体市场宣传定位。它的特殊之处在于有一个所谓的开发版（2000也有开发版，但在2002这个版本更加完善），有怀旧情结的同学，请移步这里进行围观。值得一提的是，虽然同样带有XP的光环，但Office XP远没有Windows XP那么风光（服役超过13年，甚至直到现在都还有用户对其念念不舍），因为它很快就被Office 2003取代了。
 
-![](https://media.licdn.com/mpr/mpr/AAEAAQAAAAAAAAp8AAAAJGIzMjM3NGQyLTdiOTEtNGMxZi05MmQyLWZmYWIyZTI2YjIxMg.jpg)
+![](images/68747470733a2f2f6d656469612e6c6963646e2e636f6d2f6d70722f6d70722f41414541415141414141414141417038414141414a47497a4d6a4d334e4751794c5464694f5445744e474d785a6930354d6d51794c575a6d595749795a544932596a49784d.jpg)
 
 
 ### 2. Office 2003
@@ -25,7 +25,7 @@
 
 学习Excel的VBA，我是完全认真的，一个佐证就是我在那个年月愿意花五十美金托人从国外辗转买来下面这样一本足有1000多页的书过来啃，而师从Mr.Spreadsheet——John Walkenbach，也算系出名门了。这本书以及John本人对我影响之大，很难用一两句讲清楚——在那个相对单纯的年代，我一头扎进Excel VBA的世界里，收获的可不仅仅是写代码带来的乐趣，还有在微软技术社区（那会儿叫新闻组）中认识的一大批朋友。事到如今，如果说我有什么遗憾的话，一是还没有见过John的真人，另外一个就是我虽然有心想把这本书传承给一位有缘人，但一直没有找到——它太厚了。
 
-![](https://media.licdn.com/mpr/mpr/AAEAAQAAAAAAAAzFAAAAJDBhYTkxNmQzLTczNDMtNGJhYS04YmMyLWIyY2EzOGFiNGYyNQ.jpg)
+![](images/68747470733a2f2f6d656469612e6c6963646e2e636f6d2f6d70722f6d70722f41414541415141414141414141417a46414141414a44426859546b784e6d517a4c54637a4e444d744e474a6859533034596d4d794c5749795932457a4f4746694e4759794e.jpg)
 
 
 ### 3.Office 2007
@@ -38,12 +38,12 @@
 
 > 针对.NET开发人员，微软还专门提供了OpenXML SDK，支持从自定义程序中通过OpenXML的标准操作Office文档（不要求本地安装有Office）。
 
-![](https://media.licdn.com/mpr/mpr/AAEAAQAAAAAAAAnPAAAAJDUxNjNiOGM3LWNkZDUtNDAzMi1hM2M0LTY2M2U1YzJiODg1Nw.jpg)
+![](images/68747470733a2f2f6d656469612e6c6963646e2e636f6d2f6d70722f6d70722f41414541415141414141414141416e50414141414a4455784e6a4e694f474d334c574e6b5a4455744e44417a4d6931684d324d304c5459324d325531597a4a694f4467314e.jpg)
 
 ### 4.Office 2013
 
 Office 2010相较2007来说，我感觉主要是一些界面细节的优化。但Office 2013是一个向云而生的版本，它有很多重要的创新，例如增强了与云端服务整合的能力、跨平台和设备的能力、协同编辑的能力等，还有一条对开发人员来说至关重要——它带来了一个所谓的App开发模式，而且这个模式是涵盖到了客户端和服务器端以及云端完整的产品线的。首先，这从根本上解决了开发人员部署应用程序的困扰，其次，它将通过Office Store建立一个全新的生态环境。
-![](https://media.licdn.com/mpr/mpr/AAEAAQAAAAAAAAr2AAAAJGM2ZGEwMmVkLTQ5NDQtNDMwYi05ZThiLWVhYTYyMmUyMzBlOA.png)
+![](images/68747470733a2f2f6d656469612e6c6963646e2e636f6d2f6d70722f6d70722f41414541415141414141414141417232414141414a474d325a4745774d6d566b4c5451354e4451744e444d77596930355a5468694c575668595459794d6d55794d7a426c4f.png)
 
 
 毫无疑问，我接下来要谈的将是Office 365。这样说，其实并不是说Office 2016不重要，虽然未来还将有Office 20xx这样按照年份编号的版本（我们称为本地版本），但Office 365将代表着微软对于广大Office用户的最终承诺，它已经有并且还将不断有各种创新，用技术的变革来推动生产力的进步。但在展开Office 365之前，请让我对此前的两种开发技术/模式——VBA和VSTO——进行一个归纳，向经典致敬。
@@ -55,24 +55,25 @@ VBA的全称是Microsoft Visual Basic for Applications。在多个Office客户�
 虽然理论上说VBA可以做很多事情，但它主要擅长的是对应用程序内部操作的自动化。例如，我需要根据Excel一个表格的数据，每一行生成一个表单，然后发送到打印机去打印出来。
 
 你现在能找到的任何一个Office版本，你打开某个应用（例如Excel）后，按下ALT+F11键即可进入VBA的编辑器界面。
-![](https://media.licdn.com/mpr/mpr/AAEAAQAAAAAAAA2HAAAAJGJmMWRjMWQyLTNmOTctNDYyNC04OTY1LWRhYWU4YjMxYjQxYg.png)
+![](images/68747470733a2f2f6d656469612e6c6963646e2e636f6d2f6d70722f6d70722f41414541415141414141414141413248414141414a474a6d4d57526a4d5751794c544e6d4f5463744e4459794e4330344f5459314c57526859575534596a4d78596a517859.png)
 
 
 绝大部分应用程序的VBA编辑器都支持三类模块：首先是该应用本身的对象模块（通常跟该应用程序的行为——主要体现为事件——密切相关），然后是Forms（这是Visual Basic这个名称中Visual的意思，即可视化的编程），然后就是类模块。由于之前提到VBA主要是对Office的自动化，所以相当一部分VBA程序代码都集中在应用本身的对象模块中，而某些标准化较高的通用组件（例如我的偶像John的不朽杰作——Power Pack），则有大量代码在类模块或者Forms中。
 
 我是工作之后才真正学习计算机编程的，所以实际上可以说，是VB/VBA带我进入了面向对象编程的大门。多少个抽着劣质香烟熬着的夜晚，我都是在跟下面这样的错误提示消息作战，直到多年以后的技术有了一定的提高，我也终于真正意义上找到了对象。
-![](https://media.licdn.com/mpr/mpr/AAEAAQAAAAAAAAvNAAAAJDM0NDM3ODE5LTY1ZjItNDA2NS1hNTFkLWY1MmY2ZTEwNWYyYw.jpg)
+
+![](images/68747470733a2f2f6d656469612e6c6963646e2e636f6d2f6d70722f6d70722f4141454141514141414141414141764e414141414a444d304e444d334f4445354c5459315a6a49744e4441324e5331684e54466b4c5759314d6d59325a5445774e57597959.jpg)
 
 
 学习VBA的首要工作就是要比较清楚地了解应用程序的对象模型，严格来说，这个并不难，微软提供了相当丰富详细的帮助文档（例如Excel的不完全对象模型如下），但是熟才能生巧，只有大量的实践才可能真正地得心应手。
 
-![](https://media.licdn.com/mpr/mpr/AAEAAQAAAAAAAAoCAAAAJDBiYjczN2ZkLWI3ZDMtNGQ5MS04OGI5LTZjZWRiYTc3Zjk1Yg.gif)
+![](images/68747470733a2f2f6d656469612e6c6963646e2e636f6d2f6d70722f6d70722f41414541415141414141414141416f43414141414a444269596a637a4e325a6b4c5749335a444d744e4751354d5330344f4749354c545a6a5a575269595463335a6a6b3159.jpg)
 
 但是，一个好消息是，在Office应用程序中，都提供了录制宏的功能，也就是说，你可以先按照想法进行操作，然后录制工具会把相应的代码记录下来，通常这些代码直接就可以运行，但是理想情况下应该是略加修改才真正有实用价值。毫不避讳地说，这是我早年学习VBA的一个重要法宝。编程工具能做到这个层面，不光是业界良心，而且从技术上面说也是相当先进的。
 
 > 宏——macro——是VBA中的一个重要概念，通常可以简单理解为一组代码。
 
-![](https://media.licdn.com/mpr/mpr/AAEAAQAAAAAAAAyyAAAAJDliMGQ3Y2IwLWE0M2QtNGVkOS1iYTk0LTgyMDg2MGQwYmRjNA.png)
+![](images/68747470733a2f2f6d656469612e6c6963646e2e636f6d2f6d70722f6d70722f41414541415141414141414141417979414141414a446c694d475133593249774c5745304d3251744e47566b4f53316959546b304c5467794d4467324d475177596d526a4e.png)
 
 VBA代码的部署一般分为两种，它可以作为Office文档的一部分存在（例如只是某个文件的特定功能的话），也可以单独存在（假定是一个通用的功能，尤其是希望在应用程序启动的时候就自动加载的话）。前者不消多说，现在一般就是通过带有m后缀的文件名保存即可（例如xlsm, docm等），后者有一个更加专用的格式（例如xlam）和叫法（加载宏）。
 
@@ -83,10 +84,10 @@ VSTO的全称是Visual Studio Tools for Office，最早的版本出现在Visual 
 为什么会推出VSTO这套工具呢？我个人觉得一方面是因为Visual Studio 及.NET自身发展的需要，另一方面是Office及开发人员的需要。VBA很好，但它的局限性也比较明显——它主要适合做应用程序内部的自动化，很难便捷地跟外界系统或网络资源打交道，同时对于新版本Office的一些特殊功能（例如Ribbon或者Task Pane等）也缺乏支持。
 
 最新版本的Visual Studio 2017中，采用了模块化的安装体验，如果选择了Office 开发这个模块，那么就可以在项目模板中看到一大堆VSTO的模板（针对不同的应用程序，还会有不同的模板），如下图所示
-![](https://media.licdn.com/mpr/mpr/AAEAAQAAAAAAAAqtAAAAJDk3ZDFjMjRhLTMxYzAtNDdmNS1hNzIzLWM0OThjOTc3ZWY4Ng.png)
+![](images/68747470733a2f2f6d656469612e6c6963646e2e636f6d2f6d70722f6d70722f41414541415141414141414141417174414141414a446b335a44466a4d6a52684c544d78597a41744e44646d4e5331684e7a497a4c574d304f54686a4f5463335a5759344e.png)
 
 我选择了Excel Add-in这个模板，点击“Ok”后，会自动生成如下的代码
-![](https://media.licdn.com/mpr/mpr/AAEAAQAAAAAAAAtBAAAAJGIyMDY1YzRlLTllMTItNGRlYS1iYzMzLWZkM2M5MjE4YWE4Mw.png)
+![](images/68747470733a2f2f6d656469612e6c6963646e2e636f6d2f6d70722f6d70722f41414541415141414141414141417442414141414a4749794d445931597a526c4c546c6c4d5449744e47526c59533169597a4d7a4c575a6b4d324d354d6a4534595745344d.png)
 
 这里就是我们熟悉的.NET编程的体验，可以用到几乎所有.NET Framework的功能，目前VSTO支持的开发语言除了VB.NET，还有C#。
 
@@ -96,7 +97,7 @@ VSTO的全称是Visual Studio Tools for Office，最早的版本出现在Visual 
 
 必须提出的是，微软对于VBA和VSTO的支持将继续保留，它们有自己的优势，尤其是对于Office 应用程序自有功能的自动化、快速开发、在本地使用的场景。如果大家有兴趣对VBA或者VSTO进行学习和交流，我推荐大家关注[ExcelHome](http://www.excelhome.net)，相信我，这是一个神奇的网站——“Excel教程下载和软件下载中心，Microsoft技术社区联盟成员，全球领先的Excel门户，Office技术培训的最佳社区”。
 
-![](https://media.licdn.com/mpr/mpr/AAEAAQAAAAAAAAykAAAAJDYzOWJiMDk0LTczNjgtNDU0YS1iNTQyLTgwYWY4NDU3MDk4Mg.png)
+![](images/68747470733a2f2f6d656469612e6c6963646e2e636f6d2f6d70722f6d70722f4141454141514141414141414141796b414141414a44597a4f574a694d446b304c54637a4e6a67744e445530595331694e5451794c546777595759344e4455334d446b344d.png)
 
 
 > 本文将同时在 微软中国Office 365官方微信号连载，欢迎关注“ mschinaoffice365"，每周都会收到各种新功能介绍和实用技巧。

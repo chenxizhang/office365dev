@@ -16,20 +16,21 @@
 ## 申请Office 365一年免费的开发者账号
 
 要进行Office 365开发，当然需要有完整的Office 365环境才可以。为了便于广大开发人员快速地启动这项工作，微软官方给所有开发人员提供了免费的一年开发者账号，申请地址如下 https://dev.office.com/devprogram
-![](https://media.licdn.com/mpr/mpr/AAEAAQAAAAAAAAzDAAAAJGUwM2JjZWYyLWE4NmQtNDI2MC05M2FjLTJhNGM0MGNlYTY3OA.png)
+![](images/68747470733a2f2f6d656469612e6c6963646e2e636f6d2f6d70722f6d70722f41414541415141414141414141417a44414141414a4755774d324a6a5a5759794c5745344e6d51744e4449324d4330354d32466a4c544a684e474d304d474e6c595459334f.png)
 
 申请的时候，需要提交一定的信息，然后很快会收到一个确认邮件，里面有一个注册链接（带有优惠码），请注意将这个链接在浏览器的私有模式下（Private Browser）打开，然后按照提示设置账号，如果不出意外的话，五分钟内，你将拥有一个完整的Office 365的环境。
 
 > 这里建议链接在浏览器的私有模式下打开，是考虑到有不少朋友可能已经有正式在用的Office 365账号，如果不是在私有模式下，则会提示说账号已经存在，不能重复申请之类的信息。如果你有Office 365的账号，理论上已经可以开始开发，但本教程将要求大家申请这个一年的免费开发者账号，以获得一致性的体验。
 
-![](https://media.licdn.com/mpr/mpr/AAEAAQAAAAAAAAsEAAAAJDczNzM0MDQyLTBmYTctNGVmMC04YjNlLTIwYzMxNTQ2MmU0OQ.png)
-![](https://media.licdn.com/mpr/mpr/AAEAAQAAAAAAAAuFAAAAJDI2M2ZlNGUzLTc0YmMtNDFmNi04Yjc5LWQ0NTBkMjU0NzYxMw.png)
+![](images/68747470733a2f2f6d656469612e6c6963646e2e636f6d2f6d70722f6d70722f41414541415141414141414141417345414141414a44637a4e7a4d304d4451794c54426d595463744e47566d4d433034596a4e6c4c544977597a4d784e5451324d6d55304f.png)
+
+![](images/68747470733a2f2f6d656469612e6c6963646e2e636f6d2f6d70722f6d70722f41414541415141414141414141417546414141414a4449324d325a6c4e47557a4c546330596d4d744e44466d4e693034596a63354c5751304e54426b4d6a55304e7a59784d.png)
 
 值得注意的是，申请下来的这个环境其实带有5个Office 365 E3 Developer的License，也就是说，你甚至还可以邀请四位同事（或者朋友）组成一个团队进行开发测试。
 
 > 请注意，这里申请的是国际版的Office 365 E3，绝大部分功能在国内版的Office 365 E3中是一致的，后续文章中，如果有涉及到功能不一致的地方，我会有所说明。
 
-![](https://media.licdn.com/mpr/mpr/AAEAAQAAAAAAAAz4AAAAJGUyY2YxZTljLWY5Y2YtNDgwYS05OWEzLWM5ZmJhMGMwODkwOA.png)
+![](images/68747470733a2f2f6d656469612e6c6963646e2e636f6d2f6d70722f6d70722f41414541415141414141414141417a34414141414a475579593259785a546c6a4c575935593259744e446777595330354f57457a4c574d355a6d4a684d474d774f446b774f.png)
 
 正如你所看到的那样，有了Office 365的账号，你就同时拥有了在多个设备安装Office 365 ProPlus的权利，同时还有很多有意思的服务。请自行安装，后续开发期间我们将不再对此进行赘述。
 
@@ -49,15 +50,15 @@ https://support.office.com/learn/office365-for-business?ui=en-US&rs=en-US&ad=U
 2. Visual Studio Code （免费，跨平台支持）
 
 这个月初发布的Visual Studio 2017 家族，一如既往的豪华阵营，有Enterprise，Professional，Community这主要三个版本。值得注意的是，Community这个版本是免费的，而Office 365的开发是完全受Community版本支持的。
-![](https://media.licdn.com/mpr/mpr/AAEAAQAAAAAAAAzpAAAAJDQ3NDY3YTNhLTY4MmYtNGI2NS04N2E1LTRlZDJlOWNlNWEyNQ.png)
+![](images/68747470733a2f2f6d656469612e6c6963646e2e636f6d2f6d70722f6d70722f41414541415141414141414141417a70414141414a4451334e44593359544e684c5459344d6d59744e4749324e5330344e3245314c54526c5a444a6c4f574e6c4e5745794e.png)
 
 在Viusal Studio 2017中开发Office 365应用，一个明显的感觉就是方便，模板和向导做的非常到位，开发人员可以将主要的精力花在业务功能上面。
-![](https://media.licdn.com/mpr/mpr/AAEAAQAAAAAAAAxSAAAAJDQ2OTcxN2I5LTJjNjAtNDEwMy04NjU2LWZkMzYxMjgxMTgzMw.png)
+![](images/68747470733a2f2f6d656469612e6c6963646e2e636f6d2f6d70722f6d70722f41414541415141414141414141417853414141414a4451324f5463784e3249354c544a6a4e6a41744e4445774d7930344e6a55324c575a6b4d7a59784d6a67784d54677a4d.png)
 
 另外，我要特别介绍的还有一个跨平台的免费开发工具，Visual Studio Code。所谓跨平台，是因为这个特殊的Visual Studio不仅仅可以在Windows上面运行，还可以在Mac，Linux上面运行，同时他能很好地支持开源的开发平台，例如NodeJS。
 
 Visual Studio Code的下载地址是：http://code.visualstudio.com/
-![](https://media.licdn.com/mpr/mpr/AAEAAQAAAAAAAAwpAAAAJDQ4OTg2NTdiLTYyMGEtNDRkOS1hYzcxLTE0OTgyMGNiNjY0OA.png)
+![](images/68747470733a2f2f6d656469612e6c6963646e2e636f6d2f6d70722f6d70722f41414541415141414141414141417770414141414a4451344f5467324e5464694c5459794d4745744e44526b4f533168597a63784c5445304f5467794d474e694e6a59304f.png)
 
 我必须告诉你，Visual Studio Code是我非常喜欢的一款编辑器，而它对于Office 365 Add-ins开发的支持，让我感到非常意外的惊喜。在进行后续文章的学习之前，你需要先对Visual Studio Code的Office Add-in开发支持有基本的了解，http://code.visualstudio.com/docs/other/office
 

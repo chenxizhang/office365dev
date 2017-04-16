@@ -9,7 +9,7 @@
 
 在网络还不是很发达和普及的时候（应该是2005年前），微软的用户社区大多是通过一种叫做新闻组（Newsgroup）的形式存在的。我是新闻组的重（中）度（毒）用户之一，而且也是新闻组的版主（当年我负责Excel）。新闻组是要通过一款叫Outlook Express的软件来收取的，使用体验类似于邮件，我们可以在一个时间收下来某个版块的一些讨论问题，然后在离线的状态下进行回复，等到下次可以联网的时候，再一次性发出去即可。
 
-![新闻组订阅](https://media.licdn.com/mpr/mpr/AAEAAQAAAAAAAA2NAAAAJDkyYTFkYzgyLTg3ZmMtNDI3MC04MzA5LTcxOTkxNmIyMGQwNw.gif)
+![新闻组订阅](images/68747470733a2f2f6d656469612e6c6963646e2e636f6d2f6d70722f6d70722f4141454141514141414141414141324e414141414a446b795954466b597a67794c5467335a6d4d744e4449334d4330344d7a41354c5463784f546b784e6d49794d4751774e.jpg)
 
 关于如何使用新闻组，有兴趣的朋友，可以参考这个链接，今天再次回过头来看，还是满满的怀念啊。不过，时代总是在发展的，我们需要往前看。
 
@@ -20,18 +20,18 @@
 1. 针对开发人员的MSDN社区，访问地址是 https://social.msdn.microsoft.com/Forums/zh-cn/home
 1. 针对IT专业人士的TechNet社区，访问地址是 https://social.technet.microsoft.com/Forums/zh-cn/home
 
-![TechNet论坛](https://media.licdn.com/mpr/mpr/AAEAAQAAAAAAAAplAAAAJDM0ZjA1YzVjLTIxZWYtNDkyMS05ZDJlLWRkNjhjNTcwZjg2ZA.png)
+![TechNet论坛](images/68747470733a2f2f6d656469612e6c6963646e2e636f6d2f6d70722f6d70722f4141454141514141414141414141706c414141414a444d305a6a4131597a566a4c5449785a5759744e446b794d5330355a444a6c4c57526b4e6a686a4e5463775a6a67325a.png)
 
 目前这些论坛都还是活跃的，也仍然是一个可用的渠道之一。只是这些年微软的产品线和技术其实变化较大，这些论坛并没有提供最新的技术的版块，例如Office 365，Azure等。但是这个问题其实已经有所改善了，去年下半年，总部统一发布了全新一代在线技术论坛，访问地址是 https://techcommunity.microsoft.com
 
 
 
-![微软技术论坛](https://media.licdn.com/mpr/mpr/AAEAAQAAAAAAAAyCAAAAJDRhMDcxNzgyLTkzYTQtNDgwOC1iZTFiLWM4ZDg5NDMxNDU4OA.png)
+![微软技术论坛](images/68747470733a2f2f6d656469612e6c6963646e2e636f6d2f6d70722f6d70722f41414541415141414141414141417943414141414a4452684d4463784e7a67794c546b7a595451744e4467774f4331695a5446694c574d345a4467354e444d784e4455344f.png)
 这个新的在线技术社区提供了最新的技术版块，唯一的美中不足就是，目前只有英文版，而且短期之内应该很难看到中文版。
 
 值得一提的是，如果是具体到某个产品线，国内有不少优秀的中文社区，这是对官方资源的有益补充。例如，如果是Office相关，我推荐大家关注ExcelHome这个华语地区最大的中文技术社区，截止目前拥有超过300万的注册用户，他们的地址是 http://www.excelhome.net/
 
-![ExcelHome](https://media.licdn.com/mpr/mpr/AAEAAQAAAAAAAA2iAAAAJDg4NTAzZTc0LWM3ODgtNGExNy05YmEyLTNkYjAyNzA2ZGI4NQ.png)
+![ExcelHome](images/68747470733a2f2f6d656469612e6c6963646e2e636f6d2f6d70722f6d70722f41414541415141414141414141413269414141414a4467344e54417a5a5463304c574d334f4467744e4745784e793035596d45794c544e6b596a41794e7a41325a4749344e.png)
 
 
 ## 用户社区3.0：社交媒体
@@ -44,12 +44,12 @@
 1. QQ群和微信群，这个目前应用非常广，他们的好处是可以有较好的互动性，尤其是有一些与时俱进的功能（例如发红包）等。
 
 目前来说，针对Office 365，我们有一个官方公众号——“微软中国Office365”
-![微软中国Office 365](https://media.licdn.com/mpr/mpr/AAEAAQAAAAAAAAwtAAAAJGM2NGUwYjI4LWFjMzEtNDllYy1hMjk0LWNlMzhjYzRiMjFiZQ.jpg)
+![微软中国Office 365](images/68747470733a2f2f6d656469612e6c6963646e2e636f6d2f6d70722f6d70722f41414541415141414141414141417774414141414a474d324e475577596a49344c57466a4d7a45744e446c6c597931684d6a6b304c574e6c4d7a686a597a52694d6a46695a.jpg)
 
 > 上面提到过的ExcelHome也有一个官方公众号：iexcelhome
 
 另外，我们还有一个目前国内最大的微信群——Office 365技术群（O萌），这个群由国内知名的技术专家盆盆老师创立，后由本人负责运营，目前聚集了超过260位国内关注Office 365的高级用户、技术专家、运营顾问等成员，并且于去年年底正式成立了教育分社（目前有将近40人）。
-![Office技术群](https://media.licdn.com/mpr/mpr/AAEAAQAAAAAAAAn-AAAAJDVlMDZkZmEwLTdlNzYtNDVlNC04OWQyLTFmMTg4YjE3NTFlMA.jpg)
+![Office技术群](images/68747470733a2f2f6d656469612e6c6963646e2e636f6d2f6d70722f6d70722f41414541415141414141414141416e2d414141414a44566c4d445a6b5a6d45774c54646c4e7a59744e44566c4e4330344f5751794c54466d4d546734596a45334e54466c4d.jpg)
 
 ## 用户社区4.0：精准和安全的社交媒体
 
@@ -64,13 +64,13 @@
 
 *增加基于Office 365提供的企业级社交网络Yammer 群的支持*。Yammer在加入微软Office 365产品家族之前就是业界顶尖的企业级社交网络平台，可以算得上是组织内部的Facebook。对于Office 365用户而言，本身就已经可以使用Yammer，而且它也有非常好的移动化支持。
 
-![Yammer](https://media.licdn.com/mpr/mpr/AAEAAQAAAAAAAAxeAAAAJDJkMWFmMzRhLTVhZWQtNDFkNy1hMGJmLTdkZjcyZjhhYjMyYw.jpg)
+![Yammer](images/68747470733a2f2f6d656469612e6c6963646e2e636f6d2f6d70722f6d70722f41414541415141414141414141417865414141414a444a6b4d57466d4d7a52684c5456685a5751744e44466b4e7931684d474a6d4c54646b5a6a63795a6a6868596a4d7959.jpg)
 
 有兴趣的朋友，可以填写如下的表单申请加入。请大家体谅，因为白天比较忙，我会在每天晚上统一处理请求，如果你填写信息完整，那么很快会收到邀请加入的邮件。
 
 [https://aka.ms/joinoffice365community](https://aka.ms/joinoffice365community)
 
-![申请表](https://media.licdn.com/mpr/mpr/AAEAAQAAAAAAAAqrAAAAJDQ5MzBjYWZkLWYwZTktNDIwYS04YTM3LWIxYTc4ZTZlYmM0Zg.png)
+![申请表](images/68747470733a2f2f6d656469612e6c6963646e2e636f6d2f6d70722f6d70722f41414541415141414141414141417172414141414a4451354d7a426a59575a6b4c5759775a546b744e4449775953303459544d334c574978595463345a545a6c596d4d305a.png)
 
 
 *进一步加大行业社群，专业技术社群的建设*，提供更加有针对性的讨论空间。
