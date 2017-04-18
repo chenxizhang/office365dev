@@ -12,7 +12,7 @@
 下面将简单演示五个场景，帮助大家理解Microsoft Graph API及其工作原理。
 
 ## 登录Graph 浏览器
-![Graph浏览器](./images/graphexplorer.png)
+![Graph浏览器](./images/graphexplorer.PNG)
 
 点击上图中的“登录”按钮，使用国际版Office 365账号进行登录。请注意，我在此前的[文章](office365devenv.md)中已经介绍了如何申请一个为期一年的Office 365开发者订阅。
 
@@ -88,11 +88,12 @@ https://graph.microsoft.com/v1.0/me/mailFolders/**inbox**/messages
 
 ```
 
-![发送邮件](./images/graphexplorersendmail.png)
+![发送邮件](./images/graphexplorersendmail.PNG)
 
 如果发送成功的话，返回状态码为200，反之，则会有详细的错误信息。
 
 ## 结语
 本文我介绍了利用Graph 浏览器快速体验Microsoft Graph的强大功能。以上只是举了几个常见的例子，如何用支持的功能很多，等待你的发现，常见的查询请参考下图
 
-![常见查询](./images/graphexplorerquerysample.png)
+![更多场景](./images/graphexplorerquerysample.PNG)
+
