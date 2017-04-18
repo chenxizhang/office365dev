@@ -48,12 +48,51 @@ Microsoft Graph的服务是RESTful的，具体表现在发起服务请求，只�
 https://graph.microsoft.com/v1.0/me/mailFolders/**inbox**/messages
 
 如果想要对返回结果集做筛选，排序，请参考下面这样的语法
+1. 只选择前五封邮件  https://graph.microsoft.com/v1.0/me/messages?$top=5
+2. 跳过前五封邮件选择十封邮件 https://graph.microsoft.com/v1.0/me/messages?$skip=5&take=10
+3. 按照发件人邮件地址排序 https://graph.microsoft.com/v1.0/me/messages?$orderby=from/emailAddress/address
 
+> 更多查询参数，请参考[https://developer.microsoft.com/zh-cn/graph/docs/overview/query_parameters](https://developer.microsoft.com/zh-cn/graph/docs/overview/query_parameters)
 
 ## 发送邮件
 
+上面演示了几个场景都是查询，实际上Microsoft Graph的功能远远不止是做查询，它也可以在用户授权下进行某些操作，例如接下来要演示的发送邮件。
 
+这里需要用到的API是https://graph.microsoft.com/v1.0/me/sendmail，这个接口需要使用POST方法调用，你要发送的邮件内容通过Json格式进行定义。
+
+```
+{
+  "message": {
+    "subject":"Welcome to Microsoft Graph",
+    "body": {
+      "contentType": "Text",
+      "content": " Welcome to Microsoft Graph world."
+    },
+    "toRecipients": [
+      {
+        "emailAddress": {
+          "address": "ares@office365devlabs.onmicrosoft.com"
+        }
+      }
+    ],
+    "ccRecipients": [
+      {
+        "emailAddress": {
+          "address": "ares@xizhang.com"
+        }
+      }
+    ]
+  },
+  "saveToSentItems": "true"
+}
+
+```
+
+![发送邮件](images/graphexplorersendmail.png)
+
+如果发送成功的话，返回状态码为200，反之，则会有详细的错误信息。
 
 ## 结语
-本文我介绍了如何用支持的功能很多，等待你的发现，常见的查询请参考下图
+本文我介绍了利用Graph 浏览器快速体验Microsoft Graph的强大功能。以上只是举了几个常见的例子，如何用支持的功能很多，等待你的发现，常见的查询请参考下图
+
 ![常见查询](images/graphexplorerquerysample.png)
