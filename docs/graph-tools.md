@@ -68,7 +68,7 @@ Scope: user.read mail.read mail.send
 
 点击上图中的最右侧的“Save”按钮，然后在弹出的对话框中输入Request Name等信息即可。
 
-![保存请求](images/postman-saverequest.md)
+![保存请求](images/postman-saverequest.PNG)
 
 在保存请求的时候，我们还可以将其归类到一个集合（collection）中去。（如果你还没有创建集合，则可以选择创建一个新的集合）
 
