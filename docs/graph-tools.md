@@ -1,4 +1,4 @@
-# 通过其他第三方工具体验Micrsooft Graph
+# 通过第三方工具体验Micrsooft Graph
 
 [上一篇](graphexplorer.md)文章我介绍了如何利用官方提供的Graph 浏览器快速体验Microsoft Graph强大功能，这是极好的起点。官方的Graph浏览器力图用最简单的方式帮助您使用Microsoft Graph，为此也隐藏了很多细节。为了帮助大家更好地理解Microsoft Graph的工作原理，例如要使用Microsoft Graph需要进行应用改程序注册，OAuth的过程以及Token传递的方式等，我专门再写一篇，介绍如何通过其他第三方工具来体验Microsoft Graph。
 
