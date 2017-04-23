@@ -5,6 +5,12 @@ VisualStudioVersion = 15.0.26403.7
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "graph-consoleapplicationsample", "graph-consoleapplicationsample\graph-consoleapplicationsample.csproj", "{83A7F8C0-96B8-4DE2-93D4-659DADCBCF20}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "graph-consoleapplicationsample-china", "graph-consoleapplicationsample-china\graph-consoleapplicationsample-china.csproj", "{D0AC60D9-4062-45B1-9C82-83261A3337E0}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "graph-consoleapplicationsample-vb", "graph-consoleapplicationsample-vb\graph-consoleapplicationsample-vb.vbproj", "{9AE38C9C-56ED-43FA-9A81-8E1C153D2049}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "graph-consoleapplicationsample-china-vb", "graph-consoleapplicationsample-china-vb\graph-consoleapplicationsample-china-vb.vbproj", "{3BEDE590-623A-44E1-8133-BADDB7CE0D68}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +21,18 @@ Global
 		{83A7F8C0-96B8-4DE2-93D4-659DADCBCF20}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{83A7F8C0-96B8-4DE2-93D4-659DADCBCF20}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{83A7F8C0-96B8-4DE2-93D4-659DADCBCF20}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D0AC60D9-4062-45B1-9C82-83261A3337E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D0AC60D9-4062-45B1-9C82-83261A3337E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D0AC60D9-4062-45B1-9C82-83261A3337E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D0AC60D9-4062-45B1-9C82-83261A3337E0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9AE38C9C-56ED-43FA-9A81-8E1C153D2049}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9AE38C9C-56ED-43FA-9A81-8E1C153D2049}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9AE38C9C-56ED-43FA-9A81-8E1C153D2049}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9AE38C9C-56ED-43FA-9A81-8E1C153D2049}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3BEDE590-623A-44E1-8133-BADDB7CE0D68}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3BEDE590-623A-44E1-8133-BADDB7CE0D68}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3BEDE590-623A-44E1-8133-BADDB7CE0D68}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3BEDE590-623A-44E1-8133-BADDB7CE0D68}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
