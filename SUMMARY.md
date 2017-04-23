@@ -20,6 +20,7 @@
         * [Microsoft Graph  服务应用程序](/docs/deamonapplication.md)
     * 其他话题
         * [如何保存和刷新访问令牌](/docs/accesstoken.md)
+        * [需要管理员同意的权限](/docs/adminconsent.md)
 * Office Add-ins
     * Office Add-in 技术架构
     * Outlook Add-in
