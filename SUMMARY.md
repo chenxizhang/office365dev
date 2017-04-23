@@ -18,6 +18,8 @@
         * [PowerShell脚本访问Microsoft Graph](/docs/powershell-application.md)
         * [Microsoft Graph  Web应用/API](/docs/webapplication.md)
         * [Microsoft Graph  服务应用程序](/docs/deamonapplication.md)
+    * 其他话题
+        * [如何保存和刷新访问令牌](/docs/accesstoken.md)
 * Office Add-ins
     * Office Add-in 技术架构
     * Outlook Add-in
