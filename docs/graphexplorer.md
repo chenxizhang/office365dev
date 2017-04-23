@@ -1,4 +1,5 @@
 # 通过Graph 浏览器体验Microsoft Graph
+> 作者：陈希章 发表于 2017年3月18日
 
 [上一篇](microsoftgraphoverview.md)介绍了Microsoft Graph的基本概念，接下来我们快速体验一下Microsoft Graph到底能做什么？
 

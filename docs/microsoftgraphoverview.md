@@ -1,4 +1,5 @@
 # Microsoft Graph 概述
+> 作者：陈希章 发表于 2017年3月17日
 
 这个[系列文章](../readme.md) 已经进行到了实质的阶段，继[上一篇](office365devenv.md)介绍了如何搭建Office 365开发环境之后，我会通过这篇文章给大家介绍一个非常重要的概念：Microsoft Graph。它之所以重要，首先是因为它是未来Office 365对外的统一接口（甚至可以说是未来微软的云服务的对外统一接口），其次，Microsoft Graph对于不少Office 365开发人员来说是一个需要先跨过的门槛，这个关过去了，后续进行针对性的开发（Office Add-in，SharePoint Add-in，Office 365 Connector等）才更加得心应手。
 

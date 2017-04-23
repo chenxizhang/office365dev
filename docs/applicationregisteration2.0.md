@@ -1,4 +1,5 @@
 # 注册Azure AD 2.0 应用程序
+> 作者：陈希章 发表于 2017年3月22日
 
 [上一篇](applicationregisteration.md) 介绍了Microsoft Graph应用程序的一些概念，以及目前还比较普遍的Azure AD 1.0应用程序的注册方式。但正如我多次提到的那样，虽然目前功能还在不断完善，但Azure AD 2.0会逐渐成为主流，它有如下几个优势
 
