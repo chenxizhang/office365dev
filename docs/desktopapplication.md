@@ -344,5 +344,8 @@ End Module
 ```
 > 从上面的代码对照来看，Azure AD 1.0的方式，需要开发人员处理更多细节，例如身份验证，服务调用结果处理等等。如果有兴趣并且有能力的朋友，欢迎在这个基础上做一定的封装，简化开发。
 
+本文所有代码范例，可以通过 <https://github.com/chenxizhang/office365dev/tree/master/samples/graph-consoleapplicationsample> 查看或者下载
+![](images/graph-consoleapplicationsample.PNG)
+
 ## 结语
 本文完整地介绍了针对国际版和中国版Office 365，在桌面应用程序中如何实现Microsoft Graph的集成。针对国际版，我采用的是Azure AD 2.0的方式；针对中国版，我采用的是Azure AD 1.0的方式。同时，为了照顾到VB.NET的开发人员，本文所有范例都提供了VB.NET的版本。
