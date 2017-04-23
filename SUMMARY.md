@@ -14,9 +14,10 @@
         * [注册Azure AD 2.0 应用程序](/docs/applicationregisteration2.0.md)
         * [注册中国版Microsoft Graph应用程序](/docs/chinaoffice365applicationregisteration.md)
     * 开发Microsoft Graph 应用程序
-        * 桌面应用程序
-        * Web应用/API
-        * 服务应用程序
+        * [桌面应用程序](/docs/desktopapplication.md)
+        * [PowerShell脚本](/docs/powershell-application.md)
+        * [Web应用/API](/docs/webapplication.md)
+        * [服务应用程序](/docs/deamonapplication.md)
 * Office Add-ins
     * Office Add-in 技术架构
     * Outlook Add-in

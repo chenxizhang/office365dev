@@ -10,7 +10,7 @@
 
 
 ## 注册应用程序
-你需要登录到<https://manage.windowsazure.cn>这个管理门户（旧版）才能进行中国版Office 365应用程序注册。
+你需要登录到 <https://manage.windowsazure.cn> 这个管理门户进行中国版Office 365应用程序注册。
 >需要注意的是，目前国内版的Azure，如果要管理活动目录（AD），还只能用旧版。而且如果你是刚开通中国版的Office 365，那么默认还无法访问到对应的Azure AD的，这有点让人迷惑，但我这里有一个变通办法 <http://www.cnblogs.com/chenxizhang/p/6010139.html> 
 
 ![中国版Azure管理中心](images/mooncake-portal.PNG)
