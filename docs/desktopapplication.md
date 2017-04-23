@@ -3,7 +3,7 @@
 
 桌面应用程序，在我这篇文章的语境中，我是特指在Windows桌面上面直接运行的.NET应用程序，包括Console Application，WPF Application，Windows Forms Application, UWP Application，并且限于篇幅，我只会以Console Application作为演示，因为无论表现形式如何不同，它们从本质上是类似的。
 
-> 本文所附带示例代码可以通过<https://github.com/chenxizhang/office365dev/tree/master/samples/graph-consoleapplicationsample>,这是由Visual Studio 2017编写,开发语言为C#,在Windows 10 Enterprise上面测试通过。请注意，作为演示目的，我尽可能在范例代码中仅包含最必要的代码。
+> 本文所附带示例代码可以通过<https://github.com/chenxizhang/office365dev/tree/master/samples/graph-consoleapplicationsample> 访问,这是由Visual Studio 2017编写,开发语言为C#,在Windows 10 Enterprise上面测试通过。请注意，作为演示目的，我尽可能在范例代码中仅包含最必要的代码。
 
 ## 注册Microsoft Graph应用程序
 要进行具体的编程之前，你需要注册Microsfot Graph应用程序。本系列文章约定，针对国际版我将采用Azure AD 2.0这种方式进行注册，而针对中国版将采用Azure AD 1.0这种方式。这两种方式的详细操作步骤，以及我注册好的范例应用程序，请参考
@@ -15,7 +15,7 @@
 ![](images/gallatin-nativeapplicationsample.PNG)
 
 ## 创建Console Application 
-不要问我怎么做这个事情，你应该知道，我也知道。
+不要问我怎么做这个事情，你应该知道的。
 ![](images/graph-createconsoleapplication.png)
 
 ## 考虑安全认证功能
