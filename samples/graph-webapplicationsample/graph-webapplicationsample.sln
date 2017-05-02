@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26403.7
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "graph-webapplicationsample", "graph-webapplicationsample\graph-webapplicationsample.csproj", "{7CF297F0-1683-4952-A16C-36F1EE48A0BC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "graph-webapplicationsample-aspnetmvc", "graph-webapplicationsample-aspnetmvc\graph-webapplicationsample-aspnetmvc.csproj", "{9157ACC7-3EE4-4394-8694-3E128C3FE97E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +11,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{7CF297F0-1683-4952-A16C-36F1EE48A0BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7CF297F0-1683-4952-A16C-36F1EE48A0BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7CF297F0-1683-4952-A16C-36F1EE48A0BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7CF297F0-1683-4952-A16C-36F1EE48A0BC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9157ACC7-3EE4-4394-8694-3E128C3FE97E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9157ACC7-3EE4-4394-8694-3E128C3FE97E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9157ACC7-3EE4-4394-8694-3E128C3FE97E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9157ACC7-3EE4-4394-8694-3E128C3FE97E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

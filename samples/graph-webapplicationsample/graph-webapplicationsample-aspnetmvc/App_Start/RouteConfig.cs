@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
 
-namespace graph_webapplicationsample
+namespace graph_webapplicationsample_aspnetmvc
 {
     public class RouteConfig
     {
