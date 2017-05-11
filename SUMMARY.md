@@ -16,6 +16,7 @@
     * 开发Microsoft Graph 应用程序
         * [Microsoft Graph 桌面应用程序](/docs/desktopapplication.md)
         * [PowerShell脚本访问Microsoft Graph](/docs/powershell-application.md)
+        * [支持国内版Office 365的PowerShell模块现已发布](/docs/powershell-module.md)
         * [Microsoft Graph  Web应用/API](/docs/webapplication.md)
         * [Microsoft Graph  服务应用程序](/docs/deamonapplication.md)
         * [Nodejs 应用程序](/docs/nodejsapplication.md)
