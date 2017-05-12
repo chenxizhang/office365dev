@@ -108,15 +108,6 @@ namespace MicrosoftGraphSample_ASPNETMVC
                     TokenValidationParameters = new TokenValidationParameters
                     {
                         ValidateIssuer = false,
-                        // In a real application you would use IssuerValidator for additional checks, 
-                        // like making sure the user's organization has signed up for your app.
-                        //     IssuerValidator = (issuer, token, tvp) =>
-                        //     {
-                        //         if (MyCustomTenantValidation(issuer)) 
-                        //             return issuer;
-                        //         else
-                        //             throw new SecurityTokenInvalidIssuerException("Invalid issuer");
-                        //     },
                     },
                     Notifications = new OpenIdConnectAuthenticationNotifications
                     {
@@ -133,8 +124,7 @@ namespace MicrosoftGraphSample_ASPNETMVC
 
                             AuthenticationResult result = await cca.AcquireTokenByAuthorizationCodeAsync(scopes, code);
                         },
-                        AuthenticationFailed = (context) =>
-                        {
+                        AuthenticationFailed = (context) => { 
                             context.HandleResponse();
                             context.Response.Redirect("/Error?message=" + context.Exception.Message);
                             return Task.FromResult(0);
