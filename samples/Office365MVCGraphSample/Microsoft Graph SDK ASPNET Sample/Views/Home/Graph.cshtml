@@ -1,0 +1,47 @@
+﻿<!--  Copyright (c) Microsoft. All rights reserved. Licensed under the MIT license.
+        See LICENSE in the source repository root for complete license information. -->
+
+@using Resources
+
+@{
+  ViewBag.Title = Resource.App_Name;
+}
+
+<h1>@ViewBag.Title</h1>
+<h2>@Resource.Graph_GetEmailAddress_Heading</h2>
+<p>@Html.Raw(Resource.Graph_GetEmailAddress_Instruction)</p>
+@using (Html.BeginForm("GetMyEmailAddress", "Home"))
+{
+    <div class="col-sm-12">
+        <div class="form-group">
+            <button class="btn btn-default" id="get-my-email-address">@Resource.Graph_GetEmailAddress_Button</button>
+        </div>
+    </div>
+}
+<div class="col-sm-12">
+    <label for="user-email-address">@Resource.Graph_GetEmailAddress_Results_Label</label>
+    <pre name="user-email-address">@ViewBag.Email</pre>
+</div>
+
+<h2>@Resource.Graph_SendMail_Heading</h2>
+<p>@Html.Raw(Resource.Graph_SendMail_Instruction)</p>
+@using (Html.BeginForm("SendEmail", "Home"))
+{
+    <div class="col-sm-12">
+            <div class="form-group">
+                <label for="recipients">@Resource.Graph_SendMail_Recipients_Label</label>
+                <input name="recipients" type="text" class="form-control" value="@ViewBag.Email" @(ViewBag.Email == null ? "disabled" : null) />
+            </div>
+            <div class="form-group">
+                <label for="subject">@Resource.Graph_SendMail_Subject_Label</label>
+                <input name="subject" type="text" class="form-control" value="@Resource.Graph_SendMail_Subject_Text @Resource.App_Name_Short" @(ViewBag.Email == null ? "disabled" : null) />
+            </div>
+            <div class="form-group">
+                <button class="btn btn-default @(ViewBag.Email == null ? "disabled" : null)">@Resource.Graph_SendMail_Button</button>
+                <input name="email-address" value=@ViewBag.Email type="hidden" />
+            </div>
+        </div>
+}
+<div class="col-sm-12">
+    <p class="@(ViewBag.Message == null ? "hidden" : null)">@Html.Raw(ViewBag.Message)</p>
+</div>

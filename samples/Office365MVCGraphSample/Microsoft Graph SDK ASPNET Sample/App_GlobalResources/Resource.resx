@@ -1,0 +1,244 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="About" xml:space="preserve">
+    <value>About</value>
+    <comment>Link to About page</comment>
+  </data>
+  <data name="About_Description" xml:space="preserve">
+    <value>Your application description page.</value>
+    <comment>Description of app for About view</comment>
+  </data>
+  <data name="App_Name" xml:space="preserve">
+    <value>Microsoft Graph Connect sample for ASP.NET 4.6</value>
+    <comment>Full app name for title and copyright</comment>
+  </data>
+  <data name="App_Name_Short" xml:space="preserve">
+    <value>Microsoft Graph Connect sample</value>
+    <comment>Short app name for navigation bar and browser tab</comment>
+  </data>
+  <data name="Error_AuthChallengeNeeded" xml:space="preserve">
+    <value>Caller needs to authenticate.</value>
+    <comment>Error message when unable to retrieve the access token silently.</comment>
+  </data>
+  <data name="Error_Introduction" xml:space="preserve">
+    <value>An error occurred while processing your request.</value>
+    <comment>Generic text for Error view</comment>
+  </data>
+  <data name="Error_Message" xml:space="preserve">
+    <value>Error in </value>
+    <comment>Prefix of error message sent to Error view</comment>
+  </data>
+  <data name="Graph_GetEmailAddress_Button" xml:space="preserve">
+    <value>Get email address</value>
+    <comment>Button text for 'email address' section in Graph view</comment>
+  </data>
+  <data name="Graph_GetEmailAddress_Heading" xml:space="preserve">
+    <value>Get email address</value>
+    <comment>Heading for 'email address' section in Graph view</comment>
+  </data>
+  <data name="Graph_GetEmailAddress_Instruction" xml:space="preserve">
+    <value>Choose the &lt;b&gt;Get email address&lt;/b&gt; button to get the current user's email address:</value>
+    <comment>Instructions for 'email address' section in Graph view</comment>
+  </data>
+  <data name="Graph_GetEmailAddress_Results_Label" xml:space="preserve">
+    <value>Current user's email address</value>
+    <comment>Label for email address result in Graph view</comment>
+  </data>
+  <data name="Graph_SendMail_Body_Content" xml:space="preserve">
+    <value>&lt;html&gt;&lt;head&gt;
+&lt;meta http-equiv='Content-Type' content='text/html; charset=us-ascii'&gt;
+&lt;title&gt;&lt;/title&gt;
+&lt;/head&gt;
+&lt;body style='font-family:calibri'&gt;
+&lt;h2&gt;Congratulations!&lt;/h2&gt;
+&lt;p&gt;This is a message from the Microsoft Graph Connect Sample. You are well on your way to incorporating Microsoft Graph endpoints in your apps.&lt;/p&gt;&lt;a href='{0}'&gt;See the photo you just uploaded!&lt;/a&gt;
+&lt;h3&gt;What's next?&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;Check out &lt;a href='https://developer.microsoft.com/graph'&gt;developer.microsoft.com/graph&lt;/a&gt; to start building Microsoft Graph apps today with all the latest tools, templates, and guidance to get started quickly.&lt;/li&gt;
+&lt;li&gt;Use the &lt;a href='https://developer.microsoft.com/graph/graph-explorer'&gt;Graph Explorer&lt;/a&gt; to explore the rest of the APIs and start your testing.&lt;/li&gt;
+&lt;li&gt;Browse other &lt;a href='https://github.com/search?p=5&amp;q=org%3Amicrosoftgraph+sample&amp;type=Repositories&amp;utf8=%E2%9C%93'&gt;samples on GitHub&lt;/a&gt; to see more of the APIs in action.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Give us feedback&lt;/h3&gt;
+&lt;p&gt;If you have any trouble running this sample, please &lt;a href='https://github.com/microsoftgraph/aspnet-connect-sample/issues'&gt;
+log an issue&lt;/a&gt; on our repository.&lt;/p&gt;&lt;p&gt;For general questions about the Microsoft Graph API, post to &lt;a href='https://stackoverflow.com/questions/tagged/microsoftgraph'&gt;Stack Overflow&lt;/a&gt;. Make sure that your questions or comments are tagged with [microsoftgraph].&lt;/p&gt;
+&lt;p&gt;Thanks, and happy coding!&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;Your Microsoft Graph samples development team &lt;/p&gt;
+&lt;div style='text-align:center; font-family:calibri'&gt;
+&lt;table style='width:100%; font-family:calibri'&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href='https://github.com/microsoftgraph/aspnet-connect-sample'&gt;See on GitHub&lt;/a&gt;
+&lt;/td&gt;
+&lt;td&gt;&lt;a href='https://office365.uservoice.com'&gt;Suggest on UserVoice&lt;/a&gt;
+&lt;/td&gt;
+&lt;td&gt;&lt;a href='https://twitter.com/share?text=I%20just%20started%20developing%20apps%20for%20%23ASP.NET%20using%20the%20%23MicrosoftGraph%20Connect%20app%20%40OfficeDev&amp;amp;url=https://github.com/microsoftgraph/aspnet-connect-sample'&gt;Share on Twitter&lt;/a&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</value>
+    <comment>HTML body of email (not shown in UI)</comment>
+  </data>
+  <data name="Graph_SendMail_Button" xml:space="preserve">
+    <value>Send email</value>
+    <comment>Button text for 'send mail' section in Graph view</comment>
+  </data>
+  <data name="Graph_SendMail_Heading" xml:space="preserve">
+    <value>Send an email</value>
+    <comment>Heading for 'send mail' section in Graph view</comment>
+  </data>
+  <data name="Graph_SendMail_Instruction" xml:space="preserve">
+    <value>After you get the email address, optionally change the following fields and then choose the &lt;b&gt;Send email&lt;/b&gt; button:</value>
+    <comment>Instructions for 'send mail' section in Graph view</comment>
+  </data>
+  <data name="Graph_SendMail_Message_GetEmailFirst" xml:space="preserve">
+    <value>Please choose the &lt;b&gt;Get email address&lt;/b&gt; button first.</value>
+    <comment>Message if email address is missing</comment>
+  </data>
+  <data name="Graph_SendMail_Recipients_Label" xml:space="preserve">
+    <value>Recipient email addresses, separated by a semicolon</value>
+    <comment>Label for mail recipients input in 'send mail' section in Graph view</comment>
+  </data>
+  <data name="Graph_SendMail_Subject_Label" xml:space="preserve">
+    <value>Subject of email</value>
+    <comment>Label for mail subject input in 'send mail' section in Graph view</comment>
+  </data>
+  <data name="Graph_SendMail_Subject_Text" xml:space="preserve">
+    <value>Sent from the</value>
+    <comment>Placeholder partial text for mail subject input in 'send mail' section in Graph view</comment>
+  </data>
+  <data name="Graph_SendMail_Success_Result" xml:space="preserve">
+    <value>Success! Your mail was sent.</value>
+    <comment>Success message for 'send mail' section in Graph view</comment>
+  </data>
+  <data name="Home" xml:space="preserve">
+    <value>Home</value>
+    <comment>Link to Home page</comment>
+  </data>
+  <data name="SignIn" xml:space="preserve">
+    <value>Sign in with Microsoft</value>
+    <comment>Link to Account.SignIn action</comment>
+  </data>
+  <data name="SignOut" xml:space="preserve">
+    <value>Sign out</value>
+    <comment>Link to Account.SignOut</comment>
+  </data>
+</root>

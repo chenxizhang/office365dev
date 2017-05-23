@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26510.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microsoft Graph SDK ASPNET Sample", "Microsoft Graph SDK ASPNET Sample\Microsoft Graph SDK ASPNET Sample.csproj", "{374EF207-F626-4609-98B6-0BBBF939C59C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Office365GraphMVCHelper", "Office365GraphMVCHelper\Office365GraphMVCHelper.csproj", "{2FDB9842-B24C-4412-A06C-992E47EE6329}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestMVCSample", "TestMVCSample\TestMVCSample.csproj", "{A54FE3D0-79D0-46D6-B7E5-3324A15BB053}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{374EF207-F626-4609-98B6-0BBBF939C59C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{374EF207-F626-4609-98B6-0BBBF939C59C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{374EF207-F626-4609-98B6-0BBBF939C59C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{374EF207-F626-4609-98B6-0BBBF939C59C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2FDB9842-B24C-4412-A06C-992E47EE6329}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2FDB9842-B24C-4412-A06C-992E47EE6329}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2FDB9842-B24C-4412-A06C-992E47EE6329}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2FDB9842-B24C-4412-A06C-992E47EE6329}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A54FE3D0-79D0-46D6-B7E5-3324A15BB053}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A54FE3D0-79D0-46D6-B7E5-3324A15BB053}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A54FE3D0-79D0-46D6-B7E5-3324A15BB053}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A54FE3D0-79D0-46D6-B7E5-3324A15BB053}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

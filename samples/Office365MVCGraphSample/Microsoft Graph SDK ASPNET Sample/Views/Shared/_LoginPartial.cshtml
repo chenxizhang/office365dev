@@ -1,0 +1,49 @@
+﻿<!--  Copyright (c) Microsoft. All rights reserved. Licensed under the MIT license.
+        See LICENSE in the source repository root for complete license information. -->
+
+@using Resources
+
+@if (Request.IsAuthenticated)
+{
+    <text>
+        <ul class="nav navbar-nav navbar-right">
+            <li class="navbar-text">
+                @*The 'preferred_username' claim can be used for showing the user's primary way of identifying themselves.*@
+                Hello, @(System.Security.Claims.ClaimsPrincipal.Current.FindFirst("preferred_username")?.Value)
+            </li>
+            <li>
+                @Html.ActionLink(Resource.SignOut, "SignOut", "Account")
+            </li>
+        </ul>
+    </text>
+}
+else
+{
+    <style type="text/css">
+        ul.links {
+            list-style-type: none;
+        }
+
+            ul.links li {
+                display: inline-block;
+                border-left: 1px solid black;
+                padding-left: 10px;
+                margin-left: 10px;
+            }
+
+                ul.links li:first-child {
+                    border-left: 0;
+                    padding-left: 0;
+                    margin-left: 0;
+                }
+    </style>
+
+    <ul class="nav navbar-nav navbar-right">
+        <li>
+            <a href="@Url.Action("SignIn", "Account")" title="Sign in" class="links">
+                @Resource.SignIn
+            </a>
+        </li>
+    </ul>
+}
+

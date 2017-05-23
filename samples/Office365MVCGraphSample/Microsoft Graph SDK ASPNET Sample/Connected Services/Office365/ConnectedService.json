@@ -1,0 +1,7 @@
+﻿{
+  "ProviderId": "Microsoft.Office365.ServiceProvider",
+  "Version": "15.0.0",
+  "GettingStartedDocument": {
+    "Uri": "https://go.microsoft.com/fwlink/?linkid=846131"
+  }
+}
