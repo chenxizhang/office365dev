@@ -82,6 +82,7 @@ Install-Package Office365GraphMVCHelper
 ![](images/connected-service-addpackage.PNG)
 
 接下来为当前这个项目添加一个启动类（Owin Startup Class）
+
 ![](images/connected-service-addowinclass.png)
 
 用一行代码为启动类添加Microsoft Graph身份功能
