@@ -6,7 +6,7 @@ using System.Configuration;
 
 namespace Office365GraphMVCHelper
 {
-    public class SettingsHelper
+    class SettingsHelper
     {
         public static string GraphResourceId { get; } = "https://graph.microsoft.com";
         public static string GallatinGraphResourceId { get; } = "https://microsoftgraph.chinacloudapi.cn";

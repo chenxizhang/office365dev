@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Office365GraphMVCHelper
 {
-    public interface IAuthProvider
+     interface IAuthProvider
     {
         Task<string> GetUserAccessTokenAsync();
     }

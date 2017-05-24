@@ -15,7 +15,7 @@ using Microsoft.IdentityModel.Clients.ActiveDirectory;
 
 namespace Office365GraphMVCHelper
 {
-    public sealed class SampleAuthProvider : IAuthProvider
+  sealed class SampleAuthProvider : IAuthProvider
     {
         private SampleAuthProvider() { } 
 
