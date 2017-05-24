@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>$id$</id>
+    <version>1.0</version>
+    <title>Office 365 Graph API Helper for MVC</title>
+    <authors>Ares Chen</authors>
+    <owners>Ares Chen</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Office 365 Graph API Helper for ASP.NET MVC Project</description>
+    <releaseNotes>Version 1</releaseNotes>
+    <copyright>Copyright 2017</copyright>
+    <tags>Office365 Graph</tags>
+  </metadata>
+</package>
