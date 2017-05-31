@@ -16,7 +16,6 @@
 
 > 关于这个话题，官方有一个英文的文档，请参考 <https://developer.microsoft.com/en-us/graph/docs/concepts/auth_v2_service>
 
-
 ## 注册应用程序
 
 针对Azure AD的不同版本，注册应用程序的过程我此前已经有专门的文章介绍了，请参考
@@ -39,7 +38,6 @@
 
 ![](images/daemonapplication-permissions.PNG)
 
-
 ## 获得管理员同意
 
 由于无人值守的程序其实是自动化运行的，无需用户进行参与进行授权，而它进行的操作，却又有可能要代表用户的行为。所以通常这些权限都需要得到真正的Office 365 Tenant管理员同意才能真正生效。
@@ -58,12 +56,11 @@
 
 <https://developer.microsoft.com/en-us/graph/?admin_consent=True&tenant=59723f6b-2d14-49fe-827a-8d04f9fe7a68&state=12345>
 
-
 ## 获取访问令牌
 
 无人值守应用程序，不需要用户参与进行授权，所以它获取令牌的方式也略有不同。你可以在应用程序里面使用下面的方式发起一个POST请求来获得访问令牌（Access Token）。
 
-```
+```HTML
 POST https://login.windows.net/59723f6b-2d14-49fe-827a-8d04f9fe7a68/oauth2/token
 Content-Type: application/x-www-form-urlencoded
 Host: login.windows.net
@@ -90,8 +87,7 @@ client_id=338c8e70-d0da-444e-b877-9f427a16eb17&scope=https%3A%2F%2Fgraph.microso
 上面演示的时候，我用了Fiddler这个小工具来模拟发起请求，并且快速地查看到结果。下面用一个简单的应用程序，来实现代码逻辑，给大家参考。
 >这个程序使用了最简单的代码实现，并添加了Newtonsoft.Json这个Package
 
-```
-
+```C#
 using Newtonsoft.Json.Linq;
 using System;
 using System.Net.Http;
@@ -134,5 +130,3 @@ namespace daemonapplication
     }
 }
 ```
-
-
