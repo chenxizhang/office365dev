@@ -130,3 +130,130 @@ namespace daemonapplication
     }
 }
 ```
+
+## 使用Azure AD 1.0
+
+上面的例子很简单易懂，但如果我们使用的是Azure AD 1.0（国际版同时支持1.0和2.0，中国版则只支持1.0），则注册应用程序和使用Microsoft Graph的方式会略有不同。
+
+### 注册Azure 1.0 应用程序（中国版）
+
+请参考之前的两篇文章了解如何在Azure 1.0的环境中注册应用程序
+
+1. 国际版 [链接](applicationregisteration.md)
+1. 中国版 [链接](chinaoffice365applicationregisteration.md)
+
+和上面提到的一样，有两点需要注意
+
+1. 应用程序类型设置为Web
+1. ReplyUrl可以设置为一个通用的地址，我喜欢设置为 <https://developer.microsoft.com/en-us/graph/>
+
+![](images/daemonapplication-gallatin-reg.PNG)
+
+### 配置Azure 1.0 应用程序权限（中国版）
+
+和上面提到的一样，这里需要申请Application permission，而不是delegation permission
+
+![](images/daemon-gallatin-permission.png)
+
+这里需要注意修改Manifest文件（先下载，然后编辑，最后上传），允许隐式授权
+![](images/4578.image_thumb_5D5F9F63.png)
+
+![](images/1362.image_thumb_6D023B25.png)
+
+### 获得管理员同意 (中国版)
+
+和Azure AD 2.0明显不同的是，在1.0中，获取管理员同意，需要使用如下的链接
+
+<https://login.chinacloudapi.cn/12c0cdab-3c40-4e86-80b9-3e6f98d2d344/oauth2/authorize?prompt=admin_consent&response_type=token&redirect_uri=https://developer.microsoft.com/en-us/graph/&resource=https://microsoftgraph.chinacloudapi.cn&client_id=3f56a5d5-7882-4290-9fd8-3908d734b3fe>
+
+此处的关键在于有一个prompt=admin_consent的参数，正常情况下，管理员进行授权确认后会跳转到下面这样的地址，里面已经包含了一个access_token
+
+<https://developer.microsoft.com/en-us/graph/#access_token=eyJ0eXAiOiJKV1QiLCJub25jZSI6IkFRQUJBQUFBQUFDckhLdnJ4N0cyU2FaYlpoLXREbnA3Z1BvSDFZc2w5MWlxU0x4Qmdqc1ZXODhmMDR5Vm11Tm1pZGlWZGFJclY5MEhLTl9aUXlXMENERlowcWdwRnBfOWw4Wkhpb21LdkNSM19LQURMdWZ3R1NBQSIsImFsZyI6IlJTMjU2IiwieDV0IjoiWTFjenBtLXhpY2FRVFZYQzlPU2JXN3pHeHRRIiwia2lkIjoiWTFjenBtLXhpY2FRVFZYQzlPU2JXN3pHeHRRIn0.eyJhdWQiOiJodHRwczovL21pY3Jvc29mdGdyYXBoLmNoaW5hY2xvdWRhcGkuY24iLCJpc3MiOiJodHRwczovL3N0cy5jaGluYWNsb3VkYXBpLmNuLzEyYzBjZGFiLTNjNDAtNGU4Ni04MGI5LTNlNmY5OGQyZDM0NC8iLCJpYXQiOjE0OTYyNDI0MjQsIm5iZiI6MTQ5NjI0MjQyNCwiZXhwIjoxNDk2MjQ2MzI0LCJhY3IiOiIxIiwiYWlvIjoiQVNRQTIvOEFBQUFBd2E2S3Y1YmVVRGtSVTliY2pBTzBKbFVJb0xaYzk3bEtkYW5hbzRzMFJTVT0iLCJhbXIiOlsicHdkIl0sImFwcF9kaXNwbGF5bmFtZSI6ImRlYW1vbiIsImFwcGlkIjoiM2Y1NmE1ZDUtNzg4Mi00MjkwLTlmZDgtMzkwOGQ3MzRiM2ZlIiwiYXBwaWRhY3IiOiIwIiwiZmFtaWx5X25hbWUiOiLpmYgiLCJnaXZlbl9uYW1lIjoi5biM56ugIiwiaXBhZGRyIjoiMTgwLjE1Mi4yMi41MiIsIm5hbWUiOiLpmYgg5biM56ugIiwib2lkIjoiZjU1MjRmMTAtYTNlYy00Njg3LTllMzktNWFkNmU1ZTY3MDVhIiwicGxhdGYiOiIzIiwicHVpZCI6IjIwMDM3RkZFODExNjMyMDUiLCJzY3AiOiJNYWlsLlNlbmQgVXNlci5SZWFkLkFsbCIsInN1YiI6InhpckVWTFBtVG1BRFpJTW1sZTdBajZwS0NQU2JHMlNGU3EzN3JQaV9rWkUiLCJ0aWQiOiIxMmMwY2RhYi0zYzQwLTRlODYtODBiOS0zZTZmOThkMmQzNDQiLCJ1bmlxdWVfbmFtZSI6ImFyZXNAbW9kdHNwLnBhcnRuZXIub25tc2NoaW5hLmNuIiwidXBuIjoiYXJlc0Btb2R0c3AucGFydG5lci5vbm1zY2hpbmEuY24iLCJ1dGkiOiJRSEswVy0xdXcwbTlxWW9TekNvRUFBIiwidmVyIjoiMS4wIn0.EZhZhKFXzS1hVkz5HNEFSG9lcL6CSRyjqRNEMTYpM0Q4wp7UICf1_61PQFCe_5opnZlEMl-e7sHJ2W4Ni1hqjASUxOamFoQ5pBVNQ-WgEfhX_QPJXLBbyMdFguRPdrXy1AqzYGqFQ_mtmjqFa0w7nXf4LI7vgx7MRPMm5YDljnK4vk4oXC9M7fb4EcU7g26XrBUnTz6Es_IGT9SUqAXYLDjfI3dC06GqtjRrTwtd0AYwbbUPZ288j4XZ_fb8x1lj97ZpIFZh-STnIZUatIij0dFphMrFhUig0YbMtCxlfsrpZgPyuwlrrXbnj5fgWw1ABj3xKrEaWbVt5XCT4T9-aA&token_type=Bearer&expires_in=3599&session_state=022f05fb-4b3f-4f86-b593-cbda90232a7a&admin_consent=True>
+
+
+
+### 获取访问令牌（中国版）
+
+这一步可以跳过，因为上面这一步已经获得了access_token
+
+### 使用令牌访问资源（中国版）
+
+```C#
+using System;
+using System.Net.Http;
+using System.Threading.Tasks;
+
+namespace ConsoleApp6
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            var result = GetUsers().Result;
+            Console.WriteLine(result);
+
+            Console.Read();
+
+        }
+
+
+        static async Task<string> GetUsers()
+        {
+            var token = "eyJ0eXAiOiJKV1QiLCJub25jZSI6IkFRQUJBQUFBQUFDckhLdnJ4N0cyU2FaYlpoLXREbnA3Z1BvSDFZc2w5MWlxU0x4Qmdqc1ZXODhmMDR5Vm11Tm1pZGlWZGFJclY5MEhLTl9aUXlXMENERlowcWdwRnBfOWw4Wkhpb21LdkNSM19LQURMdWZ3R1NBQSIsImFsZyI6IlJTMjU2IiwieDV0IjoiWTFjenBtLXhpY2FRVFZYQzlPU2JXN3pHeHRRIiwia2lkIjoiWTFjenBtLXhpY2FRVFZYQzlPU2JXN3pHeHRRIn0.eyJhdWQiOiJodHRwczovL21pY3Jvc29mdGdyYXBoLmNoaW5hY2xvdWRhcGkuY24iLCJpc3MiOiJodHRwczovL3N0cy5jaGluYWNsb3VkYXBpLmNuLzEyYzBjZGFiLTNjNDAtNGU4Ni04MGI5LTNlNmY5OGQyZDM0NC8iLCJpYXQiOjE0OTYyNDI0MjQsIm5iZiI6MTQ5NjI0MjQyNCwiZXhwIjoxNDk2MjQ2MzI0LCJhY3IiOiIxIiwiYWlvIjoiQVNRQTIvOEFBQUFBd2E2S3Y1YmVVRGtSVTliY2pBTzBKbFVJb0xaYzk3bEtkYW5hbzRzMFJTVT0iLCJhbXIiOlsicHdkIl0sImFwcF9kaXNwbGF5bmFtZSI6ImRlYW1vbiIsImFwcGlkIjoiM2Y1NmE1ZDUtNzg4Mi00MjkwLTlmZDgtMzkwOGQ3MzRiM2ZlIiwiYXBwaWRhY3IiOiIwIiwiZmFtaWx5X25hbWUiOiLpmYgiLCJnaXZlbl9uYW1lIjoi5biM56ugIiwiaXBhZGRyIjoiMTgwLjE1Mi4yMi41MiIsIm5hbWUiOiLpmYgg5biM56ugIiwib2lkIjoiZjU1MjRmMTAtYTNlYy00Njg3LTllMzktNWFkNmU1ZTY3MDVhIiwicGxhdGYiOiIzIiwicHVpZCI6IjIwMDM3RkZFODExNjMyMDUiLCJzY3AiOiJNYWlsLlNlbmQgVXNlci5SZWFkLkFsbCIsInN1YiI6InhpckVWTFBtVG1BRFpJTW1sZTdBajZwS0NQU2JHMlNGU3EzN3JQaV9rWkUiLCJ0aWQiOiIxMmMwY2RhYi0zYzQwLTRlODYtODBiOS0zZTZmOThkMmQzNDQiLCJ1bmlxdWVfbmFtZSI6ImFyZXNAbW9kdHNwLnBhcnRuZXIub25tc2NoaW5hLmNuIiwidXBuIjoiYXJlc0Btb2R0c3AucGFydG5lci5vbm1zY2hpbmEuY24iLCJ1dGkiOiJRSEswVy0xdXcwbTlxWW9TekNvRUFBIiwidmVyIjoiMS4wIn0.EZhZhKFXzS1hVkz5HNEFSG9lcL6CSRyjqRNEMTYpM0Q4wp7UICf1_61PQFCe_5opnZlEMl-e7sHJ2W4Ni1hqjASUxOamFoQ5pBVNQ-WgEfhX_QPJXLBbyMdFguRPdrXy1AqzYGqFQ_mtmjqFa0w7nXf4LI7vgx7MRPMm5YDljnK4vk4oXC9M7fb4EcU7g26XrBUnTz6Es_IGT9SUqAXYLDjfI3dC06GqtjRrTwtd0AYwbbUPZ288j4XZ_fb8x1lj97ZpIFZh-STnIZUatIij0dFphMrFhUig0YbMtCxlfsrpZgPyuwlrrXbnj5fgWw1ABj3xKrEaWbVt5XCT4T9-aA";
+
+            HttpClient client = new HttpClient();
+            client.DefaultRequestHeaders.Add("Authorization", "Bearer " + token);
+            HttpResponseMessage response = await client.GetAsync("https://microsoftgraph.chinacloudapi.cn/v1.0/users/");
+            string retResp = await response.Content.ReadAsStringAsync();
+
+            return retResp;
+        }
+    }
+}
+```
+
+如果我们将代码再演化一下，使用Microsoft.Graph进行访问的话，会更加轻松惬意，因为可以完全基于强类型的方式进行操作
+
+```C#
+using Microsoft.Graph;
+using System;
+using System.Threading.Tasks;
+using System.Linq;
+
+namespace ConsoleApp6
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            var result = GetUsers().Result;
+
+            foreach (var item in result)
+            {
+                Console.WriteLine(item.DisplayName);
+            }
+
+            Console.Read();
+
+        }
+
+
+        static async Task<IGraphServiceUsersCollectionPage> GetUsers()
+        {
+            var token = "eyJ0eXAiOiJKV1QiLCJub25jZSI6IkFRQUJBQUFBQUFDckhLdnJ4N0cyU2FaYlpoLXREbnA3Z1BvSDFZc2w5MWlxU0x4Qmdqc1ZXODhmMDR5Vm11Tm1pZGlWZGFJclY5MEhLTl9aUXlXMENERlowcWdwRnBfOWw4Wkhpb21LdkNSM19LQURMdWZ3R1NBQSIsImFsZyI6IlJTMjU2IiwieDV0IjoiWTFjenBtLXhpY2FRVFZYQzlPU2JXN3pHeHRRIiwia2lkIjoiWTFjenBtLXhpY2FRVFZYQzlPU2JXN3pHeHRRIn0.eyJhdWQiOiJodHRwczovL21pY3Jvc29mdGdyYXBoLmNoaW5hY2xvdWRhcGkuY24iLCJpc3MiOiJodHRwczovL3N0cy5jaGluYWNsb3VkYXBpLmNuLzEyYzBjZGFiLTNjNDAtNGU4Ni04MGI5LTNlNmY5OGQyZDM0NC8iLCJpYXQiOjE0OTYyNDI0MjQsIm5iZiI6MTQ5NjI0MjQyNCwiZXhwIjoxNDk2MjQ2MzI0LCJhY3IiOiIxIiwiYWlvIjoiQVNRQTIvOEFBQUFBd2E2S3Y1YmVVRGtSVTliY2pBTzBKbFVJb0xaYzk3bEtkYW5hbzRzMFJTVT0iLCJhbXIiOlsicHdkIl0sImFwcF9kaXNwbGF5bmFtZSI6ImRlYW1vbiIsImFwcGlkIjoiM2Y1NmE1ZDUtNzg4Mi00MjkwLTlmZDgtMzkwOGQ3MzRiM2ZlIiwiYXBwaWRhY3IiOiIwIiwiZmFtaWx5X25hbWUiOiLpmYgiLCJnaXZlbl9uYW1lIjoi5biM56ugIiwiaXBhZGRyIjoiMTgwLjE1Mi4yMi41MiIsIm5hbWUiOiLpmYgg5biM56ugIiwib2lkIjoiZjU1MjRmMTAtYTNlYy00Njg3LTllMzktNWFkNmU1ZTY3MDVhIiwicGxhdGYiOiIzIiwicHVpZCI6IjIwMDM3RkZFODExNjMyMDUiLCJzY3AiOiJNYWlsLlNlbmQgVXNlci5SZWFkLkFsbCIsInN1YiI6InhpckVWTFBtVG1BRFpJTW1sZTdBajZwS0NQU2JHMlNGU3EzN3JQaV9rWkUiLCJ0aWQiOiIxMmMwY2RhYi0zYzQwLTRlODYtODBiOS0zZTZmOThkMmQzNDQiLCJ1bmlxdWVfbmFtZSI6ImFyZXNAbW9kdHNwLnBhcnRuZXIub25tc2NoaW5hLmNuIiwidXBuIjoiYXJlc0Btb2R0c3AucGFydG5lci5vbm1zY2hpbmEuY24iLCJ1dGkiOiJRSEswVy0xdXcwbTlxWW9TekNvRUFBIiwidmVyIjoiMS4wIn0.EZhZhKFXzS1hVkz5HNEFSG9lcL6CSRyjqRNEMTYpM0Q4wp7UICf1_61PQFCe_5opnZlEMl-e7sHJ2W4Ni1hqjASUxOamFoQ5pBVNQ-WgEfhX_QPJXLBbyMdFguRPdrXy1AqzYGqFQ_mtmjqFa0w7nXf4LI7vgx7MRPMm5YDljnK4vk4oXC9M7fb4EcU7g26XrBUnTz6Es_IGT9SUqAXYLDjfI3dC06GqtjRrTwtd0AYwbbUPZ288j4XZ_fb8x1lj97ZpIFZh-STnIZUatIij0dFphMrFhUig0YbMtCxlfsrpZgPyuwlrrXbnj5fgWw1ABj3xKrEaWbVt5XCT4T9-aA";
+
+            GraphServiceClient client = new GraphServiceClient(
+                new DelegateAuthenticationProvider(async (request) =>
+                {
+                    await Task.Run(() => { request.Headers.Add("Authorization", $"Bearer {token}"); });
+                }));
+
+            client.BaseUrl = "https://microsoftgraph.chinacloudapi.cn/v1.0";
+
+            var result = client.Users.Request().GetAsync().Result;
+
+            return result;
+        }
+    }
+}
+```
