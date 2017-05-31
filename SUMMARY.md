@@ -18,6 +18,7 @@
         * [PowerShell脚本访问Microsoft Graph](/docs/powershell-application.md)
         * [支持国内版Office 365的PowerShell模块现已发布](/docs/powershell-module.md)
         * [Microsoft Graph  Web应用程序极致开发体验](/docs/webapplication.md)
+        * [如何通过PowerShell获取Office 365 TenantID](/docs/gettenantid.md)
         * [Microsoft Graph  服务应用程序](/docs/deamonapplication.md)
         * [Nodejs 应用程序](/docs/nodejsapplication.md)
     * 其他话题
