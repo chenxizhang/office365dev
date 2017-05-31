@@ -8,7 +8,7 @@ namespace Office365GraphMVCHelper
 {
     public class SettingsHelper
     {
-        public static string GraphResourceId { get; } = "https://graph.microsoft.com";
+        //public static string GraphResourceId { get; } = "https://graph.microsoft.com";
         //public static string GallatinGraphResourceId { get; } = "https://microsoftgraph.chinacloudapi.cn";
 
         //public static string GraphAADInstance { get; } = "https://login.microsoftonline.com/";
@@ -19,18 +19,18 @@ namespace Office365GraphMVCHelper
         public static string ClientSecret { get;  } = ConfigurationManager.AppSettings["ida:ClientSecret"];
         public static string TenantId { get;  } = ConfigurationManager.AppSettings["ida:TenantId"];
 
-        //public static string GraphResourceId
-        //{
-        //    get
-        //    {
-        //        var result = ConfigurationManager.AppSettings["ida:ResourceId"];
-        //        if (string.IsNullOrEmpty(result))
-        //        {
-        //            result = "https://graph.microsoft.com";
-        //        }
-        //        return result;
-        //    }
-        //}
+        public static string GraphResourceId
+        {
+            get
+            {
+                var result = ConfigurationManager.AppSettings["ida:ResourceId"];
+                if (string.IsNullOrEmpty(result))
+                {
+                    result = "https://graph.microsoft.com";
+                }
+                return result;
+            }
+        }
 
         public static string Authority { get; } = AADInstance + TenantId;
     }

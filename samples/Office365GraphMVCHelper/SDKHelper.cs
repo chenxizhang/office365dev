@@ -30,7 +30,7 @@ namespace Office365GraphMVCHelper
                         // requestMessage.Headers.Add("SampleID", "AppName");
                     }));
 
-            graphClient.BaseUrl = SettingsHelper.GraphResourceId;
+            graphClient.BaseUrl = SettingsHelper.GraphResourceId + "/v1.0";
 
             return graphClient;
         }
