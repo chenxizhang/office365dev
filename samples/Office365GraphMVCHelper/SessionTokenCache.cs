@@ -11,7 +11,7 @@ namespace Office365GraphMVCHelper
 {
 
     // Store the user's token information.
-    class SessionTokenCache : TokenCache
+    public class SessionTokenCache : TokenCache
     {
         private HttpContextBase context;
         private static readonly object FileLock = new object();
