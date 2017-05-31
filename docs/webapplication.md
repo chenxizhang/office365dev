@@ -101,3 +101,25 @@ Install-Package Office365GraphMVCHelper
 ## 总结
 这一篇文章讲解了Visual Studio 2017 Preview最新推出的直接将Microsoft Graph集成到应用程序的开发体验，并且演示了如何借助我封装好的一个组件，进一步将后续编码简化到最少。我后续还会看看怎么把中国版的功能整合进来。
 
+
+## 已经实现对中国版Office 365的支持
+
+2017年5月31日，重构代码实现了对中国版Office 365的支持，并且将Office365GraphMVCHelper这个工具包升级到了2.0版本。
+![](images/office365mvchelper-nuget.PNG)
+
+由于Visual Studio 2017 Preview提供的工具，不能直接添加中国版的Office 365作为Connected Service，所以，你需要手工地在中国版Office 365中[注册应用程序](chinaoffice365applicationregisteration)，并且在web.config文件中添加如下的信息
+```
+<add key="ida:ClientId" value="1142d051-c271-4044-b1ac-522c8029e3b7" />
+<add key="ida:ClientSecret" value="Ei4JeIsuKzPVfnkgAmWSFfE9p5YKs0yhm41dcZo/ink=" />
+<add key="ida:TenantId" value="12c0cdab-3c40-4e86-80b9-3e6f98d2d344" />
+<add key="ida:Domain" value="modtsp.partner.onmschina.cn" />
+<add key="ida:AADInstance" value="https://login.chinacloudapi.cn/" />
+<add key="ida:ResourceId" value="https://microsoftgraph.chinacloudapi.cn" />
+```
+请注意，最后一行跟国际版不一样。国际版可以省略。
+
+这样完成设置后，其他的代码都是和国际版一样的，尽情享受吧
+
+
+
+
