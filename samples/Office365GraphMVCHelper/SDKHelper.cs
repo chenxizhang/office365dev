@@ -29,6 +29,9 @@ namespace Office365GraphMVCHelper
                         // Add this header hto identify the sample in the Microsoft Graph service.
                         // requestMessage.Headers.Add("SampleID", "AppName");
                     }));
+
+            graphClient.BaseUrl = SettingsHelper.GraphResourceId;
+
             return graphClient;
         }
 

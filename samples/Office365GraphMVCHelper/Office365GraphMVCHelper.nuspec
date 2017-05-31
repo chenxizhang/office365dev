@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>$id$</id>
-    <version>1.0.4</version>
+    <version>1.0.6</version>
     <title>Office 365 Graph API Helper for MVC</title>
     <authors>Ares Chen</authors>
     <owners>Ares Chen</owners>
