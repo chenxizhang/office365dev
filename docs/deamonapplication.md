@@ -1,4 +1,4 @@
-# 在无人值守程序（服务）中调用Micrsooft Graph
+# 在无人值守程序（服务）中调用Microsoft Graph
 
 > 作者：陈希章 发表于 2017年5月31日
 
