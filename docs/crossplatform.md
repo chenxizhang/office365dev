@@ -37,7 +37,7 @@
 
 如果不出意外的话，我写好的这个简单的应用程序会启动起来，并且在本机的5000端口进行监听
 
-![](images/aspnetcoremvehomepage.png)
+![](images/aspnetcoremvchomepage.png)
 
 看起来跟我们一般的 MVC 程序真的是一样一样的，此时，请点击页面顶部左上角的“About”，看看会发生什么呢
 
