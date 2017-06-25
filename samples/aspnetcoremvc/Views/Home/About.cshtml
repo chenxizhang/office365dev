@@ -1,0 +1,15 @@
+﻿@model Microsoft.Graph.User
+
+@{
+    ViewData["Title"] = "About";
+}
+
+<h2>这里列出了通过Graph读取到的当前用户信息</h2>
+<ul>
+    <li>@Model.DisplayName</li>
+    <li>@Model.UserPrincipalName</li>
+<ul>
+
+
+
+
