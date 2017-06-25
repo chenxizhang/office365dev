@@ -20,7 +20,7 @@
         1. [Microsoft Graph  Web应用程序极致开发体验](/docs/webapplication.md)
         1. [如何通过PowerShell获取Office 365 TenantID](/docs/gettenantid.md)
         1. [Microsoft Graph  服务应用程序](/docs/deamonapplication.md)
-        1. [跨平台应用程序(dotnet core,nodejs等)](/docs/crossplatform.md)
+        1. [平台应用集成(在ASP.NET Core MVC 应用程序中集成 Microsoft Graph)](/docs/crossplatform.md)
     1. 其他话题
         1. [如何保存和刷新访问令牌](/docs/accesstoken.md)
 * Office Add-ins
