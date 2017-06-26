@@ -4,11 +4,11 @@
 
 ## 谈一谈.NET 的跨平台
 
-终于要写到这一篇了。跨平台的支持可以说是 Office 365 平台在设计伊始就考虑的目标。我在前面的文章已经提到过了，Microsoft Graph 服务针对一些主流的开源平台（主要用来做跨平台应用）都有支持，例如 python,nodejs 等。我虽然对他们也有一定的了解，但要跟我最熟悉的 Microsoft .NET 来比较的话，我自然还是更喜欢后者了。
+终于要写到这一篇了。跨平台的支持可以说是 Office 365 平台在设计伊始就考虑的目标。我在前面的文章已经提到过了，Microsoft Graph 服务针对一些主流的开源平台（主要用来做跨平台应用）都有支持，例如 python,nodejs 等。他们真的非常好用，与此同时我虽然对他们也有一定的了解，但要跟我最熟悉的 Microsoft .NET 来比较的话，我自然还是更喜欢后者了。
 
 所以，一直在等待合适的时间，要来写 Microsoft .NET 的跨平台应用，这是多么令人期待的事情啊。经过一段时间的研究，我今天正式隆重地给大家介绍，如何在 ASP.NET Core 平台上面构建一个 MVC 应用程序，并且在里面集成 Microsoft Graph。
 
-关于Microsoft .NET 这几年的发展，我是感到比较兴奋的，作为一个从.NET 1.1就开始追随的骨灰级粉丝，我很高兴地看到现在.NET 已经真正迈出了跨平台的脚步，而且完全开源了。如果要讲这个话题，恐怕我是一时半会刹不住车的，因为我就此打住吧，有兴趣的朋友们可以通过下面这个网址了解更多.NET 的发展情况。
+关于Microsoft .NET 这几年的发展，我是感到比较兴奋的，作为一个从.NET 1.1就开始追随的骨灰级粉丝，我很高兴地看到现在.NET 已经真正迈出了跨平台的脚步，而且完全开源了。如果要讲这个话题，恐怕我是一时半会刹不住车的，所以我就此打住吧，有兴趣的朋友们可以通过下面这个网址了解更多.NET 的发展情况。
 ![](images/microsoftdotnet.png)
 
 这一篇文章用到的技术，是最新的.NET Core 中 ASP.NET Core 提供的，我使用了其中的 MVC 这个模板创建了一个简单的应用程序，并且略微改造了一下，使其能够采用 Azure AD 进行身份验证，继而通过获得的用户凭据能实现对 Microsoft Graph 的使用。
@@ -51,25 +51,25 @@
 
 ## 代码解析
 
-下面我还是简单地提示一下，我在标准的模板基础上做过哪些定制，从而实现了上面的功能的。
+下面我还是简单地讲解一下我在标准的模板基础上做过哪些定制，从而实现了上面的功能的。
 
-> 要创建这个应用程序，你需要安装 dotnet sdk，然后在本地运行 dotnet new mvc 即可
+> 要创建这个应用程序，你需要安装 dotnet sdk（<https://www.microsoft.com/net/download/core> ），然后在本地命令行工具中运行 dotnet new mvc 即可
 
 首先，我为项目添加了几个外部组件包，这是通过修改项目定义文件（aspnetcoremvc.csproj）来实现的。
 
 ```
- <PackageReference Include="Microsoft.Graph" Version="1.4.0"/>
-    <PackageReference Include="Microsoft.AspNetCore.Authentication.OpenIdConnect" Version="1.1.0"/>
-    <PackageReference Include="Microsoft.AspNetCore.Authentication.Cookies" Version="1.1.0"/>
-    <PackageReference Include="Microsoft.IdentityModel.Clients.ActiveDirectory" Version="3.13.9"/>
-    <PackageReference Include="Microsoft.AspNetCore.Session" Version="1.1.0"/>
-    <PackageReference Include="Microsoft.Extensions.Caching.Memory" Version="1.1.2"/>
+<PackageReference Include="Microsoft.Graph" Version="1.4.0"/>
+<PackageReference Include="Microsoft.AspNetCore.Authentication.OpenIdConnect" Version="1.1.0"/>
+<PackageReference Include="Microsoft.AspNetCore.Authentication.Cookies" Version="1.1.0"/>
+<PackageReference Include="Microsoft.IdentityModel.Clients.ActiveDirectory" Version="3.13.9"/>
+<PackageReference Include="Microsoft.AspNetCore.Session" Version="1.1.0"/>
+<PackageReference Include="Microsoft.Extensions.Caching.Memory" Version="1.1.2"/>
 
 ```
 
 > 这些组件都是托管在 nuget.org 这个网站上面，甚至整个 dotnet core 的核心组件也都是开源托管在这个上面。一般添加完这些组件后，都需要运行 dotnet restore 命令在本地进行还原。
 
-然后，我修改了 Startup.cs 文件。这是  asp.net core 应用程序的一个标准文件，用来定义程序入口，加载相关服务和中间件。（这里涉及的知识面太多，我无法一一说明，有兴趣可以参考 <https://asp.net/core> 了解。
+然后，我修改了 Startup.cs 文件。这是  asp.net core 应用程序的一个标准文件，用来定义程序入口，加载相关服务和中间件。（这里涉及的知识面太多，以至于我无法一一说明，有兴趣可以参考 <https://asp.net/core> 了解。
 
 ```
 using System;
@@ -179,7 +179,7 @@ namespace aspntecoremvc
 
 ```
 
-我还为此专门定义了一个简单的用来保存 Token 信息的类，为了简单起见，我们将 Token 保存在 Session 里面，这样的话，用户登陆一次后，在一个会话里面就不需要多次登录，而是可以直接重用这些 Token。
+我还专门定义了一个简单的类用来保存 Token 信息。为了简单起见，我们将 Token 保存在 Session 里面，这样的话，用户登陆一次后，在一个会话里面就不需要多次登录，而是可以直接重用这些 Token。
 
 这个类其实我是重用了之前在 ASP.NET MVC 开发中的那个类，没有什么特别要交待的，请直接打开 SampleSessionCache.cs 这个文件了解即可。
 
@@ -236,13 +236,13 @@ namespace aspntecoremvc{
 有了上面的准备，在真正需要用到 Graph 服务的地方，我们的代码是非常简单的，请参考 HomeController.cs 文件中的 About 方法
 
 ```
-        [Authorize]//用这个标记该方法需要用户登录
-        public async Task<IActionResult> About()
-        {
-            var client = await this.GetAuthenticatedClient();  
-            //获取用户详细信息，然后传递给视图
-            return View(await client.Me.Request().GetAsync());
-        }
+[Authorize]//用这个标记该方法需要用户登录
+public async Task<IActionResult> About()
+{
+    var client = await this.GetAuthenticatedClient();  
+    //获取用户详细信息，然后传递给视图
+    return View(await client.Me.Request().GetAsync());
+}
 ```
 
 到这里为止，我的这个例子的主要代码就解释完了。你可能会觉得，这太简单了吧。如果你这样认为，我一方面感到很高兴，因为这是我希望呈现出来的效果；另一方面我要提醒你的是，由于 asp.net core 是一个还比较新的技术，这方面的材料相当少，其实我还是做了相当多的研究才精炼成这样的，其间遇到过多少坑，多少曲折迂回，不足以外人道也，但我很看好 asp.net core，并且将持续在此之上进行投资，这也几乎是可以肯定的。
