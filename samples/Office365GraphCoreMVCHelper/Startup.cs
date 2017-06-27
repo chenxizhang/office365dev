@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -17,10 +17,11 @@ using Microsoft.IdentityModel.Clients.ActiveDirectory;
 using Microsoft.AspNetCore.Authentication;
 using System.Security.Claims;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
 
-namespace aspntecoremvc
+namespace Office365GraphCoreMVCHelper
 {
-    public class Startup
+    public partial class Startup
     {
 
         // This method gets called by the runtime. Use this method to add services to the container.
@@ -31,7 +32,12 @@ namespace aspntecoremvc
            
             // Add framework services.
             services.AddMvc();
+
+            AddService(services);
         }
+
+        partial void AddService(IServiceCollection services);
+        partial void ConfigureMiddleware(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory);
 
         private readonly string ClientId="e91ef175-e38d-4feb-b1ed-f243a6a81b93";
         private readonly string Authority=String.Format("https://login.microsoftonline.com/{0}","office365devlabs.onmicrosoft.com");
@@ -55,9 +61,9 @@ namespace aspntecoremvc
                 app.UseExceptionHandler("/Home/Error");
             }
 
-            app.UseStaticFiles();
+            ConfigureMiddleware(app,env,loggerFactory);
 
-            
+            app.UseStaticFiles();
             app.UseSession();
             app.UseCookieAuthentication();
             app.UseOpenIdConnectAuthentication(new OpenIdConnectOptions{
