@@ -257,4 +257,324 @@ public async Task<IActionResult> About()
 我还将继续写后续的内容，例如 Office Add-ins，SharePoint 开发，Teams 开发（Bot 等），有兴趣的朋友们可继续关注。
 
 
+## 2017年6月30日更新
 
+作为一个不断追求代码复用的程序猿，我这两天在上面这个范例基础上对代码进行了一定的封装，如果你此时查看代码的话，会发现已经有了较大的不同。
+
+首先，我将所有公用的代码全部提取到了一个单独的项目（[Office365GraphCoreMVCHelper](https://github.com/chenxizhang/office365dev/tree/master/samples/Office365GraphCoreMVCHelper) ）中，这里面的关键代码有
+
+一个用来读取配置文件的类型
+```
+namespace Office365GraphCoreMVCHelper
+{
+    public class AppSetting
+    {
+
+        public Info Office365ApplicationInfo { get; set; }
+
+        public class Info
+        {
+            public string ClientId { get; set; }
+            public string ClientSecret { get; set; }
+            public string Authority { get; set; }
+
+            public string GraphResourceId { get; set; }
+        }
+    }
+}
+
+```
+
+一个可公用的Startup类型
+```
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.Caching;
+using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Authentication.OpenIdConnect;
+using Microsoft.AspNetCore.Session;
+using Microsoft.IdentityModel.Protocols.OpenIdConnect;
+using Microsoft.IdentityModel.Clients.ActiveDirectory;
+using Microsoft.AspNetCore.Authentication;
+using System.Security.Claims;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Options;
+
+namespace Office365GraphCoreMVCHelper
+{
+    public class Startup
+    {
+
+        static IConfigurationRoot Configuration { get; set; }
+
+        public Startup(IHostingEnvironment env)
+        {
+            Configuration = new ConfigurationBuilder()
+                            .SetBasePath(env.ContentRootPath)
+                            .AddJsonFile("appsettings.json")
+                            .Build();
+        }
+
+        // This method gets called by the runtime. Use this method to add services to the container.
+        public void ConfigureServices(IServiceCollection services)
+        {
+
+            //这里将配置信息注入到应用程序中
+            services.AddOptions();
+            services.Configure<AppSetting>(Configuration);
+
+            services.AddSession();
+            services.AddAuthentication(sharedoptions => sharedoptions.SignInScheme = CookieAuthenticationDefaults.AuthenticationScheme);
+
+            // Add framework services.
+            services.AddMvc();
+        }
+
+
+        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+        public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
+        {
+            loggerFactory.AddConsole();
+            loggerFactory.AddDebug();
+
+            if (env.IsDevelopment())
+            {
+                app.UseDeveloperExceptionPage();
+                app.UseBrowserLink();
+            }
+            else
+            {
+                app.UseExceptionHandler("/Home/Error");
+            }
+
+            //ConfigureMiddleware(app,env,loggerFactory);
+
+            app.UseStaticFiles();
+            app.UseSession();
+            app.UseCookieAuthentication();
+            //获得之前注入的配置信息
+            var options = app.ApplicationServices.GetRequiredService<IOptions<AppSetting>>();
+
+            app.UseOpenIdConnectAuthentication(new OpenIdConnectOptions
+            {
+                ClientId = options.Value.Office365ApplicationInfo.ClientId,
+                Authority = options.Value.Office365ApplicationInfo.Authority,
+                ClientSecret = options.Value.Office365ApplicationInfo.ClientSecret,
+                ResponseType = OpenIdConnectResponseType.CodeIdToken,
+                CallbackPath = "/signin-oidc",
+                GetClaimsFromUserInfoEndpoint = true,
+                Events = new OpenIdConnectEvents
+                {
+                    OnAuthorizationCodeReceived = async (context) =>
+                    {
+                        string userObjectId = (context.Ticket.Principal.FindFirst("http://schemas.microsoft.com/identity/claims/objectidentifier"))?.Value;
+                        ClientCredential clientCred = new ClientCredential(options.Value.Office365ApplicationInfo.ClientId, options.Value.Office365ApplicationInfo.ClientSecret);
+                        AuthenticationContext authContext = new AuthenticationContext(options.Value.Office365ApplicationInfo.Authority, new SampleSessionCache(userObjectId, context.HttpContext.Session));
+                        AuthenticationResult authResult = await authContext.AcquireTokenByAuthorizationCodeAsync(
+                            context.ProtocolMessage.Code, new Uri(context.Properties.Items[OpenIdConnectDefaults.RedirectUriForCodePropertiesKey]), clientCred, options.Value.Office365ApplicationInfo.GraphResourceId);
+                    }
+                }
+            });
+
+            app.UseMvc(routes =>
+            {
+                routes.MapRoute(
+                    name: "default",
+                    template: "{controller=Home}/{action=Index}/{id?}");
+            });
+        }
+
+        private Task OnAuthenticationFailed(FailureContext context)
+        {
+            context.HandleResponse();
+            context.Response.Redirect("/Home/Error?message=" + context.Failure.Message);
+            return Task.FromResult(0);
+        }
+    }
+}
+```
+
+
+改造过的SDKHelper类型，主要增加了从配置文件中读取信息的功能
+```
+using System;
+using System.Net.Http.Headers;
+using System.Threading.Tasks;
+using Microsoft.Graph;
+using Microsoft.IdentityModel.Clients.ActiveDirectory;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Options;
+using Microsoft.AspNetCore.Builder;
+
+namespace Office365GraphCoreMVCHelper
+{
+    public static class SDKHelper
+    {
+        public static async Task<GraphServiceClient> GetAuthenticatedClient(this ControllerBase controller,IOptions<AppSetting> options)
+        {
+            var Authority = options.Value.Office365ApplicationInfo.Authority;
+            var ClientId = options.Value.Office365ApplicationInfo.ClientId;
+            var ClientSecret = options.Value.Office365ApplicationInfo.ClientSecret;
+            var GraphResourceId = options.Value.Office365ApplicationInfo.GraphResourceId;
+
+
+            string userObjectId = controller.HttpContext.User.FindFirst("http://schemas.microsoft.com/identity/claims/objectidentifier")?.Value;
+            ClientCredential clientCred = new ClientCredential(ClientId, ClientSecret);
+            AuthenticationContext authContext = new AuthenticationContext(Authority, new SampleSessionCache(userObjectId, controller.HttpContext.Session));
+            AuthenticationResult result = await authContext.AcquireTokenSilentAsync(GraphResourceId, ClientId);
+
+            GraphServiceClient client = new GraphServiceClient(new DelegateAuthenticationProvider(async request =>
+            {
+                request.Headers.Authorization = new AuthenticationHeaderValue("bearer", result.AccessToken);
+                await Task.FromResult(0);
+            }));
+
+            return client;
+
+        }
+
+    }
+}
+```
+
+由于有了这个公用的组件，那么在aspnetcoremvc这个主程序中，我可以极大地简化代码。
+
+首先，我在项目文件中定义了对公用组件的引用
+
+```
+
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp1.1</TargetFramework>
+  </PropertyGroup>
+
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore" Version="1.1.2" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="1.1.3" />
+    <PackageReference Include="Microsoft.AspNetCore.StaticFiles" Version="1.1.2" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="1.1.2" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.BrowserLink" Version="1.1.2" />
+    <PackageReference Include="Microsoft.Graph" Version="1.4.0"/>
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.OpenIdConnect" Version="1.1.0"/>
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.Cookies" Version="1.1.0"/>
+    <PackageReference Include="Microsoft.IdentityModel.Clients.ActiveDirectory" Version="3.13.9"/>
+    <PackageReference Include="Microsoft.AspNetCore.Session" Version="1.1.0"/>
+    <PackageReference Include="Microsoft.Extensions.Caching.Memory" Version="1.1.2"/>
+  </ItemGroup>
+  <ItemGroup>   
+    <ProjectReference Include="..\Office365GraphCoreMVCHelper\Office365GraphCoreMVCHelper.csproj" />
+  </ItemGroup>  
+
+</Project>
+
+```
+
+然后，我删除了该项目中的Startup类型，取而代之的在Program中直接引用公用组件中定义好的那个Startup
+
+```
+using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Threading.Tasks;
+using Microsoft.AspNetCore.Hosting;
+using Office365GraphCoreMVCHelper;
+
+namespace aspntecoremvc
+{
+    public class Program
+    {
+        public static void Main(string[] args)
+        {
+            var host = new WebHostBuilder()
+                .UseSetting("startupAssembly","Office365GraphCoreMVCHelper")
+                .UseKestrel()
+                .UseContentRoot(Directory.GetCurrentDirectory())
+                .UseIISIntegration()
+                .Build();
+
+            host.Run();
+        }
+    }
+}
+```
+
+当然，我们需要定义一个配置文件来保存clientId等信息，该文件命名为appsettings.json
+
+```
+{
+    "Office365ApplicationInfo":{
+        "ClientId":"e91ef175-e38d-4feb-b1ed-f243a6a81b93",
+        "ClientSecret":"2F5jdoGGNn59oxeDLE9fXx5tD86uvzIji74dmLaj3YI=",
+        "Authority":"https://login.microsoftonline.com/office365devlabs.onmicrosoft.com",
+        "GraphResourceId":"https://graph.microsoft.com"
+    }
+}
+```
+
+
+最后，在HomeController（或者同类需要用到Microsoft Graph的Controller）中，通过下面的代码来实现调用
+
+```
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Security.Claims;
+using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Configuration;
+using Microsoft.IdentityModel.Clients.ActiveDirectory;
+using Microsoft.Graph;
+using System.Net.Http.Headers;
+using Office365GraphCoreMVCHelper;
+using Microsoft.Extensions.Options;
+
+namespace aspntecoremvc.Controllers
+{
+    public class HomeController : Controller
+    {
+        private readonly IOptions<AppSetting> Options;
+        public HomeController(IOptions<AppSetting> options)
+        {
+            this.Options = options;
+        }
+    
+        public IActionResult Index()
+        {
+
+            return View();
+        }
+
+        [Authorize]
+        public async Task<IActionResult> About()
+        {
+            var client = await this.GetAuthenticatedClient(this.Options);            
+            return View(await client.Me.Request().GetAsync());
+        }
+
+        public IActionResult Contact()
+        {
+            ViewData["Message"] = "Your contact page.";
+
+            return View();
+        }
+
+        public IActionResult Error()
+        {
+            return View();
+        }
+    }
+}
+
+```
