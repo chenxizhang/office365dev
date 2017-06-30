@@ -18,6 +18,8 @@
     <PackageReference Include="Microsoft.AspNetCore.Session" Version="1.1.0"/>
     <PackageReference Include="Microsoft.Extensions.Caching.Memory" Version="1.1.2"/>
   </ItemGroup>
-
+  <ItemGroup>   
+    <ProjectReference Include="..\Office365GraphCoreMVCHelper\Office365GraphCoreMVCHelper.csproj" />
+  </ItemGroup>  
 
 </Project>

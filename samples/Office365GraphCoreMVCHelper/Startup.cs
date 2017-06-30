@@ -7,7 +7,6 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
-
 using Microsoft.Extensions.Caching;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authentication.OpenIdConnect;
@@ -18,32 +17,42 @@ using Microsoft.AspNetCore.Authentication;
 using System.Security.Claims;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Options;
 
 namespace Office365GraphCoreMVCHelper
 {
-    public partial class Startup
+    public class Startup
     {
+
+        static IConfigurationRoot Configuration { get; set; }
+
+        public Startup(IHostingEnvironment env)
+        {
+            Configuration = new ConfigurationBuilder()
+                            .SetBasePath(env.ContentRootPath)
+                            .AddJsonFile("appsettings.json")
+                            .Build();
+            // ClientId = Configuration["Office365ApplicationInfo:ClientId"];
+            // Authority = Configuration["Office365ApplicationInfo:Authority"];
+            // ClientSecret = Configuration["Office365ApplicationInfo:ClientSecret"];
+            // GraphResourceId = Configuration["Office365ApplicationInfo:GraphResourceId"];
+        }
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+
+
+            services.AddOptions();
+            services.Configure<AppSetting>(Configuration);
+
             services.AddSession();
             services.AddAuthentication(sharedoptions => sharedoptions.SignInScheme = CookieAuthenticationDefaults.AuthenticationScheme);
-           
+
             // Add framework services.
             services.AddMvc();
-
-            AddService(services);
         }
 
-        partial void AddService(IServiceCollection services);
-        partial void ConfigureMiddleware(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory);
-
-        private readonly string ClientId="e91ef175-e38d-4feb-b1ed-f243a6a81b93";
-        private readonly string Authority=String.Format("https://login.microsoftonline.com/{0}","office365devlabs.onmicrosoft.com");
-        private readonly string ClientSecret="2F5jdoGGNn59oxeDLE9fXx5tD86uvzIji74dmLaj3YI=";
-        private readonly string GraphResourceId="https://graph.microsoft.com";
-        private readonly string CallbackPath ="/signin-oidc";
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
@@ -61,20 +70,32 @@ namespace Office365GraphCoreMVCHelper
                 app.UseExceptionHandler("/Home/Error");
             }
 
-            ConfigureMiddleware(app,env,loggerFactory);
+            //ConfigureMiddleware(app,env,loggerFactory);
 
             app.UseStaticFiles();
             app.UseSession();
             app.UseCookieAuthentication();
-            app.UseOpenIdConnectAuthentication(new OpenIdConnectOptions{
-                ClientId = ClientId,
-                Authority = Authority,
-                ClientSecret = ClientSecret,
+
+            var options = app.ApplicationServices.GetRequiredService<IOptions<AppSetting>>();
+
+            app.UseOpenIdConnectAuthentication(new OpenIdConnectOptions
+            {
+                ClientId = options.Value.Office365ApplicationInfo.ClientId,
+                Authority = options.Value.Office365ApplicationInfo.Authority,
+                ClientSecret = options.Value.Office365ApplicationInfo.ClientSecret,
                 ResponseType = OpenIdConnectResponseType.CodeIdToken,
-                CallbackPath = CallbackPath,
-                GetClaimsFromUserInfoEndpoint =true,
-                Events = new OpenIdConnectEvents{
-                    OnAuthorizationCodeReceived = OnAuthorizationCodeReceived
+                CallbackPath = "/signin-oidc",
+                GetClaimsFromUserInfoEndpoint = true,
+                Events = new OpenIdConnectEvents
+                {
+                    OnAuthorizationCodeReceived = async (context) =>
+                    {
+                        string userObjectId = (context.Ticket.Principal.FindFirst("http://schemas.microsoft.com/identity/claims/objectidentifier"))?.Value;
+                        ClientCredential clientCred = new ClientCredential(options.Value.Office365ApplicationInfo.ClientId, options.Value.Office365ApplicationInfo.ClientSecret);
+                        AuthenticationContext authContext = new AuthenticationContext(options.Value.Office365ApplicationInfo.Authority, new SampleSessionCache(userObjectId, context.HttpContext.Session));
+                        AuthenticationResult authResult = await authContext.AcquireTokenByAuthorizationCodeAsync(
+                            context.ProtocolMessage.Code, new Uri(context.Properties.Items[OpenIdConnectDefaults.RedirectUriForCodePropertiesKey]), clientCred, options.Value.Office365ApplicationInfo.GraphResourceId);
+                    }
                 }
             });
 
@@ -84,17 +105,6 @@ namespace Office365GraphCoreMVCHelper
                     name: "default",
                     template: "{controller=Home}/{action=Index}/{id?}");
             });
-        }
-        private async Task OnAuthorizationCodeReceived(AuthorizationCodeReceivedContext context)
-        {
-            // Acquire a Token for the Graph API and cache it using ADAL.  In the TodoListController, we'll use the cache to acquire a token to the Todo List API
-            string userObjectId = (context.Ticket.Principal.FindFirst("http://schemas.microsoft.com/identity/claims/objectidentifier"))?.Value;
-            ClientCredential clientCred = new ClientCredential(ClientId, ClientSecret);
-            AuthenticationContext authContext = new AuthenticationContext(Authority, new SampleSessionCache(userObjectId, context.HttpContext.Session));
-            AuthenticationResult authResult = await authContext.AcquireTokenByAuthorizationCodeAsync(
-                context.ProtocolMessage.Code, new Uri(context.Properties.Items[OpenIdConnectDefaults.RedirectUriForCodePropertiesKey]), clientCred, GraphResourceId);
-
-            
         }
 
         private Task OnAuthenticationFailed(FailureContext context)

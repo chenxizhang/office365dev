@@ -4,6 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Hosting;
+using Office365GraphCoreMVCHelper;
 
 namespace aspntecoremvc
 {
@@ -12,10 +13,10 @@ namespace aspntecoremvc
         public static void Main(string[] args)
         {
             var host = new WebHostBuilder()
+                .UseSetting("startupAssembly","Office365GraphCoreMVCHelper")
                 .UseKestrel()
                 .UseContentRoot(Directory.GetCurrentDirectory())
                 .UseIISIntegration()
-                .UseStartup<Startup>()
                 .Build();
 
             host.Run();

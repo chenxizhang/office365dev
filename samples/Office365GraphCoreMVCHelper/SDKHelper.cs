@@ -4,20 +4,23 @@ using System.Threading.Tasks;
 using Microsoft.Graph;
 using Microsoft.IdentityModel.Clients.ActiveDirectory;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Options;
+using Microsoft.AspNetCore.Builder;
 
 namespace Office365GraphCoreMVCHelper
 {
     public static class SDKHelper
     {
-        public static async Task<GraphServiceClient> GetAuthenticatedClient(this ControllerBase controller)
+        public static async Task<GraphServiceClient> GetAuthenticatedClient(this ControllerBase controller,IOptions<AppSetting> options)
         {
-
+            
+            
             
 
-            var Authority = String.Format("https://login.microsoftonline.com/{0}", "office365devlabs.onmicrosoft.com");
-            var ClientId = "e91ef175-e38d-4feb-b1ed-f243a6a81b93";
-            var ClientSecret = "2F5jdoGGNn59oxeDLE9fXx5tD86uvzIji74dmLaj3YI=";
-            var GraphResourceId = "https://graph.microsoft.com";
+            var Authority = options.Value.Office365ApplicationInfo.Authority;
+            var ClientId = options.Value.Office365ApplicationInfo.ClientId;
+            var ClientSecret = options.Value.Office365ApplicationInfo.ClientSecret;
+            var GraphResourceId = options.Value.Office365ApplicationInfo.GraphResourceId;
 
 
             string userObjectId = controller.HttpContext.User.FindFirst("http://schemas.microsoft.com/identity/claims/objectidentifier")?.Value;
