@@ -32,10 +32,6 @@ namespace Office365GraphCoreMVCHelper
                             .SetBasePath(env.ContentRootPath)
                             .AddJsonFile("appsettings.json")
                             .Build();
-            // ClientId = Configuration["Office365ApplicationInfo:ClientId"];
-            // Authority = Configuration["Office365ApplicationInfo:Authority"];
-            // ClientSecret = Configuration["Office365ApplicationInfo:ClientSecret"];
-            // GraphResourceId = Configuration["Office365ApplicationInfo:GraphResourceId"];
         }
 
         // This method gets called by the runtime. Use this method to add services to the container.
