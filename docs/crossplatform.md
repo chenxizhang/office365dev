@@ -578,3 +578,100 @@ namespace aspntecoremvc.Controllers
 }
 
 ```
+
+
+## 2017年7月1日更新
+
+我进一步上面分离出来的这个Office365GraphCoreMVCHelper的项目打包成了一个nuget的package<https://www.nuget.org/packages/Office365GraphCoreMVCHelper/>，以便实现更大范围的复用。
+
+![](images/aspnetcorehelpernugetpackage.png)
+
+如何使用它呢？很简单，请按照下面的步骤即可
+
+1. 创建一个ASP.NET Core MVC项目
+> dotnet new mvc
+
+2. 增加对于Office365GraphCoreMVCHelper的引用，修改csproj文件，添加如下的定义
+> <PackageReference Include="Office365GraphCoreMVCHelper" Version="1.1.0"/>
+
+3. 下载这个包
+> dotnet restore
+
+4. 修改Program.cs文件，使用Office365GraphCoreMVCHelper 定义好的Startup类（增加下面代码中的UseSetting这一句）。当前项目的Startup.cs文件可以删除。
+
+```
+using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Threading.Tasks;
+using Microsoft.AspNetCore.Hosting;
+
+namespace testaspnetcoremvc
+{
+    public class Program
+    {
+        public static void Main(string[] args)
+        {
+            var host = new WebHostBuilder()
+                .UseKestrel()
+                .UseContentRoot(Directory.GetCurrentDirectory())
+                .UseIISIntegration()
+                .UseSetting("startupAssembly","Office365GraphCoreMVCHelper")
+                .Build();
+
+            host.Run();
+        }
+    }
+}
+
+```
+
+4. 修改appsettings.json文件，确保里面有如下Office365ApplicationInfo信息
+
+```
+{
+  "Office365ApplicationInfo":{
+    "ClientId":"e91ef175-e38d-4feb-b1ed-f243a6a81b93",
+    "ClientSecret":"2F5jdoGGNn59oxeDLE9fXx5tD86uvzIji74dmLaj3YI=",
+    "Authority":"https://login.microsoftonline.com/office365devlabs.onmicrosoft.com",
+    "GraphResourceId":"https://graph.microsoft.com"
+  },
+  "Logging": {
+    "IncludeScopes": false,
+    "LogLevel": {
+      "Default": "Warning"
+    }
+  }
+}
+
+
+```
+
+5. 修改HomeController，在需要进行身份验证以及调用Graph API的地方使用如下的代码即可
+
+```
+//添加几个引用
+using Office365GraphCoreMVCHelper;
+using Microsoft.Extensions.Options;
+using Microsoft.AspNetCore.Authorization;
+
+//修改构造函数，接受注入的配置信息
+private IOptions<AppSetting> settings;
+public HomeController(IOptions<AppSetting> options)
+{
+    settings = options;
+}
+
+
+//在需要调用Graph API的Action中做如下修改
+[Authorize]
+public async Task<IActionResult> About()
+{
+    var client = await this.GetAuthenticatedClient(settings);
+    var user = client.Me.Request().GetAsync().Result;
+
+    ViewData["Message"] = $"Hello,{user.DisplayName}";
+    return View();
+}
+```
