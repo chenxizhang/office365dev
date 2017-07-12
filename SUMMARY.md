@@ -13,6 +13,7 @@
         1. [注册Azure AD 应用程序](/docs/applicationregisteration.md)
         1. [注册Azure AD 2.0 应用程序](/docs/applicationregisteration2.0.md)
         1. [注册中国版Microsoft Graph应用程序](/docs/chinaoffice365applicationregisteration.md)
+        1. [掀起Azure AD的盖头来——深入理解Microsoft Graph应用程序和服务权限声明](/docs/understandapplication.md)
     1. 开发Microsoft Graph 应用程序
         1. [Microsoft Graph 桌面应用程序](/docs/desktopapplication.md)
         1. [PowerShell脚本访问Microsoft Graph](/docs/powershell-application.md)
@@ -21,11 +22,8 @@
         1. [如何通过PowerShell获取Office 365 TenantID](/docs/gettenantid.md)
         1. [Microsoft Graph  服务应用程序](/docs/deamonapplication.md)
         1. [跨平台应用集成(在ASP.NET Core MVC 应用程序中集成 Microsoft Graph)](/docs/crossplatform.md)
-    1. 其他话题
-        1. [掀起Azure AD的盖头来——深入理解Microsoft Graph应用程序和服务权限声明](/docs/understandapplication.md)
-        1. [如何保存和刷新访问令牌](/docs/accesstoken.md)
 * Office Add-ins 开发
-    1. Office Add-in 技术架构
+    1. [Office Add-in 架构和入门](docs/officeaddins.md)
     1. Outlook Add-in
     1. Word Add-in
     1. Excel Add-in
@@ -41,7 +39,8 @@
     1. Microsoft Flow 入门
     1. Common Data Model 初探
     1. Power BI 面面观
-* Office 365与人工智能
+    1. Office 365 Connector 开发入门
+* Office 365 开发与人工智能
     1. 人工智能背景下的Office 365现状和发展趋势
     1. 机器人（Bot）开发入门
 
