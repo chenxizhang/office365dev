@@ -22,7 +22,7 @@
         1. [Microsoft Graph  服务应用程序](/docs/deamonapplication.md)
         1. [跨平台应用集成(在ASP.NET Core MVC 应用程序中集成 Microsoft Graph)](/docs/crossplatform.md)
     1. 其他话题
-        1. [深入理解Microsoft Graph应用程序和服务声明](/docs/understandapplication.md)
+        1. [掀起Azure AD的盖头来——深入理解Microsoft Graph应用程序和服务权限声明](/docs/understandapplication.md)
         1. [如何保存和刷新访问令牌](/docs/accesstoken.md)
 * Office Add-ins 开发
     1. Office Add-in 技术架构

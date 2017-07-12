@@ -1,4 +1,4 @@
-# 掀起Azure AD的盖头来————深入理解Microsoft Graph应用程序和服务声明
+# 掀起Azure AD的盖头来——深入理解Microsoft Graph应用程序和服务权限声明
 > 作者：陈希章 发表于 2017年7月12日
 
 ## 引子
