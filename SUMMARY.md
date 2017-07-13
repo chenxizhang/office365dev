@@ -25,6 +25,7 @@
 * Office Add-ins 开发
     1. [Office Add-in 架构和入门](docs/officeaddins.md)
     1. [在Visual Studio 中开发Office Add-in](docs/officeaddindev.md)
+    1. [在Visual Studio Code中开发Office Add-in](docs/vscodetoofficeaddin.md)
     1. Outlook Add-in
     1. Word Add-in
     1. Excel Add-in
