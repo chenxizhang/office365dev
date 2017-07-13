@@ -24,7 +24,7 @@
         1. [跨平台应用集成(在ASP.NET Core MVC 应用程序中集成 Microsoft Graph)](/docs/crossplatform.md)
 * Office Add-ins 开发
     1. [Office Add-in 架构和入门](docs/officeaddins.md)
-    1. [Office Add-in 开发和部署流程](docs/officeaddindev.md)
+    1. [Office Add-in 开发和部署体验](docs/officeaddindev.md)
     1. Outlook Add-in
     1. Word Add-in
     1. Excel Add-in
