@@ -73,6 +73,8 @@ Microsoft Graph可以让你的业务系统很容易地和Office 365 **集成** �
 截至目前，在Office Store里面有2186个不同类型的Office Add-in
 ![](images/officestore.png)
 
+>请注意，上面截图是国际版Office Store。句我得到的信息，今年的晚些时候，国内版的Office Store将很快跟我们见面。
+
 在每个不同的Office应用程序中，通过在“插入”选项卡中选择“Add-ins”这个分组中的“Store”按钮，可以查看到与该应用程序直接相关的所有Add-in
 ![](images/exceladdinstore.png)
 
