@@ -27,7 +27,22 @@ Visual Studio这个宇宙第一的IDE伴随着我从对编程一无所知，及�
 
 ![](images/vsofficeaddinproject.png)
 
-最左边的是manifest文件，中间是Web应用程序的首页home.html（你可以看到它用到了jquery, office.js，
+最左边的是manifest文件，中间是Web应用程序的首页 —— home.html，这两个部分其实是通过在manifest文件中的如下内容指定的
+
+```
+<DefaultSettings>
+    <SourceLocation DefaultValue="~remoteAppUrl/Home.html" />
+</DefaultSettings>
+```
+
+关于manifest文件的具体规范，以及Web应用程序开发的细节，我准备在后续专门来写。现在就让我们不做任何的修改，直接运行起来看看效果吧。对，就是按F5键。
+
+![](images/exceladdinsample1.png)
+
+这个Add-in会在“Home”这个Tab里面增加一个Add-in Command—— “Show TaskPane”，点击这个按钮后，会在工作表的右侧出现一个任务面板，并且与此同时已经插入了一些范例数据到工作表上面。如果我们选中这些数据，同时在任务面板中点击“Highlight”的话，它会把这些数字中的最大值找出来，并且用颜色进行高亮显示。
+
+![](images/exceladdinsample2.png)
+
 
 
 ## 在Visual Studio Code中开发Office Add-in
