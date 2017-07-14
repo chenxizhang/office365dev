@@ -87,7 +87,7 @@ Sideload Office Add-ins for testing
 
 最右侧的manifest不用多说了，内容跟上一篇文章的例子是基本相同的。有意思的是中间的app.ts文件。这又是什么呢？
 
-ts文件是TypeScript文件，而TypeScript是一种自由和开源的编程语言。它是JavaScript的一个严格的超集，并且添加了可选的静态类型和基于类的面向对象编程。<http://www.typescriptlang.org/>，是著名的Turbo Pascal，Delphi和C#的发明者 **安德斯·海尔斯伯格** 的又一力作。很荣幸，神一般存在的安德斯是我现在的同事。
+ts文件是TypeScript文件，而TypeScript是一种自由和开源的编程语言。它是JavaScript的一个严格的超集，并且添加了可选的静态类型和基于类的面向对象编程。[TypeScript](http://www.typescriptlang.org/)是著名的Turbo Pascal，Delphi和C#的发明者 **安德斯·海尔斯伯格** 的又一力作。很荣幸，神一般存在的安德斯是我现在的同事。
 
 我不准备在这里对TypeScript进行过多展开，但我充分理解现在在看文章的你，可能会有这样的感慨：哇，看起来不错！嗯，又要学新东西了。
 
