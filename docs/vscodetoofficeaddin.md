@@ -17,7 +17,7 @@ Visual Studio Code提供了对Office Add-in 开发的完美支持，这一篇文
 ```
 npm install -g yo generator-office
 ```
-> yo 这个工具的全称是yoeman, 有兴趣请参考它的官方网站 <http://yeoman.io/>, 甚至也可以提交自己的generator
+> yo 这个工具的全称是yeoman, 有兴趣请参考它的官方网站 <http://yeoman.io/>, 甚至也可以提交自己的generator
 
 ![](images/npmyoofficegenerator.png)
 

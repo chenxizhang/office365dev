@@ -46,17 +46,11 @@ Visual Studio这个宇宙第一的IDE伴随着我从对编程一无所知到靠�
 
 1. 编译和生成 ExcelWebAddin4Web这个项目，并且在本地用IIS Express将其运行起来，在我的电脑上，它会在下面的地址运行 <https://localhost:44379/>，这是在项目属性中指定的。
 ![](images/exceladdin4prop.PNG)
-
 1. 编译和生成 ExcelWebAddin4这个项目，并且用上面这个地址，替换到manifest文件中 ~remoteAppUrl。
-
 ![](images/exceladdin4manifest.PNG)
-
 与此同时，它会生成一个Book1.xlsx的文件用来做测试
-
 ![](images/exceladdin4debug.PNG)
-
 1. Visual Studio启动Excel，加载Book1.xlsx，并且用开发模式，加载上面这个manifest文件，进而言之就是加载我们这个Web Addin
-
 ![](images/excelwebaddindebugmode.png)
 
 为什么我们会在“Home”这个Tab中看到那个自定义的按钮，是因为在Manifest文件中定义了如下的信息

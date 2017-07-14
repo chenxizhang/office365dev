@@ -21,16 +21,22 @@
         1. [Microsoft Graph  Web应用程序极致开发体验](/docs/webapplication.md)
         1. [如何通过PowerShell获取Office 365 TenantID](/docs/gettenantid.md)
         1. [Microsoft Graph  服务应用程序](/docs/deamonapplication.md)
-        1. [跨平台应用集成(在ASP.NET Core MVC 应用程序中集成 Microsoft Graph)](/docs/crossplatform.md)
+        1. [在ASP.NET Core MVC 应用程序中集成 Microsoft Graph](/docs/crossplatform.md)
 * Office Add-ins 开发
     1. [Office Add-in 架构和入门](docs/officeaddins.md)
     1. [在Visual Studio 中开发Office Add-in](docs/officeaddindev.md)
     1. [在Visual Studio Code中开发Office Add-in](docs/vscodetoofficeaddin.md)
-    1. Outlook Add-in
-    1. Word Add-in
-    1. Excel Add-in
-    1. PowerPoint Add-in
-    1. OneNote Add-in
+    1. [Office Add-in设计规范](docs/officeaddindesignguide.md)
+    1. [详解Office Add-in 清单文件](docs/officeaddinmanifest.md)
+    1. [在企业和应用市场发布Office Add-in](docs/officeaddinpublish.md)
+    1. [使用Azure App Service部署Office Add-in](docs/officeaddindeploytoazure.md)
+    1. [使用docker部署Office Add-in](docs/officeaddindeploytodocker.md)
+    1. [在Office Add-in中实现单点登陆（SSO）](docs/officeaddinsso.md)
+    1. [Outlook Add-in 典型场景和对象模型](docs/outlookaddin.md)
+    1. [Word Add-in 典型场景和对象模型](docs/wordaddin.md)
+    1. [Excel Add-in 典型场景和对象模型](docs/exceladdin.md)
+    1. [PowerPoint Add-in 典型场景和对象模型](docs/powerpointaddin.md)
+    1. [OneNote Add-in 典型场景和对象模型](docs/onenoteaddin.md)
 * SharePoint Online 开发
     1. SharePoint 大局观
     1. SharePoint Add-in 开发
