@@ -18,7 +18,7 @@
 
 > 截至本文发稿，我发现Bot Directory这个服务已经不再接受新的提交了，现在的政策改为Bing Channel来提供服务。
 
-## 注册Bot
+## 注册一个Bot
 
 要进行Bot开发，你首先需要在Bot Framework中进行注册。你可以使用个人账号（Microsoft Account）和工作账号（Office 365账号）登陆 <https://dev.botframework.com>，然后选择“My bots”，进行如下操作完成注册。
 
@@ -65,6 +65,7 @@ codemonkeybot
 
 ```
 完成这些之后，你就可以按下F5键进行调试了，如果不出意外的话，你将看到浏览器被打开并显示如下的页面
+
 ![](iamges/botsampledebug.png)
 
 那么，这有什么用呢？目前来说，确实还看不出有什么用。因为现在来说，我们还只是构建了Bot中的服务部分，并没有将其与对应的Channel连接起来，所以也就没有用户界面来进行调用它。
@@ -77,6 +78,7 @@ codemonkeybot
 > 值得注意的是，这个模拟器可以在PC,Mac上面运行。
 
 打开模拟器，并且输入服务地址，和应用ID及密钥后，点击“Connnect”按钮
+
 ![](images/botframeworkemulator.png)
 
 确保在右侧的"Log"中看到的返回信息是 “-> POST 200 [conversationUpdate] ”，这个就表示连接成功了。然后我们在左下角的文本框，可以随便输入一些文字，点击回车后模拟器会将信息包装起来，发送给后台服务，正常情况下我们会很快看到Bot的回复文本。我的范例如下
@@ -87,7 +89,7 @@ codemonkeybot
 
 通过Bot Framework模拟器进行本地测试和调试的好处是，可以直接在Visual Studio中设置断点，一步一步地调试，便于发现和解决问题。
 
-## 将Bot代码部署到Azure App Service
+## 将Bot应用部署到Azure App Service
 
 在完成本地的开发和测试后，下一步是需要将我们开发好的API Service发布到一个合适的生产环境，以便其他用户能够访问到这个服务。这个API Service是一个标准的ASP.NET项目，你可以自行选择合适的托管环境，只要有IIS并且支持.NET Framework 4.6的Windows Server就可以。我这里演示的是，如何将这个应用部署到Azure 的App Service中，这是Azure 提供的PaaS服务，它可以将很多运行环境的细节隐藏掉，开发人员不需要关注操作系统和IIS怎么安装，负载均衡怎么做等基础性工作，而是将全部精力集中在应用开发上面。关于Azure App Service的更多细节，已经超出了本文的范畴，有兴趣的朋友可以直接参考 <https://azure.microsoft.com/en-us/services/app-service/>.
 
