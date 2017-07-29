@@ -66,7 +66,7 @@ codemonkeybot
 ```
 完成这些之后，你就可以按下F5键进行调试了，如果不出意外的话，你将看到浏览器被打开并显示如下的页面
 
-![](iamges/botsampledebug.png)
+![](images/botsampledebug.png)
 
 那么，这有什么用呢？目前来说，确实还看不出有什么用。因为现在来说，我们还只是构建了Bot中的服务部分，并没有将其与对应的Channel连接起来，所以也就没有用户界面来进行调用它。
 
@@ -105,7 +105,7 @@ codemonkeybot
 
 Visual Studio会自动对项目进行编译并且完成第一次发布，如果一切顺利的话，你将很快看到一个新打开的浏览器窗口
 
-![](images/codemonkeypublish2.PNG)
+![](images/codemonkeypublish2.png)
 
 请注意浏览器中的地址<http://codemonkeybot.azurewebsites.net/>,你可以换成 <https://codemonkeybot.azurewebsites.net/> 也是能正常工作的，这其实是Azure App Service的一个福利，所有部署到App Service的应用，都默认拥有https访问的功能，不需要自己去申请证书。要知道，在生产环境使用Bot的时候，我们是强烈推荐https的。
 
