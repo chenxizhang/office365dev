@@ -38,7 +38,8 @@
 1. **Redefining Microsoft with AI** —— We are infusing AI into every product and service we offer, from Xbox to Windows, from Bing to Office.
 
 而如果想进一步了解这方面的细节，我强烈推荐大家阅读微软亚洲研究院院长洪小文博士在“二十一世纪的计算”学术研讨会所做的报告[《Co-Evolution of Artificial Intelligence and Human Intelligence —— 人工智能和人类智能的 “共进化”》](https://www.leiphone.com/news/201611/jVCnhaDqAUnU5kt7.html?viewType=weixin)，这个报告非常具体、生动地给我们展示了人工智能的三个能力（视觉识别，自然语言理解，数据分析）和智能的四个阶段（功能，智能，智力，智慧）。
-![](images/hongxiaowen.PNG)。
+
+![](images/hongxiaowen.PNG)
 
 ## 微软人工智能总体框架和战略
 
