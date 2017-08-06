@@ -40,6 +40,7 @@
 * SharePoint Online 开发
     1. SharePoint 大局观
     1. SharePoint Add-in 开发
+    1. SharePoint Patterns and Practices 
     1. SharePoint Framework
 * 基于Office 365的业务和流程应用开发
     1. 基于Office 365的随需应变业务应用平台
