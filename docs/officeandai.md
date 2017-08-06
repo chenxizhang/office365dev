@@ -253,7 +253,7 @@
 
     ![](images/microsoftpix.PNG)
 
-    Microsoft Pix目前只有iPhoned版本，关于它详细信息，请参考 <https://www.microsoft.com/en-us/research/product/microsoftpix/>
+    Microsoft Pix目前只有iPhone版本，关于它详细信息，请参考 <https://www.microsoft.com/en-us/research/product/microsoftpix/>
 
     Office Lens则是另外一款免费的移动应用，它非常适合从白板、菜单、符号、手写备忘录或任何具有大量文本的地方捕获笔记和信息。你无需记笔记、依赖模糊图片，也不必担心将笔记放错位置。它也是捕获草图、绘图、公式甚至是无文本图片的最佳选择。它还可以和Office 365实现无缝的整合，例如一键保存到OneDrive等等。
 

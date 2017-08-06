@@ -26,7 +26,7 @@
     1. [Office Add-in 架构和入门](docs/officeaddins.md)
     1. [在Visual Studio 中开发Office Add-in](docs/officeaddindev.md)
     1. [在Visual Studio Code中开发Office Add-in](docs/vscodetoofficeaddin.md)
-    1. [Office Add-in设计规范](docs/officeaddindesignguide.md)
+    1. [Office Add-in 设计规范与最佳实践](docs/officeaddindesignguide.md)
     1. [详解Office Add-in 清单文件](docs/officeaddinmanifest.md)
     1. [在企业和应用市场发布Office Add-in](docs/officeaddinpublish.md)
     1. [使用Azure App Service部署Office Add-in](docs/officeaddindeploytoazure.md)
