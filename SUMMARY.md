@@ -40,18 +40,15 @@
 * SharePoint Online 开发
     1. SharePoint 大局观
     1. SharePoint Add-in 开发
-    1. SharePoint Patterns and Practices 
+    1. SharePoint Patterns and Practices
     1. SharePoint Framework
 * 基于Office 365的业务和流程应用开发
     1. 基于Office 365的随需应变业务应用平台
     1. PowerApps入门
     1. Microsoft Flow 入门
     1. Common Data Model 初探
-    1. Power BI 面面观
+    1. [Power BI 观未见，行不止](docs/powerbi.md)
     1. Office 365 Connector 开发入门
 * Office 365 开发与人工智能
     1. [人工智能背景下的Office 365现状和发展趋势](docs/officeandai.md)
     1. [Office 365 机器人（Bot）开发入门](docs/botframeworkquickstart.md)
-
-
-
