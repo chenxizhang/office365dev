@@ -47,7 +47,7 @@
     1. PowerApps入门
     1. Microsoft Flow 入门
     1. Common Data Model 初探
-    1. [Power BI 观未见，行不止](docs/powerbi.md)
+    1. [观未见，行不止 —— Power BI 两周年技术和方案交流圆桌会议纪实](docs/powerbi.md)
     1. Office 365 Connector 开发入门
 * Office 365 开发与人工智能
     1. [人工智能背景下的Office 365现状和发展趋势](docs/officeandai.md)
