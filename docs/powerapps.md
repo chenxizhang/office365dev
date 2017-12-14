@@ -123,6 +123,8 @@ PowerApps是给业务用户来准备的，所以他的使用并不需要你懂�
 
 ![](images/powerapps-excel-5.PNG)
 
+> 正如你看到的，你还可以将这个应用保存在本地计算机（This computer）。这个操作会生成一个扩展名为msapp的文件，收到这个文件的用户也可以双击打开应用。
+
 然后你可以将应用分享给需要的同事
 
 ![](images/powerapps-excel-6.PNG)
