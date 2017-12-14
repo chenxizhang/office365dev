@@ -41,11 +41,11 @@
     1. SharePoint Framework
 * 基于Office 365的业务和流程应用开发
     1. [基于Office 365的随需应变业务应用平台](docs/officebusinessapp.md)
-    1. PowerApps入门
-    1. Microsoft Flow 入门
-    1. Common Data Model 初探
+    1. [PowerApps入门](docs/powerapps.md)
+    1. [Microsoft Flow 入门](docs/microsoftflow.md)
+    1. [Common Data Model 初探](docs/commondatamodel.md)
     1. [观未见，行不止 —— Power BI 两周年技术和方案交流圆桌会议纪实](docs/powerbi.md)
-    1. Office 365 Connector 开发入门
+    1. [Office 365 Connector 开发入门](docs/office365connector.md)
 * Office 365 开发与人工智能
     1. [人工智能背景下的Office 365现状和发展趋势](docs/officeandai.md)
     1. [Office 365 机器人（Bot）开发入门](docs/botframeworkquickstart.md)
