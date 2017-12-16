@@ -41,9 +41,9 @@
     1. SharePoint Framework
 * 基于Office 365的业务和流程应用开发
     1. [基于Office 365的随需应变业务应用平台](docs/officebusinessapp.md)
-    1. [使用PowerApps快速构建基于主题的轻业务应用 —— 入门篇](docs/powerapps.md)
-    1. [使用PowerApps快速构建基于主题的轻业务应用 —— 进阶篇](docs/powerappsadv.md)
-    1. [Microsoft Flow 入门](docs/microsoftflow.md)
+    1. [PowerApps 入门篇](docs/powerapps.md)
+    1. [PowerApps 进阶篇](docs/powerappsadv.md)
+    1. [Microsoft Flow 概览](docs/microsoftflow.md)
     1. [Common Data Model 初探](docs/commondatamodel.md)
     1. [为PowerApps和Flow开发自定义连接器](docs/powerappsconnector.md)
     1. [观未见，行不止 —— Power BI 两周年技术和方案交流圆桌会议纪实](docs/powerbi.md)
