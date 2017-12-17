@@ -44,7 +44,7 @@
     1. [PowerApps 入门篇](docs/powerapps.md)
     1. [PowerApps 进阶篇](docs/powerappsadv.md)
     1. [Microsoft Flow 概览](docs/microsoftflow.md)
-    1. [Common Data Model 初探](docs/commondatamodel.md)
+    1. [Common Data Service 初探](docs/commondatamodel.md)
     1. [为PowerApps和Flow开发自定义连接器](docs/powerappsconnector.md)
     1. [观未见，行不止 —— Power BI 两周年技术和方案交流圆桌会议纪实](docs/powerbi.md)
     1. [Office 365 Connector 开发入门](docs/office365connector.md)
