@@ -79,6 +79,8 @@
 
 有意思的是，要定义工具栏和清单，在清单文件中，我们称之为VersionOverrides。一个最简单的Ribbon定义如下
 
+> 如果想要实现当文档打开时，就自动加载某个TaskPaneApp，则无需进行VersionOverrides，直接保留DefaultSettings即可。这样，用户在选择插入该Add-in的时候，不会去改变宿主程序的菜单（Ribbon和Context Menu），而是自动打开任务面板，而且最关键的是，这种情况下，下次再次打开文档的时候，也会自动打开这个任务面板。
+
 ```
 <VersionOverrides xmlns="http://schemas.microsoft.com/office/taskpaneappversionoverrides" xsi:type="VersionOverridesV1_0">
     <Hosts>
