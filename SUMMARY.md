@@ -28,7 +28,7 @@
     1. [在Visual Studio Code中开发Office Add-in](docs/vscodetoofficeaddin.md)
     1. [Office Add-in 设计规范与最佳实践](docs/officeaddindesignguide.md)
     1. [实战Excel Add-in的三种玩法(VBA,VSTO,Web Add-in)](docs/exceladdinsample.md)
-    1. [Excel Web Add-in的五种开发场景](docs/exceladdinpractics.md)
+    1. [Excel Web Add-in的开发常见问题解答](docs/exceladdinpractics.md)
     1. [详解Office Add-in 清单文件](docs/officeaddinmanifest.md)
     1. [在企业和应用市场发布Office Add-in](docs/officeaddinpublish.md)
     1. [使用Azure App Service部署Office Add-in](docs/officeaddindeploytoazure.md)
