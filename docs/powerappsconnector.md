@@ -93,6 +93,8 @@
 
 ![](images/2017-12-20-09-36-06.png)
 
+> 请注意，真正使用的连接器，是需要做身份验证的。建议在这个基础上，大家做一些针对性的实践。
+
 点击“继续”，此时Flow会读取swagger文件中的定义信息，列出所有的操作
 
 ![](images/2017-12-20-09-37-28.png)
@@ -165,10 +167,6 @@
 
 [Data Connector SDK Developer Preview](https://powerbi.microsoft.com/en-us/blog/data-connectors-developer-preview/)
 
-
 ## 结语
 
 新一代的商业应用平台，它的强大依赖于强大的底层设计和灵活的应用架构。作为PowerApps和Flow的基础，连接器是一个核心的基础组件。微软提供的组件化架构，让开发人员可以使用自己习惯的方式开发Web API，并将其无缝地整合到业务应用的开发中去。
-
-
-
