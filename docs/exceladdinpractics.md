@@ -175,3 +175,58 @@
     - 在VSTO中是这么做的：<https://blogs.msdn.microsoft.com/eric_carter/2004/12/01/writing-user-defined-functions-for-excel-in-net/>
 
     在Web Add-in的时代，目前已经提供了针对发烧友（Office Insider）的Developer Preview支持，请参考 <https://docs.microsoft.com/en-us/office/dev/add-ins/excel/custom-functions-overview>
+
+1. 能不能实现文档打开的时候自动加载某个Add-in
+
+    可以，但是分两种情况。
+    - 第一种情况，如果是Content Add-in（目前在Excel和PowerPoint中受支持），则自动就实现了，你可以创建一个文档，然后插入好这个Add-in，保存后，下次打开就自动会加载进来。
+    - 第二种情况，如果是TaskPane Add-in（目前在Excel，Word，PowerPoint中受支持），则只有在没有添加VersionOverrides的情况下可以实现类似于Content Add-in 的效果，也就是说不能有自定义的Ribbon和Context Menu。
+
+    ```
+    <?xml version="1.0" encoding="UTF-8"?>
+    <!--Created:ce44715c-8c4e-446b-879c-ea9ebe0f09c8-->
+    <OfficeApp 
+            xmlns="http://schemas.microsoft.com/office/appforoffice/1.1" 
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+            xmlns:bt="http://schemas.microsoft.com/office/officeappbasictypes/1.0" 
+            xmlns:ov="http://schemas.microsoft.com/office/taskpaneappversionoverrides"
+            xsi:type="TaskPaneApp">
+
+    <!-- Begin Basic Settings: Add-in metadata, used for all versions of Office unless override provided. -->
+
+    <!-- IMPORTANT! Id must be unique for your add-in, if you reuse this manifest ensure that you change this id to a new GUID. -->
+    <Id>f43cc685-d5de-464e-a97c-520017b901a3</Id>
+
+    <!--Version. Updates from the store only get triggered if there is a version change. -->
+    <Version>1.0.0.0</Version>
+    <ProviderName>[Provider name]</ProviderName>
+    <DefaultLocale>en-US</DefaultLocale>
+    <!-- The display name of your add-in. Used on the store and various places of the Office UI such as the add-ins dialog. -->
+    <DisplayName DefaultValue="WordWebAddInSample" />
+    <Description DefaultValue="WordWebAddInSample"/>
+    <!-- Icon for your add-in. Used on installation screens and the add-ins dialog. -->
+    <IconUrl DefaultValue="~remoteAppUrl/Images/Button32x32.png" />
+
+    <SupportUrl DefaultValue="http://www.contoso.com" />
+    <!-- Domains that will be allowed when navigating. For example, if you use ShowTaskpane and then have an href link, navigation will only be allowed if the domain is on this list. -->
+    <AppDomains>
+        <AppDomain>AppDomain1</AppDomain>
+        <AppDomain>AppDomain2</AppDomain>
+        <AppDomain>AppDomain3</AppDomain>
+    </AppDomains>
+    <!--End Basic Settings. -->
+    
+    <!--Begin TaskPane Mode integration. This section is used if there are no VersionOverrides or if the Office client version does not support add-in commands. -->
+    <Hosts>
+        <Host Name="Document" />
+    </Hosts>
+    <DefaultSettings>
+        <SourceLocation DefaultValue="~remoteAppUrl/Home.html" />
+    </DefaultSettings>
+    <!-- End TaskPane Mode integration.  -->
+
+    <Permissions>ReadWriteDocument</Permissions>
+    <!-- End Add-in Commands Mode integration. -->
+
+    </OfficeApp>
+    ```
