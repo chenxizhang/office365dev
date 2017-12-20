@@ -31,8 +31,6 @@
     1. [Office Web Add-in的技术原理和开发常见问题剖析](docs/exceladdinpractics.md)
     1. [详解Office Add-in 清单文件](docs/officeaddinmanifest.md)
     1. [在企业和应用市场发布Office Add-in](docs/officeaddinpublish.md)
-    1. [使用Azure App Service部署Office Add-in](docs/officeaddindeploytoazure.md)
-    1. [使用docker部署Office Add-in](docs/officeaddindeploytodocker.md)
     1. [在Office Add-in中实现单点登陆（SSO）](docs/officeaddinsso.md)
 * SharePoint Online 开发
     1. SharePoint 大局观
