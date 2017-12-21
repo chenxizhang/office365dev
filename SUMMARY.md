@@ -33,7 +33,7 @@
     1. [在企业和应用市场发布Office Add-in](docs/officeaddinpublish.md)
     1. [在Office Add-in中实现单点登陆（SSO）](docs/officeaddinsso.md)
 * SharePoint Online 开发
-    1. [SharePoint 大局观](docs/sharepoint.md)
+    1. [再谈 SharePoint 大局观](docs/sharepoint.md)
     1. [SharePoint Add-in 开发](docs/sharepointaddin.md)
     1. [SharePoint Patterns and Practices](docs/sharepointpnp.md)
     1. [SharePoint Framework](docs/sharepointframework.md)
