@@ -67,7 +67,11 @@ SharePoint Framework这套框架 (<https://aka.ms/spfx>) ，也基本实现了�
 
 其实到这里为止，一个可以运行的WebPart项目已经准备就绪了。SharePoint Framework有一个很神奇的功能，就是支持在本地直接进行调试，不要求你安装SharePoint Server，也不需要你真的拥有SharePoint Online的环境（如果你只是显示内容，不需要涉及到调用SharePoint资源的话），这可是一个非常大的进步了。
 
-但要开始本地调试之前，我们需要确保有一个用于测试的数字证书，因为SharePoint Framework要求网站的地址必须是支持SSL的。我们可以通过 `gulp trust-dev-cert` 这个命令生成一个本地的证书，并且选择信任它。正常情况下，你将会看到一个弹出的窗口，请你确认证书信息，命令正常运行后，会有如下的输出：
+但要开始本地调试之前，我们需要确保有一个用于测试的数字证书，因为SharePoint Framework要求网站的地址必须是支持SSL的。我们可以通过 `gulp trust-dev-cert` 这个命令生成一个本地的证书，并且选择信任它。正常情况下，你将会看到一个弹出的窗口
+
+![](images/2017-12-25-21-53-26.png)
+
+请你确认证书信息，命令正常运行后，会有如下的输出：
 
 ![](images/2017-12-25-16-46-49.png)
 
@@ -91,6 +95,8 @@ SharePoint Framework这套框架 (<https://aka.ms/spfx>) ，也基本实现了�
 
 1. 打开任何一个SharePoint Online站点，将其地址复制下来，例如 `https://microsoftapc.sharepoint.com/teams/Samplesiteforares`
 1. 在上面的地址后面追加一段地址 `/_layouts/15/workbench.aspx`，在浏览器中访问这个地址后，你将看到一个跟刚才那个本地调试界面很类似的页面
+
+>这里的地址也可以是 `/_layouts/workbench.aspx`
 
 ![](images/2017-12-25-17-00-19.png)
 
