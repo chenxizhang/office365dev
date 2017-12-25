@@ -36,7 +36,7 @@
     1. [再谈 SharePoint 大局观](docs/sharepoint.md)
     1. [SharePoint Add-in 开发](docs/sharepointaddin.md)
     1. [SharePoint Patterns and Practices 简介](docs/sharepointpnp.md)
-    1. [SharePoint Framework](docs/sharepointframework.md)
+    1. [SharePoint Framework 简介](docs/sharepointframework.md)
 * 基于Office 365的业务和流程应用开发
     1. [基于Office 365的随需应变业务应用平台](docs/officebusinessapp.md)
     1. [PowerApps 入门篇](docs/powerapps.md)
