@@ -37,9 +37,13 @@ SharePoint Framework这套框架 (<https://aka.ms/spfx>) ，也基本实现了�
 另外一个好消息是，你可以使用Visual Studio Code 这一款更加轻量级的、跨平台的工具来进行SPFx开发，而且因为SPFx的框架无关性，你可以使用你最熟悉的Javascript框架（例如React、Handlebars、Knockout、Angular等）开发。如果你对C#很熟悉，你的经验可以得到复用，因为Visual Studio Code内置了对Typescript的支持。
 
 1. NodeJS，请一定要下载安装6.x这个版本（<https://nodejs.org/dist/latest-v6.x/>）。据产品组的声明，目前SPFx在其他版本的NodeJS中运行可能会遇到一些小问题。请安装好之后对照下图确认一下版本信息：
+
     ![](images/2017-12-25-16-12-46.png)
+
 1. 通过命令 `npm install -g yo gulp` 安装yeoman和gulp这两个模块
+
     ![](images/2017-12-25-16-15-16.png)
+    
 1. 安装微软提供的一个项目模板 `npm install -g @microsoft/generator-sharepoint`
 
 ## 开发和调试一个简单的客户端Web Part 
