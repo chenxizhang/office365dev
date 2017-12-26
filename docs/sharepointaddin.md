@@ -230,6 +230,8 @@ Visual Studio会在磁盘上面生成一个APP文件
 
 [注册 SharePoint 加载项 2013](https://docs.microsoft.com/zh-cn/sharepoint/dev/sp-add-ins/register-sharepoint-add-ins)
 
+> 如果是在Visual Studio中调试，直接按下F5后，会动态生成一个客户端ID和密钥，并且自动修改好所有的信息。如果需要为某个租户创建客户端ID和密码，则需要用SharePoint管理员身份在某个SharePoint网站上面运行 `_layouts/15/AppRegNew.aspx` 这个页面。而如果你的应用是要发布到Office Store，则还需要专门在“卖家面板”上面去注册。
+
 我已经生成一个信息如下
 
 ![](images/2017-12-22-16-14-48.png)
@@ -252,6 +254,39 @@ Visual Studio会在磁盘上面生成一个APP文件
 
 安装成功后你会在左侧导航栏看到一个新的链接，点击之后会跳转到这个页面
 
-![](images/2017-12-22-16-23-05.png)
+![](images/2017-12-26-14-33-52.png)
 
-然后，后面的操作就是在你的这个自定义网站上面进行了。
+如果我们研究一下此时浏览器的地址，它其实是这样的 `https://sharepointaddinsample.azurewebsites.net/?SPHostUrl=https://office365devlabs.sharepoint.com/sites/dev&SPLanguage=zh-CN&SPClientTag=0&SPProductNumber=16.0.7206.1208`，所以其实此时打开的是真正的你自己的网站，但是会把一些相关的上下文信息传递过来。
+
+但是，即便确实是一个独立的网站，在这个网站里面也还是可以访问到SharePoint的资源的，所有的操作都是通过SharePoint的Client API来实现的。下面是代码范例
+
+```
+[SharePointContextFilter]
+public ActionResult Index()
+{
+    User spUser = null;
+
+    var spContext = SharePointContextProvider.Current.GetSharePointContext(HttpContext);
+
+    using (var clientContext = spContext.CreateUserClientContextForSPHost())
+    {
+        if (clientContext != null)
+        {
+            spUser = clientContext.Web.CurrentUser;
+
+            clientContext.Load(spUser, user => user.Title);
+
+            clientContext.ExecuteQuery();
+
+            ViewBag.UserName = spUser.Title;
+        }
+    }
+
+    return View();
+}
+
+```
+
+## 结语
+
+本文完整地介绍了SharePoint Add-in开发的两种模式，一种是SharePoint托管的，一种是提供商托管的。第一种不需要独立的部署一个网站，它只能包含客户端脚本来实现定制，而且会以一个iframe的形式嵌入在SharePoint的网页中。第二种则可以由开发者自己部署一个网站，通过在SharePoint上面注册一个应用程序，来实现关联。这一种方式可以用更加强大的服务器编程，但也可以通过客户端API访问到SharePoint在资源。
