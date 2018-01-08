@@ -9,6 +9,7 @@
     - [Microsoft Graph 概述](/docs/microsoftgraphoverview.md)
     - [通过GraphExplorer体验Microsoft Graph](/docs/graphexplorer.md)
     - [通过其他第三方工具体验Microsoft Graph](/docs/graph-tools.md)
+    - [通过tokenPlease()函数获取accessToken](docs/tokenplease.md)
     - 注册Microsoft Graph 应用程序
         - [注册Azure AD 应用程序](/docs/applicationregisteration.md)
         - [注册Azure AD 2.0 应用程序](/docs/applicationregisteration2.0.md)
