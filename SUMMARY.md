@@ -50,3 +50,4 @@
 - Office 365 开发与人工智能
     - [人工智能背景下的Office 365现状和发展趋势](docs/officeandai.md)
     - [Office 365 机器人（Bot）开发入门](docs/botframeworkquickstart.md)
+    - [Office 365 机器人（Bot）开发入门指南](docs/botframeworkguide.md)
