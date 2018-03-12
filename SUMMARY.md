@@ -39,6 +39,8 @@
     - [SharePoint Add-in 开发](docs/sharepointaddin.md)
     - [SharePoint Patterns and Practices 简介](docs/sharepointpnp.md)
     - [SharePoint Framework 简介](docs/sharepointframework.md)
+- Office 365 Connector及其开发
+    - [Office 365 Connector开发概览](docs/office365connector.md)
 - 基于Office 365的业务和流程应用开发
     - [基于Office 365的随需应变业务应用平台](docs/officebusinessapp.md)
     - [PowerApps 入门篇](docs/powerapps.md)
