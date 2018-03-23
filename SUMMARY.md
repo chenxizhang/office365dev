@@ -9,8 +9,6 @@
     - [Microsoft Graph 概述](/docs/microsoftgraphoverview.md)
     - [通过GraphExplorer体验Microsoft Graph](/docs/graphexplorer.md)
     - [通过其他第三方工具体验Microsoft Graph](/docs/graph-tools.md)
-    - [通过tokenPlease()函数获取accessToken](docs/tokenplease.md)
-    - [解码id_token](docs/id_token.md)
     - 注册Microsoft Graph 应用程序
         - [注册Azure AD 应用程序](/docs/applicationregisteration.md)
         - [注册Azure AD 2.0 应用程序](/docs/applicationregisteration2.0.md)
@@ -25,6 +23,10 @@
         - [Microsoft Graph  服务应用程序](/docs/deamonapplication.md)
         - [在ASP.NET Core MVC 应用程序中集成 Microsoft Graph](/docs/crossplatform.md)
         - [扩展Microsoft Graph数据结构](docs/graphextensions.md)
+    - Microsoft Graph 安全性
+        - [通过tokenPlease()函数获取accessToken](docs/tokenplease.md)
+        - [解码id_token](docs/id_token.md)
+        - [详解 OAuth的场景](docs/oauth.md)
 - Office Add-ins 开发
     - [Office Add-in 架构和入门](docs/officeaddins.md)
     - [在Visual Studio 中开发Office Add-in](docs/officeaddindev.md)
