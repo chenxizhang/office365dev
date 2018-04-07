@@ -1,4 +1,4 @@
-# 扩展Microsoft Graph数据结构（开放扩展）
+# 扩展Microsoft Graph数据结构-开放扩展 
 > 作者：陈希章 发表于 2018年1月2日
 
 ## 前言

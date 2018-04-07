@@ -22,7 +22,8 @@
         - [如何通过PowerShell获取Office 365 TenantID](/docs/gettenantid.md)
         - [Microsoft Graph  服务应用程序](/docs/deamonapplication.md)
         - [在ASP.NET Core MVC 应用程序中集成 Microsoft Graph](/docs/crossplatform.md)
-        - [扩展Microsoft Graph数据结构](docs/graphextensions.md)
+        - [扩展Microsoft Graph数据结构 -开放扩展](docs/graphextensions.md)
+        - [扩展Microsoft Graph数据结构 -架构扩展](docs/graphschemaextensions.md)
     - Microsoft Graph 安全性
         - [通过tokenPlease()函数获取accessToken](docs/tokenplease.md)
         - [解码id_token](docs/id_token.md)
