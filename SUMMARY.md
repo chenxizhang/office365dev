@@ -59,4 +59,4 @@
     - [Office 365 机器人（Bot）开发入门](docs/botframeworkquickstart.md)
     - [Office 365 机器人（Bot）开发入门指南](docs/botframeworkguide.md)
 - Office 365 开发与开源技术
-    - [谈一谈在Office 365开发中能使用的开源框架及技术](docs/office365opensource.md)
+    - [拥抱开源，Office 365开发迎来新的时代](docs/office365opensource.md)
