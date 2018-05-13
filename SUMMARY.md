@@ -25,6 +25,7 @@
         - [扩展Microsoft Graph数据结构 -开放扩展](docs/graphextensions.md)
         - [扩展Microsoft Graph数据结构 -架构扩展](docs/graphschemaextensions.md)
         - [Excel as a Service —— Excel 开发居然可以这么玩](docs/excelgraph.md)
+        - [基于Microsoft Graph打造自己的Timeline应用](docs/timeline.md)
     - Microsoft Graph 安全性
         - [通过tokenPlease()函数获取accessToken](docs/tokenplease.md)
         - [解码id_token](docs/id_token.md)
