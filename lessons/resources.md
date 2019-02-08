@@ -38,9 +38,11 @@
 1. 开发人员中心 <https://developer.microsoft.com/zh-cn/office>
 1. 申请一年的开发人员版本 <https://developer.microsoft.com/zh-CN/office/dev-program>
 1. Office 365 在GitHub上面的主页 <https://github.com/OfficeDev>
+1. Office 365 开发入门指南 <http://product.dangdang.com/25347066.html>
 
 ## 技术社区
 
 1. Office 365 中文技术社区 <https://mp.weixin.qq.com/s/60hBizYLdbLxoViO1PpXwQ>
 1. Microsoft Teams 大中华区技术社区 <https://mp.weixin.qq.com/s/NZKRiysZ7ofwy-IIeGKZ9Q>
 1. Office 365 官方微信公众号 : `微软Office365`
+1. 陈希章的微信公众号 `希章分享` 或 `chenxizhang2018`
