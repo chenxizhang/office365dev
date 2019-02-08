@@ -6,8 +6,7 @@
 ## Office 365 试用申请
 
 1. 国际版 <https://products.office.com/en-us/try>
-1. 中国版 <https://www.21vbluecloud.com/office365/o365-pricing/>
-    > 受相关政策影响，目前不提供公开申请试用版，请通过联系销售人员获取试用版
+1. 中国版 <https://mp.weixin.qq.com/s/TN0VuarqMakpMIim9i4wYw?subscene=0>
 1. 开发者版 <https://developer.microsoft.com/zh-CN/office/dev-program>
 
 ## Office 365 产品网站
@@ -46,3 +45,5 @@
 1. Microsoft Teams 大中华区技术社区 <https://mp.weixin.qq.com/s/NZKRiysZ7ofwy-IIeGKZ9Q>
 1. Office 365 官方微信公众号 : `微软Office365`
 1. 陈希章的微信公众号 `希章分享` 或 `chenxizhang2018`
+1. [MVP]陈健的微信公众号 `中国極道` 或 `myseatme`
+1. [MVP]方洁影的微信公众号 `熬肥Office妖精` 或 `gh_909080a9f90d`
