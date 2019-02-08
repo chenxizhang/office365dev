@@ -6,7 +6,8 @@
 ## Office 365 试用申请
 
 1. 国际版 <https://products.office.com/en-us/try>
-1. 中国版 <>
+1. 中国版 <https://www.21vbluecloud.com/office365/o365-pricing/>
+    > 受相关政策影响，目前不提供公开申请试用版，请通过联系销售人员获取试用版
 1. 开发者版 <https://developer.microsoft.com/zh-CN/office/dev-program>
 
 ## Office 365 产品网站
