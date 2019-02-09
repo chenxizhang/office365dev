@@ -1,7 +1,7 @@
 # Office 365 产品和开发相关资源
 
 > 陈希章 于 2019-2-8
-> 该资源列表将持续更新，请访问 <https://github.com/chenxizhang/office365dev/blob/master/lessons/%E7%AC%AC%E4%B8%80%E7%AB%A0/resources.md> 获取最新信息
+> 该资源列表将持续更新，请访问 <https://github.com/chenxizhang/office365dev/blob/master/lessons/chapter1/resources.md> 获取最新信息
 
 ## Office 365 试用申请
 
