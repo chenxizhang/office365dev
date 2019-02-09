@@ -17,18 +17,18 @@ Get-AzureADApplication
 Get-AzureADApplication -ObjectId xxxxxxxxx
 
 # 创建一个新的应用程序（客户端）
-$clientapp=New-AzureADApplication -ReplyUrls "" -PublicClient $true -DisplayName "xxxx"
+$clientapp = New-AzureADApplication -ReplyUrls "" -PublicClient $true -DisplayName "xxxx"
 
 # 创建一个新的应用程序（网页）,需要有Homepage和IdentitierUris
-$webapp = New-AzureADApplication -DisplayName $name  -ReplyUrls $replyurl -Homepage "https://websample.com" -IdentifierUris "https://websample.com"
+# $webapp = New-AzureADApplication -DisplayName $name  -ReplyUrls $replyurl -Homepage "https://websample.com" -IdentifierUris "https://websample.com"
 
 
 # 定义权限
 $graphrequest = New-Object -TypeName "Microsoft.Open.AzureAD.Model.RequiredResourceAccess"
 $graphrequest.ResourceAccess = New-Object -TypeName "System.Collections.Generic.List[Microsoft.Open.AzureAD.Model.ResourceAccess]"
-$ids =@("024d486e-b451-40bb-833d-3e66d98c5c73","e383f46e-2787-4529-855e-0e479a3ffac0","e1fe6dd8-ba31-4d61-89e7-88639da4683d","b340eb25-3456-403f-be2f-af7a0d370277")
-foreach($id in $ids){
-    $obj = New-Object -TypeName "Microsoft.Open.AzureAD.Model.ResourceAccess" -ArgumentList $id,"Scope"
+$ids = @("024d486e-b451-40bb-833d-3e66d98c5c73", "e383f46e-2787-4529-855e-0e479a3ffac0", "e1fe6dd8-ba31-4d61-89e7-88639da4683d", "b340eb25-3456-403f-be2f-af7a0d370277")
+foreach ($id in $ids) {
+    $obj = New-Object -TypeName "Microsoft.Open.AzureAD.Model.ResourceAccess" -ArgumentList $id, "Scope"
     $graphrequest.ResourceAccess.Add($obj)
 }
 $graphrequest.ResourceAppId = "00000003-0000-0000-c000-000000000000"
@@ -44,8 +44,8 @@ Set-AzureADApplication -ObjectId $clientapp.ObjectId -RequiredResourceAccess ($g
 # 完成管理员授权
 $IsGallatin = $true
 if ($IsGallatin) {
-    Start-Process ("https://login.chinacloudapi.cn/common/adminconsent?client_id="+$clientapp.AppId+"&state=12345&redirect_uri=https://developer.microsoft.com/en-us/graph/")
+    Start-Process ("https://login.chinacloudapi.cn/common/adminconsent?client_id=" + $clientapp.AppId + "&state=12345&redirect_uri=https://developer.microsoft.com/en-us/graph/")
 }
 else {
-    Start-Process ("https://login.microsoftonline.com/common/adminconsent?client_id="+$clientapp.AppId+"&state=12345&redirect_uri=https://developer.microsoft.com/en-us/graph/")
+    Start-Process ("https://login.microsoftonline.com/common/adminconsent?client_id=" + $clientapp.AppId + "&state=12345&redirect_uri=https://developer.microsoft.com/en-us/graph/")
 }
