@@ -46,4 +46,4 @@
 1. Office 365 官方微信公众号 : `微软Office365`
 1. 陈希章的微信公众号 `希章分享` 或 `chenxizhang2018`
 1. [MVP]陈健的微信公众号 `中国極道` 或 `myseatme`
-1. [MVP]方洁影的微信公众号 `熬肥Office妖精` 或 `gh_909080a9f90d`
+1. [MVP]方洁影的微信公众号 `熬肥Office妖精` 或 `MSOffice-player`
