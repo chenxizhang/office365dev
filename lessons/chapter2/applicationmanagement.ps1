@@ -33,11 +33,6 @@ foreach ($id in $ids) {
 }
 $graphrequest.ResourceAppId = "00000003-0000-0000-c000-000000000000"
 
-# 理解ServicePricipal
-Get-AzureADServicePrincipal 
-Get-AzureADServicePrincipal -ObjectId 3319d71d-8dfc-42ff-8fa0-0aa64f553350 #Microsoft Graph这个服务组件
-
-
 # 权限绑定
 Set-AzureADApplication -ObjectId $clientapp.ObjectId -RequiredResourceAccess ($graphrequest)
 
@@ -49,3 +44,7 @@ if ($IsGallatin) {
 else {
     Start-Process ("https://login.microsoftonline.com/common/adminconsent?client_id=" + $clientapp.AppId + "&state=12345&redirect_uri=https://developer.microsoft.com/en-us/graph/")
 }
+
+# 理解ServicePricipal
+Get-AzureADServicePrincipal 
+Get-AzureADServicePrincipal -ObjectId 3319d71d-8dfc-42ff-8fa0-0aa64f553350 #Microsoft Graph这个服务组件
