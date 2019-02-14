@@ -1,8 +1,11 @@
 # 这个脚本演示如何通过PowerShell管理Office 365用户
 # 作者：陈希章 《Office 365 开发入门指南》第二版  于 2019-2-9
 
-# 准备工作，请通过单独打开一个Powershell窗口，并用管理员方式打开
-# Install-Module -Name AzureAD
+# 准备工作，参考 https://docs.microsoft.com/zh-cn/office365/enterprise/powershell/connect-to-office-365-powershell
+# 安装一个登陆助手 https://go.microsoft.com/fwlink/p/?LinkId=286152
+
+# 通过单独打开一个Powershell窗口，并用管理员方式打开，运行下面的命令安装模块，请注意这两个模块不一
+# Install-Module -Name Msonline
 
 # 第一步，连接到国际版的Office 365
 Connect-MsolService 
