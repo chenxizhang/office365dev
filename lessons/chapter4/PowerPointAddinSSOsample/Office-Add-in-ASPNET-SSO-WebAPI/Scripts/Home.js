@@ -34,6 +34,7 @@ function getOneDriveFiles() {
 }	
 
 function getDataWithToken(options) {
+
     Office.context.auth.getAccessTokenAsync(options,
         function (result) {
             if (result.status === "succeeded") {
