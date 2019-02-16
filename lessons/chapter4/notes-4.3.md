@@ -8,7 +8,7 @@
 
 1. 准备开发环境，Visual Studio 2017，Office 365国际版管理员账号
 1. 客户代码库 <https://github.com/officedev/office-add-in-aspnet-sso>
-1. 打开Completed目录下面的sln文件，并且解决编译问题 `Install-Package Microsoft.Identity.Client -IncludePrerelease`，确保能运行
+1. 打开Completed目录下面的sln文件，并且解决编译问题 `Install-Package Microsoft.Identity.Client -Version 1.1.4-preview0002`，确保能运行
 1. 注册应用程序 <https://apps.dev.microsoft.com/>, 这个步骤至关重要，必须要用Office 365管理员账号进行登陆，详细操作请参考 <https://docs.microsoft.com/zh-cn/office/dev/add-ins/develop/register-sso-add-in-aad-v2>，预分配的三个应用的信息如下，请注意记录clientid和secret
 
     ``` text
