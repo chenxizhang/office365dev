@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+
+    <link rel="stylesheet" href="https://appsforoffice.microsoft.com/fabric/2.1.0/fabric.min.css" />
+    <link rel="stylesheet" href="https://appsforoffice.microsoft.com/fabric/2.1.0/fabric.components.min.css" />
+
+    <!-- Template styles -->
+    <link href="~/Content/instruction.step.css" rel="stylesheet" type="text/css" />
+
+</head>
+<body class="ms-font-l">
+    <main class="ms-firstrun-instructionstep">
+        <section class="ms-firstrun-instructionstep__header">
+            <div class="ms-fontSize-xl ms-fontColor-themePrimary ">WELCOME</div>
+            <div class="ms-font-m ms-fontColor-themePrimary ms-fontWeight-light">
+                This add-in demonstrates how to use single sign-on for the Office host, the add-in, and Microsoft Graph.
+            </div>
+            <div class="ms-firstrun-instructionstep__header--image"></div>
+        </section>
+        <div class="ms-firstrun-instructionstep__welcome-body">
+            <p class="ms-font-xs ms-firstrun-instructionstep__welcome-intro">To use this add-in</p>
+            <ul class="ms-List ms-firstrun-instructionstep__list">
+                <li class="ms-ListItem">
+                    <span class="ms-ListItem-primaryText">1</span>
+                    <span class="ms-ListItem-secondaryText">
+                        <span class="ms-fontColor-themePrimary ">
+                            <span>Be sure there are some files in your</span> <span class="ms-fontWeight-semibold "> OneDrive for Business</span><span> (Office 365) account.</span>
+                        </span>
+                    </span>
+                    <div class="clearfix"></div>
+                </li>
+                <li class="ms-ListItem">
+                    <span class="ms-ListItem-primaryText">2</span>
+                    <span class="ms-ListItem-secondaryText">
+                        <span class="ms-fontColor-themePrimary ">
+                            <span>Click the button. If you are not logged in to Office, you are prompted to login.</span>
+                        </span>
+                    </span>
+                    <div class="clearfix"></div>
+                </li>
+                <li class="ms-ListItem">
+                    <span class="ms-ListItem-primaryText">3</span>
+                    <span class="ms-ListItem-secondaryText">
+                        <span class="ms-fontColor-themePrimary ">
+                            <span>When you are logged in, the files in your account are listed below.</span>
+                        </span>
+                    </span>
+                    <div class="clearfix"></div>
+                </li>
+            </ul>
+            <p align="center">
+                <button id="getGraphAccessTokenButton" class="popupButton ms-Button ms-Button--primary"><span class="ms-Button-label">Get My Files from OneDrive </span></button>
+            </p>
+            <p style="padding-top:20px"></p>
+            <ul id="file-list" class="ms-List ms-firstrun-instructionstep__list"></ul>
+        </div>
+    </main>
+    <div class="container body-content">
+        @RenderBody()
+    </div>
+</body>
+</html>
