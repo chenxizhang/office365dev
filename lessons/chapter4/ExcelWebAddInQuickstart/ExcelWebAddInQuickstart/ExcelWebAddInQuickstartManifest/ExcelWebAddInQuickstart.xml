@@ -1,0 +1,165 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!--Created:ce44715c-8c4e-446b-879c-ea9ebe0f09c8-->
+<OfficeApp
+          xmlns="http://schemas.microsoft.com/office/appforoffice/1.1"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xmlns:bt="http://schemas.microsoft.com/office/officeappbasictypes/1.0"
+          xmlns:ov="http://schemas.microsoft.com/office/taskpaneappversionoverrides"
+          xsi:type="TaskPaneApp">
+
+  <!-- 开始基本设置：外接程序元数据，用于所有版本的 Office（除非提供重写）。 -->
+
+  <!-- 重要事项！ID 对于外接程序必须是唯一的，如果重复使用该清单，请确保将此 ID 改为新的 GUID。 -->
+  <Id>d5e1f55b-de70-4784-a4c7-9c1a434a4f87</Id>
+
+  <!--版本。来自应用商店的更新只有在版本变化时才会被触发。 -->
+  <Version>1.0.0.0</Version>
+  <ProviderName>陈希章</ProviderName>
+  <DefaultLocale>zh-cn</DefaultLocale>
+  <!-- 外接程序的显示名称。在应用商店中使用，出现在外接程序对话框等 Office UI 中。 -->
+  <DisplayName DefaultValue="神奇功能" />
+  <Description DefaultValue="我的神奇功能插件"/>
+  <!-- 外接程序的图标。用于安装屏幕和外接程序对话框中。 -->
+  <IconUrl DefaultValue="~remoteAppUrl/Images/Button32x32.png" />
+
+  <SupportUrl DefaultValue="https://github.com/chenxizhang/office365dev" />
+  <!-- 导航时允许使用的域。例如，如果使用 ShowTaskpane，然后得到一个 href 链接，则只有在此列表上存在该域时，才允许导航。 -->
+  <AppDomains>
+    <AppDomain>AppDomain1</AppDomain>
+    <AppDomain>AppDomain2</AppDomain>
+    <AppDomain>AppDomain3</AppDomain>
+  </AppDomains>
+  <!--结束基本设置。 -->
+
+  <!--开始任务窗格模式集成。如果没有 VersionOverrides 或如果 Office 客户端版本不支持外接程序命令，将使用此部分。 -->
+  <Hosts>
+    <Host Name="Workbook" />
+  </Hosts>
+  <DefaultSettings>
+    <SourceLocation DefaultValue="~remoteAppUrl/Home.html" />
+  </DefaultSettings>
+  <!-- 结束任务窗格模式集成。  -->
+
+  <Permissions>ReadWriteDocument</Permissions>
+
+  <!-- 开始外接程序命令模式集成。 -->
+  <VersionOverrides xmlns="http://schemas.microsoft.com/office/taskpaneappversionoverrides" xsi:type="VersionOverridesV1_0">
+
+    <!-- 主机节点为必需。 -->
+    <Hosts>
+      <!-- 每个主机可具有不同的命令集。 -->
+      <!-- Excel 主机为工作簿，文档中的 Word 主机和 PowerPoint 主机为演示文稿。 -->
+      <!-- 确保重写的主机与清单顶部声明的主机相匹配。 -->
+      <Host xsi:type="Workbook">
+        <!-- 外形规格。当前只支持 DesktopFormFactor。 -->
+        <DesktopFormFactor>
+          <!--“此代码将启用可自定义的消息，在单独安装成功加载外接程序时进行显示。”-->
+          <GetStarted>
+            <!-- “入门”标注的标题。resid 属性指向 ShortString 资源 -->
+            <Title resid="Contoso.GetStarted.Title"/>
+
+            <!-- 入门标注的描述。ResID 指向 LongString 资源 -->
+            <Description resid="Contoso.GetStarted.Description"/>
+
+            <!-- 指向详细说明外接程序使用方法的 URL 资源。 -->
+            <LearnMoreUrl resid="Contoso.GetStarted.LearnMoreUrl"/>
+          </GetStarted>
+          <!-- 函数文件是包含 JavaScript 的 HTML 页面，将在此页面中调用用于 ExecuteAction 的函数。             将 FunctionFile 视为代码隐藏 ExecuteFunction。 -->
+          <FunctionFile resid="Contoso.DesktopFunctionFile.Url" />
+
+          <!-- PrimaryCommandSurface 为 Office 主功能区。 -->
+          <ExtensionPoint xsi:type="PrimaryCommandSurface">
+            <!-- 使用 OfficeTab 来扩展现有选项卡。使用 CustomTab 来创建新选项卡。 -->
+            <OfficeTab id="TabHome">
+              <!-- 确保为组提供唯一 ID。建议 ID 为使用公司名的命名空间。 -->
+              <Group id="Contoso.Group1">
+                <!-- 为组指定标签。resid 必须指向 ShortString 资源。 -->
+                <Label resid="Contoso.Group1Label" />
+                <!-- 图标。必需大小: 16、32、80，可选大小: 20、24、40、48、64。强烈建议为大 UX 提供所有大小。 -->
+                <!-- 使用 PNG 图标。资源部分中的所有 URL 必须使用 HTTPS。 -->
+                <Icon>
+                  <bt:Image size="16" resid="Contoso.tpicon_16x16" />
+                  <bt:Image size="32" resid="Contoso.tpicon_32x32" />
+                  <bt:Image size="80" resid="Contoso.tpicon_80x80" />
+                </Icon>
+
+                <!-- 控件。可以为“按钮”类型或“菜单”类型。 -->
+                <Control xsi:type="Button" id="Contoso.TaskpaneButton">
+                  <Label resid="Contoso.TaskpaneButton.Label" />
+                  <Supertip>
+                    <!-- 工具提示标题。resid 必须指向 ShortString 资源。 -->
+                    <Title resid="Contoso.TaskpaneButton.Label" />
+                    <!-- 工具提示标题。resid 必须指向 LongString 资源。 -->
+                    <Description resid="Contoso.TaskpaneButton.Tooltip" />
+                  </Supertip>
+                  <Icon>
+                    <bt:Image size="16" resid="Contoso.tpicon_16x16" />
+                    <bt:Image size="32" resid="Contoso.tpicon_32x32" />
+                    <bt:Image size="80" resid="Contoso.tpicon_80x80" />
+                  </Icon>
+
+                  <!-- 这是触发命令时的操作(例如单击功能区)。支持的操作为 ExecuteFunction 或 ShowTaskpane。 -->
+                  <Action xsi:type="ShowTaskpane">
+                    <TaskpaneId>ButtonId1</TaskpaneId>
+                    <!-- 提供将显示在任务窗格上的位置的 URL 资源 ID。 -->
+                    <SourceLocation resid="Contoso.Taskpane.Url" />
+                  </Action>
+                </Control>
+
+                <Control xsi:type="Button" id="Contoso.ClickButton">
+                  <Label resid="Contoso.ClickButton.Label"/>
+                  <Supertip>
+                    <Title resid="Contoso.ClickButton.Label"/>
+                    <Description resid="Contoso.ClickButton.Tooltip"/>
+                  </Supertip>
+                  <Icon>
+                    <bt:Image size="16" resid="Contoso.tp2icon_16x16" />
+                    <bt:Image size="32" resid="Contoso.tp2icon_32x32" />
+                    <bt:Image size="80" resid="Contoso.tp2icon_80x80" />
+                  </Icon>
+                  <Action xsi:type="ExecuteFunction">
+                    <FunctionName>showSampleData</FunctionName>
+                  </Action>
+                </Control>
+
+              </Group>
+            </OfficeTab>
+          </ExtensionPoint>
+        </DesktopFormFactor>
+      </Host>
+    </Hosts>
+
+    <!-- 你可以在主机和窗体上使用资源。 -->
+    <Resources>
+      <bt:Images>
+        <bt:Image id="Contoso.tpicon_16x16" DefaultValue="~remoteAppUrl/Images/atom-16.png" />
+        <bt:Image id="Contoso.tpicon_32x32" DefaultValue="~remoteAppUrl/Images/atom-32.png" />
+        <bt:Image id="Contoso.tpicon_80x80" DefaultValue="~remoteAppUrl/Images/atom-72.png" />
+
+        <bt:Image id="Contoso.tp2icon_16x16" DefaultValue="~remoteAppUrl/Images/telegram-16.png" />
+        <bt:Image id="Contoso.tp2icon_32x32" DefaultValue="~remoteAppUrl/Images/telegram-32.png" />
+        <bt:Image id="Contoso.tp2icon_80x80" DefaultValue="~remoteAppUrl/Images/telegram-72.png" />
+      </bt:Images>
+      <bt:Urls>
+        <bt:Url id="Contoso.DesktopFunctionFile.Url" DefaultValue="~remoteAppUrl/Functions/FunctionFile.html" />
+        <bt:Url id="Contoso.Taskpane.Url" DefaultValue="~remoteAppUrl/Home.html" />
+        <bt:Url id="Contoso.GetStarted.LearnMoreUrl" DefaultValue="https://go.microsoft.com/fwlink/?LinkId=276812" />
+      </bt:Urls>
+      <!-- ShortStrings 最大字符数==125。 -->
+      <bt:ShortStrings>
+        <bt:String id="Contoso.TaskpaneButton.Label" DefaultValue="显示面板" />
+        <bt:String id="Contoso.ClickButton.Label" DefaultValue="执行代码" />
+        <bt:String id="Contoso.Group1Label" DefaultValue="培训学习" />
+        <bt:String id="Contoso.GetStarted.Title" DefaultValue="立即体验!" />
+      </bt:ShortStrings>
+      <!-- LongStrings 最大字符数==250。 -->
+      <bt:LongStrings>
+        <bt:String id="Contoso.TaskpaneButton.Tooltip" DefaultValue="点击打开任务面板" />
+        <bt:String id="Contoso.ClickButton.Tooltip" DefaultValue="点击直接执行代码，不显示任务面板" />
+        <bt:String id="Contoso.GetStarted.Description" DefaultValue="插件已经加载，点击按钮开始吧" />
+      </bt:LongStrings>
+    </Resources>
+  </VersionOverrides>
+  <!-- 结束外接程序命令模式集成。 -->
+
+</OfficeApp>
