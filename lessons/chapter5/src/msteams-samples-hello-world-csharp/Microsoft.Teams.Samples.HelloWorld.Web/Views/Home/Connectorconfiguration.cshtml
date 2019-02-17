@@ -1,0 +1,78 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>开发入门指南-连接器配置</title>
+    @Styles.Render("~/Content/msteams-16.css")
+    @Styles.Render("~/Content/Site.css")
+    @Scripts.Render("https://statics.teams.microsoft.com/sdk/v1.0/js/MicrosoftTeams.min.js")
+    <script>
+        // Call the initialize API first
+        microsoftTeams.initialize();
+
+        // Check the initial theme user chose and respect it
+        microsoftTeams.getContext(function (context) {
+            if (context && context.theme) {
+                setTheme(context.theme);
+            }
+        });
+
+        //让用户可以保存
+        microsoftTeams.settings.setValidityState(true)
+
+        // Handle theme changes
+        microsoftTeams.registerOnThemeChangeHandler(function (theme) {
+            setTheme(theme);
+        });
+
+        // Save configuration changes
+        microsoftTeams.settings.registerOnSaveHandler(function (saveEvent) {
+            // Let the Microsoft Teams platform know what you want to load based on
+            // what the user configured on this page
+
+            //保存设置
+            microsoftTeams.settings.setSettings({
+                entityId: "http://msteams.azurewebsites.net/connectorconfiguration",
+                configName: "devguide",
+                contentUrl:"http://msteams.azurewebsites.net/connectorconfiguration"
+            });
+
+            //将webhook地址保存起来,这里是演示，实际情况下，需要将这个地址调用api保存在后台，然后根据一些设置定期调用这个地址发送消息即可
+            document.getElementById("result").innerText = microsoftTeams.settings.getSettings().webhookUrl;
+
+            // 通知Teams已经完成了保存
+            saveEvent.notifySuccess();
+        });
+
+
+        // 设置主题
+        function setTheme(theme) {
+            if (theme) {
+                // Possible values for theme: 'default', 'light', 'dark' and 'contrast'
+                document.body.className = 'theme-' + (theme === 'default' ? 'light' : theme);
+            }
+        }
+
+    </script>
+</head>
+<body class="theme-light">
+    <div class="surface">
+        <div class="panel">
+
+            <div class="font-semibold font-title">
+                连接器配置页面
+            </div>
+            <p>
+                请点击保存按钮来完成配置!!!
+            </p>
+
+            <p>
+                <span id="result"></span>
+            </p>
+        </div>
+    </div>
+</body>
+</html>

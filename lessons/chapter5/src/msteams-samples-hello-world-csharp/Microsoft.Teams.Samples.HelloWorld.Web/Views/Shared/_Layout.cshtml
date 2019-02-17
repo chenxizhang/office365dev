@@ -1,0 +1,19 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>开发入门指南快速启动范例</title>
+    @Styles.Render("~/Content/msteams-16.css")
+    @Styles.Render("~/Content/Site.css")
+    @Scripts.Render("https://statics.teams.microsoft.com/sdk/v1.0/js/MicrosoftTeams.min.js")
+    @Scripts.Render("~/Scripts/teamsapp.js")
+
+    @RenderSection("scripts", required: false)
+</head>
+<body class="theme-light">
+    <div class="surface">
+        <div class="panel">
+            @RenderBody()
+        </div>
+    </div>
+</body>
+</html>
