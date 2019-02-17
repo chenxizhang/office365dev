@@ -1,9 +1,10 @@
-# 课程笔记 —— Microsoft Teams 应用开发实战
+# 课程笔记 —— Microsoft Teams 与 Graph API
 
 > 陈希章 于 2019-2-10
 
-1. 官方案例链接 <https://docs.microsoft.com/en-us/microsoftteams/platform/get-started/get-started-dotnet-app-studio>
-1. 
-
-2. SSO in Teams Tabs <https://techcommunity.microsoft.com/t5/Microsoft-Teams-Blog/Authentication-SSO-and-Microsoft-Graph-in-Microsoft-Teams-Tabs/ba-p/125366>
-1. SSO in Teams Bot <https://docs.microsoft.com/en-us/azure/bot-service/bot-builder-tutorial-authentication?view=azure-bot-service-3.0>
+1. Microsoft Teams Grpah API <https://docs.microsoft.com/zh-cn/graph/api/resources/teams-api-overview?view=graph-rest-1.0>
+1. Microsoft Graph 浏览器
+    * 国际版 <https://developer.microsoft.com/graph/graph-explorer/#>
+    * 国内版 <https://graphexplorerchina.azurewebsites.net>
+1. Microsoft Teams PowerShell Module <https://www.powershellgallery.com/packages/MicrosoftTeams>
+1. Microsoft Teams + Flow <https://docs.microsoft.com/zh-cn/connectors/teams/>

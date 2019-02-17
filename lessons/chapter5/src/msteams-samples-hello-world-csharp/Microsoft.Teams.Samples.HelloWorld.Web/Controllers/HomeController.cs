@@ -11,7 +11,7 @@ namespace Microsoft.Teams.Samples.HelloWorld.Web.Controllers
             return View();
         }
 
-        [Route("hello")]
+        [Route("hello")]//当前作为静态选项卡用的
         public ActionResult Hello()
         {
             return View("Index");
@@ -29,7 +29,7 @@ namespace Microsoft.Teams.Samples.HelloWorld.Web.Controllers
             return View();
         }
 
-        [Route("configure")]
+        [Route("configure")]//配置页面
         public ActionResult Configure()
         {
             return View();

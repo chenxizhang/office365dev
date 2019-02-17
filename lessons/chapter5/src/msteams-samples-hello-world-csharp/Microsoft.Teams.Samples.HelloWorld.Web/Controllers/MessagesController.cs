@@ -19,7 +19,7 @@ namespace Microsoft.Teams.Samples.HelloWorld.Web.Controllers
         {
             using (var connector = new ConnectorClient(new Uri(activity.ServiceUrl)))
             {
-                if (activity.IsComposeExtensionQuery())
+                if (activity.IsComposeExtensionQuery())//针对Messaging extension的响应
                 {
                     var response = MessageExtension.HandleMessageExtensionQuery(connector, activity);
                     return response != null
