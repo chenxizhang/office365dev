@@ -25,7 +25,6 @@ namespace Microsoft.Teams.Samples.HelloWorld.Web
             };
 
 
-
             if (query.CommandId != null && query.Parameters != null && query.Parameters.Count > 0)
             {
                 //用户没有设置参数，而是初始化

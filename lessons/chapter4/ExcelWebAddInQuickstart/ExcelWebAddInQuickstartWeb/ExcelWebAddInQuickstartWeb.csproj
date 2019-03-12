@@ -110,6 +110,7 @@
     <Content Include="Content\sass\Fabric.Animations.Output.scss" />
     <None Include="Scripts\jquery-1.9.1.intellisense.js" />
     <Content Include="Dialogs\dialog.html" />
+    <Content Include="Dialogs\dialog.js" />
     <Content Include="Functions\FunctionFile.html" />
     <Content Include="Functions\FunctionFile.js" />
     <Content Include="Home.css" />
