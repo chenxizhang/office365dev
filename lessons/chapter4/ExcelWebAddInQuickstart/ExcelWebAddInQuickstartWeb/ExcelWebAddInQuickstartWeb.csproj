@@ -108,7 +108,10 @@
     <Content Include="Content\sass\Fabric.Color.Mixins.Output.scss" />
     <Content Include="Content\sass\Fabric.Animations.RTL.Output.scss" />
     <Content Include="Content\sass\Fabric.Animations.Output.scss" />
+    <Content Include="CustomFunctions\customfunctions.html" />
+    <Content Include="CustomFunctions\customfunctions.json" />
     <None Include="Scripts\jquery-1.9.1.intellisense.js" />
+    <Content Include="CustomFunctions\CustomFunctions.js" />
     <Content Include="Dialogs\dialog.html" />
     <Content Include="Dialogs\dialog.js" />
     <Content Include="Functions\FunctionFile.html" />

@@ -66,7 +66,7 @@
           </GetStarted>
           <!-- 函数文件是包含 JavaScript 的 HTML 页面，将在此页面中调用用于 ExecuteAction 的函数。             将 FunctionFile 视为代码隐藏 ExecuteFunction。 -->
           <FunctionFile resid="Contoso.DesktopFunctionFile.Url" />
-
+          
           <!-- PrimaryCommandSurface 为 Office 主功能区。 -->
           <ExtensionPoint xsi:type="PrimaryCommandSurface">
             <!-- 使用 OfficeTab 来扩展现有选项卡。使用 CustomTab 来创建新选项卡。 -->
@@ -126,6 +126,7 @@
             </OfficeTab>
           </ExtensionPoint>
         </DesktopFormFactor>
+        
       </Host>
     </Hosts>
 
